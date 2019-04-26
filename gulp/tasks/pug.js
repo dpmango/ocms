@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var pug = require('gulp-pug');
+var pugbem = require('gulp-pugbem');
 var plumber = require('gulp-plumber');
 var changed = require('gulp-changed');
 var gulpif = require('gulp-if');
@@ -15,6 +16,7 @@ function renderHtml(onlyChanged) {
     .pipe(
       pug({
         pretty: true,
+        plugins: [ pugbem ]
       })
     )
     .pipe(gulp.dest(config.dest.html));
