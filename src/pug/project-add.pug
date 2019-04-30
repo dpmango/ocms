@@ -1,0 +1,65 @@
+---
+title: Создание проекта
+login: true
+---
+extends shared/_layout
+block content
+  
+  .page-main.page-body__main
+    .main-header._header
+      ._container.container
+
+        ._info
+          h1._heading Создание проекта
+
+          ._actions
+            a._link(href='projects.html' title='Вернуться к списку проектов')
+              i.ico.ico-mono-chevron-left
+              | Вернуться к списку проектов
+      
+        ul.primary-menu._primary-menu
+          li._item
+            a._link.is-active(href='project-add.html' title='О проекте') О проекте
+          li._item
+            a._link(href='project-passport.html' title='Паспорт') Паспорт
+          li._item
+            a._link(href='project-roles.html' title='Сотрудники') Сотрудники
+          li._item
+            a._link(href='project-questions.html' title='Вопросы и ответы') Вопросы и ответы
+          li._item
+            a._link(href='project-tasks.html' title='Задачи') Задачи
+          li._item
+            a._link(href='project-comments.html' title='Комментарии') Комментарии
+          li._item
+            a._link(href='project-access.html' title='Права') Права
+    
+    form.main-body._body(action='/' method='post')
+      .main-content._content
+        ._container.container
+          ._inner
+
+            .content-form._form
+              .ui-group.-inline
+                label._label Название *
+                ._content
+                  input.ui-input._input(type='text')
+              
+              .ui-group.-inline
+                label._label Описание
+                ._content
+                  textarea.ui-input._input(rows='6')
+              
+              .ui-group.-inline
+                label._label Тип анкеты *
+                ._content
+                  select.ui-input._input(js-select)
+                    option Выберите из списка
+                    option(value='0') Тип 1
+                    option(value='1') Тип 2
+                    option(value='2') Тип 3
+                    option(value='3') Тип 4
+                    option(value='4') Тип 5
+
+      .main-footer._footer
+        ._container.container
+          button.btn.btn-primary._btn К следующему шагу

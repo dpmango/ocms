@@ -10,9 +10,9 @@
   width: 100%
 
 .selectric
-  border: 1px solid #DDD
-  border-radius: 0px
-  background: #F8F8F8
+  border: 1px solid $colorBg
+  border-radius: 4px
+  background: $colorBg
   position: relative
   overflow: hidden
   .label
@@ -20,8 +20,8 @@
     white-space: nowrap
     overflow: hidden
     text-overflow: ellipsis
-    margin: 0 38px 0 10px
-    font-size: 12px
+    margin: 0 38px 0 15px
+    font-size: 14px
     line-height: 38px
     color: #444
     height: 38px
@@ -37,7 +37,7 @@
     width: 38px
     height: 38px
     line-height: 38px
-    background-color: #F8f8f8
+    background-color: $colorBg
     color: #BBB
     text-align: center
     font: 0/0 a
@@ -60,7 +60,6 @@
   border-color: #aaaaaa
 
 .selectric-hover .selectric
-  border-color: #c4c4c4
   .button
     color: #a2a2a2
     &:after

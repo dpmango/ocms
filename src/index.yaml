@@ -2,6 +2,28 @@ ProjectTitle: Project-name
 
 PageList:
 - file: homepage.html
-  ready: 100
-- file: page.html
+  ready: 0
+- file: sign-in.html
+  ready: 50
+- file: sign-up.html
+  ready: 50
+- file: forgot.html
+  ready: 50
+- file: client-add.html
+  ready: 50
+- file: project-add.html
+  ready: 50
+- file: project-passport.html
+  ready: 50
+- file: project-access.html
+  ready: 0
+- file: project-comments.html
+  ready: 0
+- file: project-questions.html
+  ready: 0
+- file: project-roles.html
+  ready: 0
+- file: projects.html
+  ready: 0
+- file: project-tasks.html
   ready: 0

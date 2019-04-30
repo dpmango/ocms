@@ -11,7 +11,7 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build --production",
-    "surge": "surge --project ./dist --domain khmelevskoy.surge.sh",
+    "surge": "surge --project ./dist --domain ocms.surge.sh",
     "deploy": "gulp build --production && surge --project ./dist --domain khmelevskoy.surge.sh"
   },
   "dependencies": {

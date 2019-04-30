@@ -1,0 +1,80 @@
+---
+title: Добавление клиента
+login: true
+---
+extends shared/_layout
+block content
+  
+  .page-main.page-body__main
+    .main-header._header
+      ._container.container
+
+        ._info
+          h1._heading Добавление клиента
+
+    form.main-body._body(action='/' method='post')
+      .main-content._content
+        fieldset._fieldset
+          ._fields
+            ._container.container
+              ._inner
+                legend._legend Данные клиента
+
+                .content-form._form
+                  .ui-group
+                    label._label Название организации
+                    ._content
+                      input.ui-input._input(type='text')
+                  
+                  .ui-row._ui-row
+                    ._ui-col.ui-col.is-6
+                      .ui-group._ui-group
+                        label._label Имя
+                        input.ui-input._input(type='text' name='')
+
+                    ._ui-col.ui-col.is-6
+                      .ui-group._ui-group
+                        label._label Фамилия
+                        input.ui-input._input(type='text' name='')
+                  
+                  .ui-group
+                    label._label Должность
+                    ._content
+                      input.ui-input._input(type='text')
+                  
+                  .ui-group
+                    label._label Email
+                    ._content
+                      input.ui-input._input(type='email')
+        
+        fieldset._fieldset
+          ._fields
+            ._container.container
+              ._inner
+                legend._legend Информация о проекте
+
+                .content-form._form
+                  .ui-group
+                    label._label Название *
+                    ._content
+                      input.ui-input._input(type='text')
+                  
+                  .ui-group
+                    label._label Описание
+                    ._content
+                      textarea.ui-input._input(rows='6')
+                  
+                  .ui-group
+                    label._label Тип анкеты *
+                    ._content
+                      select.ui-input._input(js-select)
+                        option Выберите из списка
+                        option(value='0') Тип 1
+                        option(value='1') Тип 2
+                        option(value='2') Тип 3
+                        option(value='3') Тип 4
+                        option(value='4') Тип 5
+
+      .main-footer._footer
+        ._container.container
+          button.btn.btn-primary._btn Сохранить

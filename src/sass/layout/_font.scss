@@ -1,0 +1,20 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic');
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('../fonts/ProximaNova-Regular.ttf') format("ttf"),
+       url('../fonts/ProximaNova-Regular.woff') format("woff"),
+       url('../fonts/ProximaNova-Regular.eot') format("eot");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('../fonts/ProximaNova-Bold.ttf') format("ttf"),
+       url('../fonts/ProximaNova-Bold.woff') format("woff"),
+       url('../fonts/ProximaNova-Bold.eot') format("eot");
+  font-style: normal;
+  font-weight: 700;
+}
