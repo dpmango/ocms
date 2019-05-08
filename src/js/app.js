@@ -53,6 +53,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Dev.Credentials.logCredentials();
       APP.Dev.Breakpoint.listenResize();
       APP.Browser().methods.setBodyTags();
+      APP.Plugins.Viewport.init();
       APP.Plugins.LegacySupport.init();
       APP.Plugins.ScrollBlock.listenScroll();
       APP.Plugins.Clicks.init();
