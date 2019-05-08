@@ -3,12 +3,12 @@ ProjectTitle: OCMS
 PageList:
   - file: homepage.html
     ready: 90
-  - file: sign-in.html
-    ready: 75
-  - file: sign-up.html
-    ready: 75
-  - file: forgot.html
-    ready: 75
+  - file: auth-login.html
+    ready: 90
+  - file: auth-signup.html
+    ready: 90
+  - file: auth-recover.html
+    ready: 90
   - file: client-add.html
     ready: 75
   - file: project-add.html

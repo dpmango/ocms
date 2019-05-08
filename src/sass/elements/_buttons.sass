@@ -13,40 +13,38 @@ button
   position: relative
   text-align: center
   cursor: pointer
-  transition: all $transitionSpeed $ease
+  transition: all .25s $ease
   border-radius: 4px
   &:focus, &:active
     outline: none
   &--block
     display: block
     width: 100%
-  
+
   &-primary
     color: $colorWhite
     background: $colorPrimary
     &:hover
-      background: rgba($colorPrimary, .9)
-  
+      background: #2A87C7
+    &[disabled]
+      color: $colorLight
+      background: $borderColor
+      cursor: not-allowed
+      &:hover
+        color: $colorLight
+        background: $borderColor
+
   &-outline
     color: $colorPrimary
     border: 1px solid $colorPrimary
     background-color: transparent
-
-  &-example
-    // please use paddings instead of line-height to control btn height
-    background: $colorPrimary
-    font-size: 20px
-    padding: 15px 30px
-    color: white
-    transition: .25s $ease
-    transform-origin: center bottom
-    box-shadow: none
-    will-change: box-shadow, transform
-    &:hover
-      transform: scale(1.05) translateY(-5px)
-      background: rgba($colorPrimary, .9)
-      box-shadow: 0 15px 10px -15px rgba($fontColor, .4)
-
+    &[disabled]
+      color: $colorLight
+      border-color: $borderColor
+      cursor: not-allowed
+      &:hover
+        color: $colorLight
+        border-color: $borderColor
 
 .btn-delete
   width: 16px

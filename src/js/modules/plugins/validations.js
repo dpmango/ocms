@@ -6,116 +6,124 @@
 (function($, APP) {
   APP.Plugins.Validations = {
     init: function() {
-      // GENERIC FUNCTIONS
-      var validateErrorPlacement = function(error, element) {
+      this.langPack();
+      this.applyForms();
+    },
+    data: {
+      validateErrorPlacement: function(error, element) {
         error.addClass('ui-input__validation');
         error.appendTo(element.parent('div'));
-      };
-      var validateHighlight = function(element) {
+      },
+      validateHighlight: function(element) {
         $(element).addClass('has-error');
-      };
-      var validateUnhighlight = function(element) {
+      },
+      validateUnhighlight: function(element) {
         $(element).removeClass('has-error');
-      };
-      var validateSubmitHandler = function(form) {
-        $(form).addClass('loading');
-        $.ajax({
-          type: 'POST',
-          url: $(form).attr('action'),
-          data: $(form).serialize(),
-          success: function(response) {
-            $(form).removeClass('loading');
-            var data = $.parseJSON(response);
-            if (data.status === 'success') {
-              // do something I can't test
+      },
+      validateSubmitHandler: function(form) {
+        $(form).addClass('is-loading');
+
+        alert('форма валидна - отправляем $.ajax');
+
+        // $.ajax({
+        //   type: 'POST',
+        //   url: $(form).attr('action'),
+        //   data: $(form).serialize(),
+        //   success: function(response) {
+        //     $(form).removeClass('is-loading');
+        //     var data = $.parseJSON(response);
+        //     if (data.status === 'success') {
+        //       // do something I can't test
+        //     } else {
+        //       $(form)
+        //         .find('[data-error]')
+        //         .html(data.message)
+        //         .show();
+        //     }
+        //   },
+        // });
+      },
+      masks: {
+        phone: {
+          required: true,
+          normalizer: function(value) {
+            var PHONE_MASK = '+X (XXX) XXX-XXXX';
+            if (!value || value === PHONE_MASK) {
+              return value;
             } else {
-              $(form)
-                .find('[data-error]')
-                .html(data.message)
-                .show();
+              return value.replace(/[^\d]/g, '');
             }
           },
-        });
-      };
-
-      var validatePhone = {
-        required: true,
-        normalizer: function(value) {
-          var PHONE_MASK = '+X (XXX) XXX-XXXX';
-          if (!value || value === PHONE_MASK) {
-            return value;
-          } else {
-            return value.replace(/[^\d]/g, '');
-          }
+          minlength: 11,
+          digits: true,
         },
-        minlength: 11,
-        digits: true,
-      };
-
-      /////////////////////
-      // REGISTRATION FORM
-      ////////////////////
-      $('.js-registration-form').validate({
-        errorPlacement: validateErrorPlacement,
-        highlight: validateHighlight,
-        unhighlight: validateUnhighlight,
-        submitHandler: validateSubmitHandler,
-        rules: {
-          lastName: 'required',
-          firstName: 'required',
-          email: {
-            required: true,
-            email: true,
-          },
-          password: {
-            required: true,
-            minlength: 6,
-          },
-          // phone: validatePhone
-        },
-        messages: {
-          lastName: 'Заполните это поле',
-          firstName: 'Заполните это поле',
-          email: {
-            required: 'Заполните это поле',
-            email: 'Email содержит неправильный формат',
-          },
-          password: {
-            required: 'Заполните это поле',
-            email: 'Пароль мимимум 6 символов',
-          },
-          // phone: {
-          //     required: "Заполните это поле",
-          //     minlength: "Введите корректный телефон"
-          // }
-        },
+      },
+    },
+    langPack: function() {
+      /*
+       * Translated default messages for the jQuery validation plugin.
+       * Locale: RU (Russian; русский язык)
+       */
+      $.extend($.validator.messages, {
+        required: 'Это поле необходимо заполнить.',
+        remote: 'Пожалуйста, введите правильное значение.',
+        email: 'Пожалуйста, введите корректный адрес электронной почты.',
+        url: 'Пожалуйста, введите корректный URL.',
+        date: 'Пожалуйста, введите корректную дату.',
+        dateISO: 'Пожалуйста, введите корректную дату в формате ISO.',
+        number: 'Пожалуйста, введите число.',
+        digits: 'Пожалуйста, вводите только цифры.',
+        creditcard: 'Пожалуйста, введите правильный номер кредитной карты.',
+        equalTo: 'Пожалуйста, введите такое же значение ещё раз.',
+        extension: 'Пожалуйста, выберите файл с правильным расширением.',
+        maxlength: $.validator.format('Пожалуйста, введите не больше {0} символов.'),
+        minlength: $.validator.format('Пожалуйста, введите не меньше {0} символов.'),
+        rangelength: $.validator.format(
+          'Пожалуйста, введите значение длиной от {0} до {1} символов.'
+        ),
+        range: $.validator.format('Пожалуйста, введите число от {0} до {1}.'),
+        max: $.validator.format('Пожалуйста, введите число, меньшее или равное {0}.'),
+        min: $.validator.format('Пожалуйста, введите число, большее или равное {0}.'),
       });
+    },
+    applyForms: function() {
+      var _this = this;
+      var $forms = $('[js-validate-form]:not(.is-validation-attached)');
+      if ($forms.length === 0) return;
 
-      // when multiple forms share functionality
+      // CONSTRUCTOR LIKE FIRST
+      $forms.each(function(i, form) {
+        var $form = $(form);
 
-      // var subscriptionValidationObject = {
-      //   errorPlacement: validateErrorPlacement,
-      //   highlight: validateHighlight,
-      //   unhighlight: validateUnhighlight,
-      //   submitHandler: validateSubmitHandler,
-      //   rules: {
-      //     email: {
-      //       required: true,
-      //       email: true
-      //     }
-      //   },
-      //   messages: {
-      //     email: {
-      //       required: "Fill this field",
-      //       email: "Email is invalid"
-      //     }
-      //   }
-      // }
+        var validationOptions = {
+          errorPlacement: _this.data.validateErrorPlacement,
+          highlight: _this.data.validateHighlight,
+          unhighlight: _this.data.validateUnhighlight,
+          submitHandler: _this.data.validateSubmitHandler,
+          // rules to be set in html as well (merged props)
+          rules: {
+            email: {
+              required: true,
+              email: true,
+            },
+            leadPhone: _this.data.masks.phone,
+          },
+          messages: {
+            email: {
+              required: 'Заполните это поле',
+              email: 'Формат email неверен',
+            },
+            phone: {
+              required: 'Заполните это поле',
+              minlength: 'Введите корректный телефон',
+            },
+          },
+        };
 
-      // call/init
-      // $("[js-subscription-validation]").validate(subscriptionValidationObject);
-      // $("[js-subscription-validation-footer]").validate(subscriptionValidationObject);
-      // $("[js-subscription-validation-menu]").validate(subscriptionValidationObject);
+        $form.validate(validationOptions);
+
+        $form.addClass('is-validation-attached');
+      });
     },
   };
 })(jQuery, window.APP);

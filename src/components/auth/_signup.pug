@@ -1,0 +1,49 @@
+// AUTH
+.auth.main-content__guest
+  .auth__header
+    a(href="homepage.html").auth__logo
+      +svgMono('logo')
+
+  .auth__body
+    h1.auth__heading Регистрация
+
+    form.auth__form(action='#' js-validate-form)
+      .ui-group
+        label(for="organization") Название организации
+        input.ui-input(type='text' name='organization')
+
+      .ui-row._ui-row
+        ._ui-col.ui-col.is-6
+          .ui-group
+            label(for="name") Имя
+            input.ui-input(type='text' name='name')
+
+        ._ui-col.ui-col.is-6
+          .ui-group
+            label(for="surname") Фамилия
+            input.ui-input(type='text' name='surname')
+
+      .ui-group
+        label(for="position") Должность
+        input.ui-input(type='text' name='position')
+
+      .ui-group
+        label(for="email") Электронная почта
+          i.required *
+        input.ui-input(type='email' name='email' required)
+
+      .ui-group
+        label(for="passwordRepeat") Пароль
+          i.required *
+        input.ui-input(type='password' name='password' required)
+
+      .ui-group
+        label(for="passwordRepeat") Подтвердите пароль
+          i.required *
+        input.ui-input(type='password' name='passwordRepeat' required)
+
+      button.btn.btn-primary(type="submit") Зарегистрироваться
+
+  .auth__footer
+    span Уже регистрировались?
+    a.auth__link(href='sign-in.html' title='') Авторизация
