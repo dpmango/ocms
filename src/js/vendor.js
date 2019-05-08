@@ -2,7 +2,6 @@
 import svg4everybody from 'svg4everybody';
 import picturefill from 'picturefill';
 import viewportUnitsBuggyfill from 'viewport-units-buggyfill';
-import Swiper from 'swiper';
 import magnificPopup from 'magnific-popup';
 import AOS from 'aos';
 import scrollMonitor from 'scrollmonitor';
@@ -24,7 +23,6 @@ import tippy from 'tippy.js';
 window.svg4everybody = svg4everybody;
 window.picturefill = picturefill;
 window.viewportUnitsBuggyfill = viewportUnitsBuggyfill;
-window.Swiper = Swiper;
 window.magnificPopup = magnificPopup;
 window.AOS = AOS;
 window.scrollMonitor = scrollMonitor;
