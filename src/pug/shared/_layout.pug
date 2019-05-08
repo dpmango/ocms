@@ -1,6 +1,6 @@
 include ../utilities/_mixins
 doctype html
-html(lang="en")
+html(lang="ru")
   head
     include _head
 
@@ -9,13 +9,13 @@ html(lang="en")
     #barba-wrapper
       // what should be changed with every pjax
       .page-body(class=outClass)
-        if login
+        if !auth
           block header
             include ../../components/header/_header
 
         block content
 
-        if login
+        if !auth
           block footer
             include ../../components/footer/_footer
 
