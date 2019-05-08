@@ -5,26 +5,29 @@
   will-change: transform
   backface-visibility: hidden
   transform-style: preserve-3d
-  
+
   &__container
     display: flex
     padding-right: 0
     padding-left: 0
     height: 70px
-  
+
   &__logo
     display: flex
     align-items: center
     justify-content: center
     flex: 0 0 142px
     max-width: 142px
+    font-size: 0
     margin-right: 30px
     border-right: 1px solid rgba($colorWhite, 0.15)
-
+    transition: color .25s $ease
+    &:hover
+      color: rgba($colorWhite, .5)
     .ico-mono-logo
-      width: 82px
-      height: 30px
-  
+      transform: translateY(2px)
+      font-size: 30px
+
   &__primary-menu
     margin: 0
 
@@ -32,15 +35,19 @@
       padding-top: 25px
       height: 100%
       font-size: 13px
+      font-weight: 700
       text-transform: uppercase
 
-    .primary-menu__link.is-active:after
-      background-color: $colorWhite
-  
+    .primary-menu__link
+      &:hover
+        color: rgba($colorWhite, .5)
+      &.is-active:after
+        background-color: $colorWhite
+
   &__actions
     display: flex
     margin-left: auto
-  
+
   &__action
     display: flex
     align-items: center
@@ -48,7 +55,6 @@
     flex-shrink: 0
     width: 70px
     border-left: 1px solid rgba($colorWhite, 0.15)
-
     .ico
       width: 20px
       height: 20px

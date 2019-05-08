@@ -8,7 +8,7 @@
     },
     init: function() {
       // config
-      Barba.Pjax.Dom.containerClass = 'page';
+      Barba.Pjax.Dom.containerClass = 'page-body';
       this.data = this.data || {};
       this.data.transitionInitElement = '';
 

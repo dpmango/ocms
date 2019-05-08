@@ -31,7 +31,6 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
     };
 
     app.refresh = function() {
-      APP.Components.Header.closeMobileMenu(true);
       app.initPlugins(true);
       app.initComponents(true);
     };
@@ -78,8 +77,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
 
     // All components from `src/componenets`
     app.initComponents = function(fromPjax) {
-      APP.Components.Header.init(fromPjax);
-      APP.Components.Test.init();
+      APP.Components.Header.init();
     };
 
     return app;
