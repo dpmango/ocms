@@ -1,0 +1,41 @@
+.main-header
+  flex-shrink: 0
+  margin-top: 50px
+  border-bottom: 1px solid $borderColor
+  transition: margin .25s $ease
+
+  &__info
+    display: flex
+    align-items: center
+    margin-bottom: 21px
+
+  &__heading
+    flex: 1 1 auto
+    margin: 0
+
+  &__actions
+    flex: 0 0 auto
+    margin-left: 30px
+
+  &__link
+    // TODO - второй повтор по коду (главная ссылка со стрелкой)
+    color: $colorLight
+    display: flex
+    align-items: center
+    span
+      display: inline-block
+      margin-left: 0.5em
+    .ico
+      font-size: 10px
+      transition: transform .25s $ease
+    &:hover
+      .ico
+        transform: translate(-9px, 0px)
+
+
+  &__primary-menu
+    flex: 1 1 auto
+    margin: 0 0 -1px
+
+  &.is-scrolled
+    margin-top: 21px

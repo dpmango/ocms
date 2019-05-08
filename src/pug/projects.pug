@@ -3,23 +3,20 @@ title: Проекты
 login: true
 ---
 extends shared/_layout
+include ../components/mainHeader/_mainHeader
+include ../components/mainFooter/_mainFooter
+
 block content
-  
+
   .page-main.page-body__main
-    .main-header._header
-      ._container.container
+    +mainHeader("Проекты")
 
-        ._info
-          h1._heading Проекты
-
-          ._actions
-    
     .main-body._body
       .main-content._content
         ._container.container
           ._list
 
-            // start project card 
+            // start project card
             .project-card._project-card
               ._content
                 ._inner
@@ -39,12 +36,12 @@ block content
 
               ._info
                 ._date
-                  span._label Изменено: 
+                  span._label Изменено:
                   | 21.03.2019, 16:15
                 a.btn.btn-outline._btn(href='#' title='Перейти к проекту') Перейти к проекту
-            // end project card 
+            // end project card
 
-            // start project card 
+            // start project card
             .project-card._project-card
               ._content
                 ._inner
@@ -63,12 +60,12 @@ block content
 
               ._info
                 ._date
-                  span._label Изменено: 
+                  span._label Изменено:
                   | 18.03.2019, 15:36
                 a.btn.btn-outline._btn(href='#' title='Перейти к проекту') Перейти к проекту
-            // end project card 
+            // end project card
 
-            // start project card 
+            // start project card
             .project-card._project-card
               ._content
                 ._inner
@@ -87,12 +84,12 @@ block content
 
               ._info
                 ._date
-                  span._label Изменено: 
+                  span._label Изменено:
                   | 16.03.2019, 10:02
                 a.btn.btn-outline._btn(href='#' title='Перейти к проекту') Перейти к проекту
-            // end project card 
+            // end project card
 
-            // start project card 
+            // start project card
             .project-card._project-card
               ._content
                 ._inner
@@ -112,11 +109,11 @@ block content
 
               ._info
                 ._date
-                  span._label Изменено: 
+                  span._label Изменено:
                   | 21.03.2019, 16:15
                 a.btn.btn-outline._btn(href='#' title='Перейти к проекту') Перейти к проекту
-            // end project card 
-          
+            // end project card
+
           .content-pagenav._pagenav
             ._list
               a._link(href='#' title='') 1

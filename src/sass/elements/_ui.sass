@@ -31,7 +31,7 @@
     display: flex
     align-items: flex-start
 
-    > label
+    > label:not(.ui-input__validation)
       flex: 0 0 150px
       max-width: 150px
       margin-bottom: 0
@@ -72,7 +72,7 @@
     border-color: $colorLight
 
 
-.ui-input textarea
+textarea.ui-input
   resize: vertical
 
 .ui-input__validation
@@ -82,6 +82,10 @@
   margin-top: .5em
   margin-bottom: -.7em
 
+.required
+  color: $colorDanger
+  font-style: normal
+  margin-left: .27em
 
 /* Checkbox/radio
 .ui-checkbox, .ui-radio

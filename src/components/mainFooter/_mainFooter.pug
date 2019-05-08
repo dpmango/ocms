@@ -1,0 +1,8 @@
+mixin mainFooter(btnText, returnLink)
+  .main-footer(js-min-footer-onscroll)
+    .main-footer__container.container
+      if returnLink
+        a.main-footer__return(href=returnLink.url title=returnLink.name)
+          +svgMono("arrow-left")
+          span Вернуться к шагу «Паспорт»
+      button.btn.btn-primary.main-footer__btn(type="submit")= btnText

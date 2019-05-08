@@ -7,6 +7,12 @@ This package intended to solve common front-end development tasks. Works best fo
 * `gulp build` - build project from sources
 * `yarn deploy` or `npm run deploy` - run build and deploy to surge
 
+
+## TODO
+- [ ] Страница прыгает при переходах ajax
+- [ ] Убрать мысорные классы
+
+
 ## List of Gulp tasks
 To run separate task type in command line `gulp [task_name]`.
 Almost all tasks also have watch mode - `gulp [task_name]:watch`, but you don't need to use it directly.

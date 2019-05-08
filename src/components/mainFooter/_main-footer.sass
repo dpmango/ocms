@@ -1,0 +1,30 @@
+
+.main-footer
+  padding: 30px 0
+  flex-shrink: 0
+  border-top: 1px solid $borderColor
+  transition: padding .25s $ease
+
+  &__container
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &__return
+    color: $colorLight
+    display: flex
+    align-items: center
+    span
+      display: inline-block
+      margin-left: 0.5em
+    .ico
+      font-size: 10px
+      transition: transform .25s $ease
+    &:hover
+      .ico
+        transform: translate(-9px, 0px)
+  &__btn
+    margin-left: auto
+
+  &.is-scrolled
+    padding: 15px 0

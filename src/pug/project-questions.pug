@@ -3,43 +3,32 @@ title: Вопросы и ответы
 login: true
 ---
 extends shared/_layout
+include ../components/mainHeader/_mainHeader
+include ../components/mainFooter/_mainFooter
+
 block content
-  
+
   .page-main.page-body__main
-    .main-header._header
-      ._container.container
+    -
+      var menu = [
+        {url: 'project-add.html', name: 'О проекте', active: true},
+        {url: 'project-passport.html', name: 'Паспорт', active: true},
+        {url: 'project-roles.html', name: 'Сотрудники', active: true},
+        {url: 'project-questions.html', name: 'Вопросы и ответы', active: true},
+        {url: 'project-tasks.html', name: 'Задачи', active: true},
+        {url: 'project-comments.html', name: 'Комментарии', active: true},
+        {url: 'project-access.html', name: 'Права', active: true},
+      ]
 
-        ._info
-          h1._heading Интернет-магазин Спортмастер
+    +mainHeader("Создание проекта", true, menu)
 
-          ._actions
-            a._link(href='projects.html' title='Вернуться к списку проектов')
-              i.ico.ico-mono-chevron-left
-              | Вернуться к списку проектов
-      
-        ul.primary-menu._primary-menu
-          li._item
-            a._link(href='project-add.html' title='О проекте') О проекте
-          li._item
-            a._link(href='project-passport.html' title='Паспорт') Паспорт
-          li._item
-            a._link(href='project-roles.html' title='Сотрудники') Сотрудники
-          li._item
-            a._link.is-active(href='project-questions.html' title='Вопросы и ответы') Вопросы и ответы
-          li._item
-            a._link(href='project-tasks.html' title='Задачи') Задачи
-          li._item
-            a._link(href='project-comments.html' title='Комментарии') Комментарии
-          li._item
-            a._link(href='project-access.html' title='Права') Права
-    
     form.main-body._body(action='/' method='post')
       .main-content._content
         ._container.container
           ._inner
 
-            
 
-      .main-footer._footer
-        ._container.container
-          button.btn.btn-primary._btn К следующему шагу
+      +mainFooter("К следующему шагу", {
+        url: 'project-roles.html',
+        name: 'Вернуться к шагу «Сотрудники»'
+      })

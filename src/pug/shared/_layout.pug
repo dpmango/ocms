@@ -10,14 +10,14 @@ html(lang="en")
       if login
         block header
           include ../../components/header/_header
-    
+
       // what should be changed with every pjax
       .page-body._body(class=outClass)
         block content
 
-      if login
-        block footer
-          include ../../components/footer/_footer
-          
+        if login
+          block footer
+            include ../../components/footer/_footer
+
       block scripts
         include _scripts
