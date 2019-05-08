@@ -38,8 +38,31 @@ block content
         ._container.container
           ._inner
 
+            .content-grid._grid
+              ._inner
+                ._column
+                  .tile._tile
+                    button.btn-delete._btn-delete(type='button' title='Удалить')
+                      +svgMono('delete')
+                    h3._heading Андрей Логвинов
+                    ._select
+                      span._label Доступ:
+                      span._selected Редактирование
+                
+                ._column
+                  .tile._tile
+                    button.btn-delete._btn-delete(type='button' title='Удалить')
+                      +svgMono('delete')
+                    h3._heading Константин Константинопольский
+                    ._select
+                      span._label Доступ:
+                      span._selected Чтение
+                
+                ._column
+                  .tile.-add._tile Добавить нового пользователя
             
 
       .main-footer._footer
         ._container.container
+          a._return(href='project-comments.html' title='Вернуться к шагу «Комментарии»') Вернуться к шагу «Комментарии»
           button.btn.btn-primary._btn Сохранить

@@ -8,11 +8,13 @@ button
     outline: none
 
 .btn
+  padding: 12px 19px
   display: inline-block
   position: relative
   text-align: center
   cursor: pointer
   transition: all $transitionSpeed $ease
+  border-radius: 4px
   &:focus, &:active
     outline: none
   &--block
@@ -20,12 +22,15 @@ button
     width: 100%
   
   &-primary
-    padding: 12px 19px
     color: $colorWhite
     background: $colorPrimary
-    border-radius: 4px
     &:hover
       background: rgba($colorPrimary, .9)
+  
+  &-outline
+    color: $colorPrimary
+    border: 1px solid $colorPrimary
+    background-color: transparent
 
   &-example
     // please use paddings instead of line-height to control btn height
@@ -41,3 +46,14 @@ button
       transform: scale(1.05) translateY(-5px)
       background: rgba($colorPrimary, .9)
       box-shadow: 0 15px 10px -15px rgba($fontColor, .4)
+
+
+.btn-delete
+  width: 16px
+  height: 16px
+  color: $colorIcon
+  border: 0
+  background-color: transparent
+
+  &:hover
+    color: $colorDanger

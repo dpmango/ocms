@@ -38,8 +38,43 @@ block content
         ._container.container
           ._inner
 
+            .content-info._info
+              h2._heading Не всем ролям назначены сотрудники
+              ._content
+                span._label Осталось распределить:
+                ul.tags._tags
+                  li._item Коммерческий директор
+                  li._item Проект-менеджер
+            
+            .content-grid._grid
+              ._inner
+                ._column
+                  .tile._tile
+                    button.btn-delete._btn-delete(type='button' title='Удалить')
+                      +svgMono('delete')
+                    h3._heading Дизайнер
+                    p._caption Евгений Гришковец
+                
+                ._column
+                  .tile._tile
+                    button.btn-delete._btn-delete(type='button' title='Удалить')
+                      +svgMono('delete')
+                    h3._heading Программист
+                    p._caption Введите имя сотрудника
+                
+                ._column
+                  .tile._tile
+                    button.btn-delete._btn-delete(type='button' title='Удалить')
+                      +svgMono('delete')
+                    h3._heading Выберите роль
+                    p._caption Введите имя сотрудника
+                
+                ._column
+                  .tile.-add._tile Добавить нового сотрудника
+                    
             
 
       .main-footer._footer
         ._container.container
+          a._return(href='project-passport.html' title='Вернуться к шагу «Паспорт»') Вернуться к шагу «Паспорт»
           button.btn.btn-primary._btn К следующему шагу

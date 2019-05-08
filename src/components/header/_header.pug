@@ -5,7 +5,17 @@
     a._logo(href='homepage.html' title='')
       +svgMono('logo')
 
-    ._menu
+    ul.primary-menu._primary-menu
+      li._item
+        a._link.is-active(href='homepage.html' title='Общие сведения') Рабочий стол
+      li._item
+        a._link(href='projects.html' title='Проекты') Проекты
+      li._item
+        a._link(href='forms.html' title='Анкеты') Анкеты
 
     ._actions
+      a._action(href='#' title='')
+        +svgMono('user-add')
+      a._action(href='#' title='')
+        +svgMono('logout')
 // PAGE-HEADER :: END

@@ -36,10 +36,55 @@ block content
     form.main-body._body(action='/' method='post')
       .main-content._content
         ._container.container
-          ._inner
+          
+          .content-comments._comments
+            ._list
 
-            
+              // start comment-card 
+              .comment-card._comment-card
+                ._header
+                  ._title Алексей Чурков
+                  span._label Спортмастер
+                p._caption Если выстроить в ряд случаи инверсий у Державина, то генеративная поэтика вращает абстракционизм.
+                span._date 15.04.2019, 12:12
+              // end comment-card 
+
+              // start comment-card 
+              .comment-card._comment-card
+                ._header
+                  ._title Алевтина Китова
+                  span._label YAMI YAMI
+                p._caption Диалектический характер неумеренно отталкивает апериодический угол курса.
+                span._date 15.04.2019, 12:12
+              // end comment-card 
+
+              // start comment-card 
+              .comment-card._comment-card
+                ._header
+                  ._title Алексей Чурков
+                  span._label Спортмастер
+                p._caption Если выстроить в ряд случаи инверсий у Державина, то генеративная поэтика вращает абстракционизм.
+                span._date 15.04.2019, 12:12
+              // end comment-card 
+
+              // start comment-card 
+              .comment-card._comment-card
+                ._header
+                  ._title Алевтина Китова
+                  span._label YAMI YAMI
+                p._caption Диалектический характер неумеренно отталкивает апериодический угол курса.
+                span._date 15.04.2019, 12:12
+              // end comment-card 
+
+            ._add
+              form._form(action='#' method='post')
+                .ui-group
+                    textarea.ui-input._input(rows='6' name='' placeholder='Напишите свой комментарий...')
+
+                button.btn.btn-outline Отправить
+
 
       .main-footer._footer
         ._container.container
+          a._return(href='project-tasks.html' title='Вернуться к шагу «Задачи»') Вернуться к шагу «Задачи»
           button.btn.btn-primary._btn К следующему шагу
