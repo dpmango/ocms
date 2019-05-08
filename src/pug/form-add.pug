@@ -3,30 +3,14 @@ title: Создание анкеты
 login: true
 ---
 extends shared/_layout
+include ../components/mainHeader/_mainHeader
+include ../components/mainFooter/_mainFooter
+
 block content
-  
+
   .page-main.page-body__main
-    .main-header._header
-      ._container.container
+    +mainHeader("Создание анкеты", 2, 2)
 
-        ._info
-          h1._heading Создание анкеты
-
-          ._actions
-            a._link(href='forms.html' title='Вернуться к списку анкет')
-              i.ico.ico-mono-chevron-left
-              | Вернуться к списку анкет
-      
-        ul.primary-menu._primary-menu
-          li._item
-            a._link.is-active(href='form-add.html' title='Общие сведения') Общие сведения
-          li._item
-            a._link(href='form-passport.html' title='Паспорт') Паспорт
-          li._item
-            a._link(href='form-roles.html' title='Роли') Роли
-          li._item
-            a._link(href='form-questions.html' title='Вопросы и ответы') Вопросы и ответы
-    
     form.main-body._body(action='/' method='post')
       .main-content._content
         ._container.container
@@ -34,30 +18,28 @@ block content
 
             .content-form._form
               .ui-group.-inline
-                label._label Название 
+                label._label Название
                   i.required *
                 ._content
                   input.ui-input._input(type='text')
-              
+
               .ui-group.-inline
                 label._label Описание
                 ._content
                   textarea.ui-input._input(rows='6')
-              
+
               .ui-group.-inline
-                label._label Тип анкеты 
+                label._label Тип анкеты
                   i.required *
                 ._content
                   .ui-radio._item
                     input#private(type='radio' name='type' checked)
                     label(for='private')
                       span Приватная (доступная только вашей организации)
-                  
+
                   .ui-radio._item
                     input#public(type='radio' name='type')
                     label(for='public')
                       span Публичная (доступна всем)
 
-      .main-footer._footer
-        ._container.container
-          button.btn.btn-primary._btn К следующему шагу
+      +mainFooter("К следующему шагу")

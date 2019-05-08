@@ -1,5 +1,5 @@
 ---
-title: Задачи
+title: Пасспорт
 login: true
 ---
 extends shared/_layout
@@ -9,7 +9,7 @@ include ../components/mainFooter/_mainFooter
 block content
 
   .page-main.page-body__main
-    +mainHeader("Создание проекта", true, 1)
+    +mainHeader("Создание анкеты", 2, 2)
 
     form.main-body._body(action='/' method='post')
       .main-content._content
@@ -17,7 +17,8 @@ block content
           ._inner
 
 
+
       +mainFooter("К следующему шагу", {
-        url: 'project-questions.html',
-        name: 'Вернуться к шагу «Вопросы и ответы»'
+        url: 'form-add.html',
+        name: 'Вернуться к шагу «Общие сведения»'
       })
