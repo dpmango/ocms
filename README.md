@@ -11,7 +11,7 @@ This package intended to solve common front-end development tasks. Works best fo
 ## TODO
 - [ ] Страница прыгает при переходах ajax
 - [ ] Убрать мысорные классы
-
+- [ ] Модальные
 
 ## List of Gulp tasks
 To run separate task type in command line `gulp [task_name]`.
