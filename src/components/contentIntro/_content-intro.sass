@@ -1,6 +1,7 @@
 
 .content-intro
   display: flex
+  flex-wrap: wrap
   margin-left: -13px
   margin-right: -13px
 
@@ -31,3 +32,11 @@
   &__steps-list
     margin: 0
     max-width: 450px
+
++r($lg)
+  .content-intro
+    &__content, &__info
+      flex-basis: 100%
+      max-width: 100%
+    &__info
+      margin-top: 40px
