@@ -1,4 +1,4 @@
-ProjectTitle: Project-name
+ProjectTitle: OCMS
 
 PageList:
 - file: homepage.html
@@ -20,13 +20,13 @@ PageList:
 - file: project-comments.html
   ready: 75
 - file: project-questions.html
-  ready: 0
+  ready: 10
 - file: project-roles.html
   ready: 60
 - file: projects.html
   ready: 75
 - file: project-tasks.html
-  ready: 0
+  ready: 10
 - file: forms.html
   ready: 75
 - file: form-add.html
