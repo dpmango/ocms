@@ -5,46 +5,11 @@ login: true
 ---
 extends shared/_layout
 block content
-  
+
   .page-main.page-body__main
-    .main-body._body
-      .main-content._content
-        ._container.container
-          ._inner
+    .main-body.page-main__body
+      .main-content.main-body__content
+        .main-content__container.container
+          .main-content__inner
 
-            .content-intro._intro
-              ._content
-                h1._heading OCMS — сервис для быстрого создания проектов и задач
-                
-                .stats-info._stats-info
-                  ._item
-                    span._value 14
-                    p._caption проектов открыто
-                    a._link(href='#' title='Создать проект') Создать проект
-                  ._item
-                    span._value 4
-                    p._caption анкеты созданы, из них 2 публичные
-                    a._link(href='#' title='Создать анкету') Создать анкету
-
-              ._info
-                ul.steps-list._steps-list
-                  li._item
-                    span._icon
-                      +svgMono('plus')
-                    p._title Создавайте анкеты, состоящие из дерева вопросов
-                  li._item
-                    span._icon
-                      +svgMono('lock')
-                    p._title Добавляйте публичные анкеты, доступные всем, либо приватные, доступные только Вам
-                  li._item
-                    span._icon
-                      +svgMono('folder')
-                    p._title Создавайте проекты на основе имеющихся анкет
-                  li._item
-                    span._icon
-                      +svgMono('figure')
-                    p._title Назначайте ответственных, следите за списком задач
-                  li._item
-                    span._icon
-                      +svgMono('share')
-                    p._title Делитесь Вашими проектами, предоставляя доступ на чтение либо полный доступ
+            include ../components/contentIntro/_intro

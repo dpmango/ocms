@@ -1,0 +1,41 @@
+
+.stats-info
+  display: flex
+  flex-wrap: wrap
+  margin-left: -13px
+  margin-right: -13px
+
+  &__item
+    display: flex
+    align-items: flex-start
+    flex-direction: column
+    flex: 0 0 $col4
+    max-width: $col4
+    min-width: 1px
+    min-height: 0
+    padding-left: 13px
+    padding-right: 13px
+
+    &:last-child
+      margin-right: 0
+
+  &__value
+    margin: 0 0 5px
+    color: $colorPrimary
+    font-size: 48px
+    font-weight: 700
+    line-height: 1
+
+  &__caption
+    margin: 0 0 17px
+
+  &__link
+    margin-top: auto
+    color: $colorPrimary
+    font-weight: 700
+    display: flex
+    align-items: center
+    span
+      margin-right: .5em
+    .ico
+      font-size: 9px

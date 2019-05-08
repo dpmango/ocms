@@ -1,0 +1,43 @@
+// CONTENT INTRO
+.content-intro.main-content__intro
+  .content-intro__content
+    h1.content-intro__heading OCMS&nbsp;&mdash; сервис <br/> для быстрого создания проектов и&nbsp;задач
+
+    // stats info
+    .stats-info.content-intro__stats-info
+      ._item
+        span._value 14
+        p._caption проектов открыто
+        a._link(href='#' title='Создать проект')
+          span Создать проект
+          +svgMono('arrow-right')
+      ._item
+        span._value 4
+        p._caption анкеты созданы, из&nbsp;них 2&nbsp;публичные
+        a._link(href='#' title='Создать анкету')
+          span Создать анкету
+          +svgMono('arrow-right')
+
+  .content-intro__info
+    // steps list
+    ul.steps-list.content-intro__steps-list
+      li._item
+        span._icon
+          +svgMono('plus')
+        p._title Создавайте анкеты, состоящие из дерева вопросов
+      li._item
+        span._icon
+          +svgMono('lock')
+        p._title Добавляйте публичные анкеты, доступные всем, либо приватные, доступные только Вам
+      li._item
+        span._icon
+          +svgMono('folder')
+        p._title Создавайте проекты на основе имеющихся анкет
+      li._item
+        span._icon
+          +svgMono('figure')
+        p._title Назначайте ответственных, следите за списком задач
+      li._item
+        span._icon
+          +svgMono('share')
+        p._title Делитесь Вашими проектами, предоставляя доступ на чтение либо полный доступ

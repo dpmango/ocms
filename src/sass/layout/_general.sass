@@ -20,7 +20,7 @@ body, html
   // font-family: "Helvetica", -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Ubuntu', 'Cantarell', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
   font-size: 14px
   line-height: 1.57
-  min-width: 320px
+  min-width: 768px
   max-width: 100%
   margin: 0
   overflow: hidden
@@ -52,7 +52,7 @@ body, html
 
   &__header, &__footer
     flex-shrink: 0
-  
+
   &__body
     flex: 1 1 auto
 
@@ -90,7 +90,7 @@ body, html
     flex-shrink: 0
     margin-top: 50px
     border-bottom: 1px solid $borderColor
-  
+
   &__body
     flex: 1 1 auto
     min-height: 0
@@ -105,14 +105,14 @@ body, html
   &__heading
     flex: 1 1 auto
     margin: 0
-  
+
   &__actions
     flex: 0 0 auto
     margin-left: 30px
-  
+
   &__link
     color: $colorLight
-  
+
   &__primary-menu
     flex: 1 1 auto
     margin: 0 0 -1px
@@ -125,7 +125,7 @@ body, html
   &__content
     flex: 1 1 auto
     min-height: 0
-  
+
   &__footer
     flex-shrink: 0
     border-top: 1px solid $borderColor
@@ -142,15 +142,17 @@ body, html
 
   &__inner
     padding: 30px 0
+    margin-top: auto
+    margin-bottom: auto
 
   &__form
     max-width: 640px
-  
+
   &__guest
     margin-left: auto
     margin-right: auto
     max-width: 500px
-  
+
   &__fieldset
     margin: 0
     padding: 0
@@ -166,24 +168,24 @@ body, html
     .main-content__form
       flex: 1 1 auto
       max-width: 410px
-  
+
   &__legend
     flex: 0 0 330px
     font-size: 18px
     font-weight: 700
-  
+
   &__intro
     padding: 20px 0
-  
+
   &__project-card
     border-bottom: 1px solid $borderColor
-  
+
   &__info
     margin-bottom: 30px
-  
+
   &__comments
     flex: 1 1 auto
-  
+
   &__pagenav
     margin-top: 30px
 
@@ -195,10 +197,10 @@ body, html
     display: flex
     align-items: center
     justify-content: space-between
-  
+
   &__return
     color: $colorLight
-  
+
   &__btn
     margin-left: auto
 
@@ -207,87 +209,96 @@ body, html
   &__header
     margin-bottom: 10px
     padding-left: 30px
-  
+
   &__logo
     .ico
       width: 83px
       height: 30px
       fill: $colorPrimary
-  
+
   &__body
     padding: 30px
     border: 1px solid $borderColor
-  
+
   &__heading
     margin: 0 0 10px
     font-size: 18px
-  
+
   &__form
     margin-top: 20px
-  
+
   &__caption
     margin: 0 0 20px
 
   &__ui-group
     margin-bottom: 25px
-  
+
   &__forgot
     color: $colorLight
-  
+
   &__footer
     margin-top: 25px
     font-size: 16px
     text-align: center
-  
+
   &__link
     color: $colorPrimary
 
 
-.content-intro
-  display: flex
+// .content-intro
+//   display: flex
+//   margin-left: -13px
+//   margin-right: -13px
 
-  &__content
-    display: flex
-    flex-direction: column
-    flex: 1 1 50%
-    max-width: 50%
-  
-  &__heading
-    margin: 0 0 25px
-    max-width: 480px
-    font-size: 36px
-  
-  &__stats-info
-    margin-top: auto
-  
-  &__info
-    flex: 1 1 50%
-    max-width: 50%
-    padding-top: 10px
-    
-  &__steps-list
-    margin: 0
-    max-width: 450px
+//   &__content, &__info
+//     width: 100%
+//     min-width: 1px
+//     min-height: 0px
+//     padding-left: 13px
+//     padding-right: 13px
+
+//   &__content
+//     display: flex
+//     flex-direction: column
+//     flex: 0 0 50%
+//     max-width: 50%
+
+//   &__heading
+//     margin: 0 0 25px
+//     max-width: 480px
+//     font-size: 36px
+
+//   &__stats-info
+//     margin-top: auto
+
+//   &__info
+//     flex: 0 0 50%
+//     max-width: 50%
+//     padding-top: 10px
+
+//   &__steps-list
+//     margin: 0
+//     max-width: 450px
 
 
-.content-info
-  padding: 16px 0 16px 25px
-  border-left: 4px solid #A0B1BB
+// .content-info
+//   padding: 16px 0 16px 25px
+//   border-left: 4px solid #A0B1BB
 
-  &__heading
-    margin: 0 0 13px
-    font-size: 16px
-  
-  &__content
-    display: flex
-  
-  &__label
-    flex-shrink: 0
-    margin-right: 7px
-    white-space: nowrap
-  
-  &__tags
-    margin: 0
+//   &__heading
+//     margin: 0 0 13px
+//     font-size: 16px
+
+//   &__content
+//     display: flex
+
+//   &__label
+//     flex-shrink: 0
+//     margin-right: 7px
+//     white-space: nowrap
+
+//   &__tags
+//     margin: 0
 
 
 .content-grid
@@ -295,7 +306,7 @@ body, html
     display: flex
     flex-wrap: wrap
     margin: 0 -13px -25px
-  
+
   &__column
     flex: 1 1 20%
     max-width: 20%
@@ -313,7 +324,7 @@ body, html
     max-width: 50%
     padding: 30px 30px 30px 0
     border-right: 1px solid $borderColor
-  
+
   &__comment-card
     margin-bottom: 24px
     padding-bottom: 24px
@@ -323,7 +334,7 @@ body, html
       margin-bottom: 0
       padding-bottom: 0
       border-bottom: 0
-  
+
   &__add
     flex: 1 1 50%
     max-width: 50%
@@ -337,7 +348,7 @@ body, html
     display: flex
     border: 1px solid $borderColor
     border-radius: 4px
-  
+
   &__link
     display: flex
     align-items: center
@@ -365,7 +376,7 @@ body, html
 
     &:last-child
       margin-right: 0
-  
+
   &__link
     position: relative
     display: block
@@ -382,7 +393,7 @@ body, html
         width: 100%
         height: 4px
         background-color: $colorPrimary
-  
+
   &__count
     margin-left: 10px
     padding: 5px 4px 3px
@@ -398,65 +409,65 @@ body, html
     border-radius: 4px
 
 
-.stats-info
-  display: flex
+// .stats-info
+//   display: flex
 
-  &__item
-    display: flex
-    align-items: flex-start
-    flex-direction: column
-    margin-right: 110px
-    max-width: 130px
+//   &__item
+//     display: flex
+//     align-items: flex-start
+//     flex-direction: column
+//     margin-right: 110px
+//     max-width: 130px
 
-    &:last-child
-      margin-right: 0
-  
-  &__value
-    margin: 0 0 10px
-    color: $colorPrimary
-    font-size: 48px
-    font-weight: 700
-    line-height: 1
-  
-  &__caption
-    margin: 0 0 17px
-  
-  &__link
-    margin-top: auto
-    color: $colorPrimary
-    font-weight: 700
+//     &:last-child
+//       margin-right: 0
+
+//   &__value
+//     margin: 0 0 10px
+//     color: $colorPrimary
+//     font-size: 48px
+//     font-weight: 700
+//     line-height: 1
+
+//   &__caption
+//     margin: 0 0 17px
+
+//   &__link
+//     margin-top: auto
+//     color: $colorPrimary
+//     font-weight: 700
 
 
-.steps-list
-  padding: 0
-  font-size: 16px
-  list-style: none
+// .steps-list
+//   padding: 0
+//   font-size: 16px
+//   list-style: none
 
-  &__item
-    display: flex
-    align-items: center
-    margin-bottom: 20px
+//   &__item
+//     display: flex
+//     align-items: center
+//     margin-bottom: 20px
 
-    &:last-child
-      margin-bottom: 0
-  
-  &__icon
-    display: flex
-    align-items: center
-    justify-content: center
-    flex-shrink: 0
-    margin-right: 30px
-    width: 60px
-    height: 60px
-    border: 1px solid $borderColor
-    border-radius: 50%
+//     &:last-child
+//       margin-bottom: 0
 
-    .ico
-      width: 20px
-      height: 20px
-  
-  &__title
-    flex: 1 1 auto
+//   &__icon
+//     display: flex
+//     align-items: center
+//     justify-content: center
+//     flex-shrink: 0
+//     margin-right: 30px
+//     width: 60px
+//     height: 60px
+//     border: 1px solid $borderColor
+//     border-radius: 50%
+
+//     .ico
+//       width: 20px
+//       height: 20px
+
+//   &__title
+//     flex: 1 1 auto
 
 
 .project-card
@@ -486,39 +497,39 @@ body, html
   &__content
     flex: 1 1 auto
     padding-right: 30px
-  
+
   &__inner
     max-width: 640px
-  
+
   &__heading
     margin: 0 15px 10px 0
     display: inline-block
     font-size: 18px
-  
+
   &__tags
     position: relative
     top: -2px
     margin: 0
-  
+
   &__caption
     margin: 0 0 10px
-  
+
   &__properties
     display: flex
     flex-wrap: wrap
-  
+
   &__property
     margin-right: 30px
-  
+
   &__info
     display: flex
     align-items: center
     flex: 0 0 auto
-  
+
   &__date
     margin-right: 30px
     white-space: nowrap
-  
+
   &__label
     color: $colorLight
 
@@ -528,14 +539,14 @@ body, html
     display: flex
     flex-wrap: wrap
     margin-bottom: 8px
-  
+
   &__title
     margin: 0 7px 0 0
     font-weight: 700
-  
+
   &__caption
     margin: 0 0 7px
-  
+
   &__date
     color: $colorLight
     font-size: 12px
@@ -554,7 +565,7 @@ body, html
 
     &:last-child
       border-right: 0
-    
+
     &--complete
       background-color: $colorPrimary
 
@@ -607,7 +618,7 @@ body, html
 
     .tile__btn-delete
       display: block
-  
+
   &--add
     display: flex
     flex-direction: column
@@ -632,7 +643,7 @@ body, html
       line-height: 32px
       background-color: $colorPrimary
       border-radius: 50%
-  
+
   &__btn-delete
     position: absolute
     top: 10px
@@ -641,16 +652,16 @@ body, html
 
   &__heading
     margin: 0 0 9px
-  
+
   &__caption
     margin: auto 0 0
-  
+
   &__select
     margin-top: auto
-  
+
   &__label
     margin-right: 7px
-  
+
   &__selected
     color: $colorLight
     cursor: pointer
