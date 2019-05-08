@@ -5,7 +5,7 @@ login: true
 extends shared/_layout
 block content
 
-  .page-main.page-body__main
+  .page-main
     .main-header._header
       ._container.container
 
@@ -25,8 +25,8 @@ block content
             a._link(href='#' title='Публичные анкеты') Публичные анкеты
               span._count 5
 
-    .main-body._body
-      .main-content._content(js-main-content-scroller)
+    .main-body
+      .main-content(js-main-content-scroller)
         ._container.container
           ._list
 

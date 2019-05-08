@@ -5,114 +5,55 @@ login: true
 extends shared/_layout
 include ../components/mainHeader/_mainHeader
 include ../components/mainFooter/_mainFooter
+include ../components/projectCard/_projectCard
 
 block content
 
-  .page-main.page-body__main
-    +mainHeader("Проекты")
+  .page-main
+    +mainHeader("Проекты", false, false)
 
-    .main-body._body
-      .main-content._content(js-main-content-scroller)
+    .main-body
+      .main-content(js-main-content-scroller)
         ._container.container
           ._list
+            -
+              var cards = [
+                {
+                  name: "Проектирование интерфейса личного кабинета",
+                  caption: 'Пуантилизм, зародившийся в музыкальных микроформах начала ХХ столетия, нашел далекую историческую параллель в лице средневекового гокета.',
+                  company: 'Азбука Вкуса',
+                  access: 'full',
+                  progress: 1,
+                  date: '21.03.2019, 16:15'
+                },
+                {
+                  name: "Создание брендбука",
+                  caption: '',
+                  company: 'Спортмастер',
+                  access: 'limited',
+                  progress: 4,
+                  date: '18.03.2019, 15:36'
+                },
+                {
+                  name: "Концепция сайта для тендера",
+                  caption: '',
+                  company: 'YAMI YAMI',
+                  access: 'full',
+                  progress: 2,
+                  date: '16.03.2019, 10:02'
+                },
+                {
+                  name: "Подключение к CRM-системе Tillypad",
+                  caption: 'Панладовая система регрессийно символизирует доиндустриальный тип политической культуры.',
+                  company: 'Азбука Вкуса',
+                  access: 'limited',
+                  progress: 1,
+                  date: '14.03.2019, 16:15'
+                }
+              ]
 
-            // start project card
-            .project-card._project-card
-              ._content
-                ._inner
-                  ._header
-                    h2._heading
-                      a._link(href='#' title='') Проектирование интерфейса личного кабинета
-                    .progress._progress
-                      ._cell.-complete
-                      ._cell
-                      ._cell
-                      ._cell
-                      ._title Прогресс проекта: 25%
-                  p._caption Пуантилизм, зародившийся в музыкальных микроформах начала ХХ столетия, нашел далекую историческую параллель в лице средневекового гокета.
-                  ._properties
-                    ._property Азбука Вкуса
-                    ._property Полный доступ
-
-              ._info
-                ._date
-                  span._label Изменено:
-                  | 21.03.2019, 16:15
-                a.btn.btn-outline._btn(href='#' title='Перейти к проекту') Перейти к проекту
-            // end project card
-
-            // start project card
-            .project-card._project-card
-              ._content
-                ._inner
-                  ._header
-                    h2._heading
-                      a._link(href='#' title='') Создание брендбука
-                    .progress._progress
-                      ._cell.-complete
-                      ._cell.-complete
-                      ._cell.-complete
-                      ._cell.-complete
-                      ._title Прогресс проекта: 100%
-                  ._properties
-                    ._property Спортмастер
-                    ._property Ограниченный доступ
-
-              ._info
-                ._date
-                  span._label Изменено:
-                  | 18.03.2019, 15:36
-                a.btn.btn-outline._btn(href='#' title='Перейти к проекту') Перейти к проекту
-            // end project card
-
-            // start project card
-            .project-card._project-card
-              ._content
-                ._inner
-                  ._header
-                    h2._heading
-                      a._link(href='#' title='') Концепция сайта для тендера
-                    .progress._progress
-                      ._cell.-complete
-                      ._cell.-complete
-                      ._cell
-                      ._cell
-                      ._title Прогресс проекта: 50%
-                  ._properties
-                    ._property YAMI YAMI
-                    ._property Ограниченный доступ
-
-              ._info
-                ._date
-                  span._label Изменено:
-                  | 16.03.2019, 10:02
-                a.btn.btn-outline._btn(href='#' title='Перейти к проекту') Перейти к проекту
-            // end project card
-
-            // start project card
-            .project-card._project-card
-              ._content
-                ._inner
-                  ._header
-                    h2._heading
-                      a._link(href='#' title='') Подключение к CRM-системе Tillypad
-                    .progress._progress
-                      ._cell.-complete
-                      ._cell
-                      ._cell
-                      ._cell
-                      ._title Прогресс проекта: 25%
-                  p._caption Панладовая система регрессийно символизирует доиндустриальный тип политической культуры.
-                  ._properties
-                    ._property Азбука Вкуса
-                    ._property Ограниченный доступ
-
-              ._info
-                ._date
-                  span._label Изменено:
-                  | 21.03.2019, 16:15
-                a.btn.btn-outline._btn(href='#' title='Перейти к проекту') Перейти к проекту
-            // end project card
+            each x, index in cards
+              +projectCard(x)
 
           .content-pagenav._pagenav
             ._list

@@ -1,0 +1,17 @@
+
+.progress
+  display: inline-flex
+  position: relative
+  height: 5px
+  background-color: #D2DBE5
+
+  &__cell
+    flex-shrink: 0
+    width: 9px
+    border-right: 1px solid white
+
+    &:last-child
+      border-right: 0
+
+    &--complete
+      background-color: $colorPrimary

@@ -8,11 +8,11 @@ include ../components/mainFooter/_mainFooter
 
 block content
 
-  .page-main.page-body__main
+  .page-main
     +mainHeader("Добавление клиента")
 
-    form.main-body._body(action='/' js-validate-form)
-      .main-content._content(js-main-content-scroller)
+    form.main-body(action='/' js-validate-form)
+      .main-content(js-main-content-scroller)
         fieldset._fieldset
           ._fields
             ._container.container

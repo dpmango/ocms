@@ -13,6 +13,9 @@ This package intended to solve common front-end development tasks. Works best fo
 - [ ] Убрать мысорные классы
 - [ ] Модальные
 
+- [ ] Projects.html - фильтр
+- [ ] projects.html - двойной скролл
+
 ## List of Gulp tasks
 To run separate task type in command line `gulp [task_name]`.
 Almost all tasks also have watch mode - `gulp [task_name]:watch`, but you don't need to use it directly.

@@ -8,12 +8,11 @@ include ../components/mainFooter/_mainFooter
 
 block content
 
-  .page-main.page-body__main
-
+  .page-main
     +mainHeader("Создание проекта", true, 1)
 
-    form.main-body._body(action='/' method='post')
-      .main-content._content(js-main-content-scroller)
+    form.main-body(action='/' method='post')
+      .main-content(js-main-content-scroller)
         ._container.container
 
           .content-comments._comments

@@ -6,13 +6,13 @@ html(lang="en")
 
   body
     // place where pjax bindings happen's
-    .page#barba-wrapper
-      if login
-        block header
-          include ../../components/header/_header
-
+    #barba-wrapper
       // what should be changed with every pjax
-      .page-body._body(class=outClass)
+      .page-body(class=outClass)
+        if login
+          block header
+            include ../../components/header/_header
+
         block content
 
         if login
