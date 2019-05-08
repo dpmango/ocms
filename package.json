@@ -11,8 +11,8 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build --production",
-    "surge": "surge --project ./dist --domain ocms-co.surge.sh",
-    "deploy": "gulp build --production && surge --project ./dist --domain ocms-co.surge.sh"
+    "surge": "surge --project ./dist --domain ocms2.surge.sh",
+    "deploy": "gulp build --production && surge --project ./dist --domain ocms2.surge.sh"
   },
   "dependencies": {
     "aos": "^2.3.4",
