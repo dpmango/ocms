@@ -29,6 +29,41 @@ mixin projectCard(obj)
         span= obj.date
       a.btn.btn-outline(href='#' title='Перейти к проекту') Перейти к проекту
 
+
+mixin pollCard(obj)
+  // poll card
+  .project-card(js-link href="homepage.html")
+    .project-card__content
+      .project-card__inner
+        .project-card__header
+          .project-card__remove(js-tooltip data-tippy-placement="right" data-tippy-content="Удалить?")
+            +svgMono("delete")
+          h2.project-card__heading= obj.name
+          ul.tags.project-card__tags
+            li.tags__item= obj.tags
+        if obj.caption
+          p.project-card__caption= obj.caption
+        .project-card__properties
+          .project-card__property
+            +svgMono("company-user")
+            span= obj.user
+          .project-card__property
+            if obj.visibility === 'public'
+              +svgMono("visibility-public")
+              span Публичная
+            if obj.visibility === 'private'
+              +svgMono("visibility-private")
+              span Приватная
+
+    .project-card__info
+      .btn.btn-square(js-dropdown) ...
+        //- .dropdown
+        //-   li
+        //-     a(href="#") Изменить
+
+      a.btn.btn-outline(href='#' title='Посмотреть') Посмотреть
+
+
 mixin progress(val)
   if val === 0
     .progress(js-tooltip data-tippy-placement="top" data-tippy-content="Прогресс проекта: 0%")

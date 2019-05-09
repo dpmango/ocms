@@ -55,13 +55,4 @@ block content
             each x, index in cards
               +projectCard(x)
 
-          .content-pagenav._pagenav
-            ._list
-              a._link(href='#' title='') 1
-              a._link(href='#' title='') 2
-              a._link.-current(href='#' title='') 3
-              a._link(href='#' title='') 4
-              a._link(href='#' title='') 5
-              a._link(href='#' title='') ...
-              a._link(href='#' title='') 12
-            //- a._next(href='#' title='Следующая страница')
+          include ../components/pagenav/_pagenav

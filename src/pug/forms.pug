@@ -3,93 +3,45 @@ title: Анкеты
 auth: false
 ---
 extends shared/_layout
+include ../components/mainHeader/_mainHeader
+include ../components/projectCard/_projectCard
+
 block content
 
   .page-main
-    .main-header._header
-      ._container.container
+    +mainHeader("Анкеты", false, 3)
 
-        ._info
-          h1._heading Анкеты
-
-          ._actions
-
-        ul.primary-menu._primary-menu
-          li._item
-            a._link.is-active(href='forms.html' title='Все анкеты') Все анкеты
-              span._count 30
-          li._item
-            a._link(href='#' title='Мои анкеты') Мои анкеты
-              span._count 25
-          li._item
-            a._link(href='#' title='Публичные анкеты') Публичные анкеты
-              span._count 5
 
     .main-body
       .main-content(js-main-content-scroller)
         ._container.container
           ._list
+            -
+              var cards = [
+                {
+                  name: "Создание брендбука",
+                  tags: '16 проектов',
+                  caption: 'Пуантилизм, зародившийся в музыкальных микроформах начала ХХ столетия, нашел далекую историческую параллель в лице средневекового гокета.',
+                  user: 'Админ',
+                  visibility: 'public'
+                },
+                {
+                  name: "Разработка интернет-магазина",
+                  tags: '12 проектов',
+                  caption: '',
+                  user: 'Антон',
+                  visibility: 'public'
+                },
+                {
+                  name: "Настройка эквайринга",
+                  tags: '5 проектов',
+                  caption: 'Пуантилизм, зародившийся в музыкальных микроформах начала ХХ столетия, нашел далекую историческую параллель в лице средневекового гокета.',
+                  user: 'Админ',
+                  visibility: 'private'
+                },
+              ]
 
-            // start project card
-            .project-card._project-card
-              ._content
-                ._inner
-                  ._header
-                    h2._heading
-                      a._link(href='#' title='') Создание брендбука
-                    ul.tags._tags
-                      li._item 16 проектов
-                  p._caption Пуантилизм, зародившийся в музыкальных микроформах начала ХХ столетия, нашел далекую историческую параллель в лице средневекового гокета.
-                  ._properties
-                    ._property Админ
-                    ._property Публичная
+            each x, index in cards
+              +pollCard(x)
 
-              ._info
-                a.btn.btn-outline._btn(href='#' title='Посмотреть') Посмотреть
-            // end project card
-
-            // start project card
-            .project-card._project-card
-              ._content
-                ._inner
-                  ._header
-                    h2._heading
-                      a._link(href='#' title='') Разработка интернет-магазина
-                    ul.tags._tags
-                      li._item 12 проектов
-                  ._properties
-                    ._property Антон
-                    ._property Публичная
-
-              ._info
-                a.btn.btn-outline._btn(href='#' title='Посмотреть') Посмотреть
-            // end project card
-
-            // start project card
-            .project-card._project-card
-              ._content
-                ._inner
-                  ._header
-                    h2._heading
-                      a._link(href='#' title='') Настройка эквайринга
-                    ul.tags._tags
-                      li._item 5 проектов
-                  p._caption Пуантилизм, зародившийся в музыкальных микроформах начала ХХ столетия, нашел далекую историческую параллель в лице средневекового гокета.
-                  ._properties
-                    ._property Антон
-                    ._property Приватная
-
-              ._info
-                a.btn.btn-outline._btn(href='#' title='Посмотреть') Посмотреть
-            // end project card
-
-          .content-pagenav._pagenav
-            ._list
-              a._link(href='#' title='') 1
-              a._link(href='#' title='') ...
-              a._link(href='#' title='') 10
-              a._link(href='#' title='') 11
-              a._link.-current(href='#' title='') 12
-              a._link(href='#' title='') 13
-              a._link(href='#' title='') 24
-            //- a._next(href='#' title='Следующая страница')
+          include ../components/pagenav/_pagenav

@@ -11,7 +11,6 @@
     },
 
     scrollHeader: function() {
-      console.log('scrollHeader');
       var $header = $('[js-min-header-onscroll]');
       var $content = $('[js-main-content-scroller]');
       if (($header.length === 0) | ($content.length === 0)) return;

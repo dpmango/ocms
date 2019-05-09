@@ -6,30 +6,35 @@ mixin mainHeader(title, hasReturn,  menuType)
         h1.main-header__heading= title
 
         .main-header__actions
-          if hasReturn === true
+          if hasReturn === 'projects'
             a.main-header__link(href='projects.html' title='Вернуться к списку проектов')
               +svgMono("arrow-left")
               span Вернуться к списку проектов
-          if hasReturn === 2
+          if hasReturn === 'forms'
             a.main-header__link(href='forms.html' title='Вернуться к списку анкет')
               +svgMono("arrow-left")
               span Вернуться к списку анкет
       -
         var menu = [
           [
-            {url: 'project-add.html', name: 'О проекте', active: true},
-            {url: 'project-passport.html', name: 'Паспорт', active: true},
-            {url: 'project-roles.html', name: 'Сотрудники', active: true},
-            {url: 'project-questions.html', name: 'Вопросы и ответы', active: true},
-            {url: 'project-tasks.html', name: 'Задачи', active: true},
-            {url: 'project-comments.html', name: 'Комментарии', active: true},
-            {url: 'project-access.html', name: 'Права', active: true},
+            {url: 'project-add.html', name: 'О проекте'},
+            {url: 'project-passport.html', name: 'Паспорт'},
+            {url: 'project-roles.html', name: 'Сотрудники'},
+            {url: 'project-questions.html', name: 'Вопросы и ответы'},
+            {url: 'project-tasks.html', name: 'Задачи'},
+            {url: 'project-comments.html', name: 'Комментарии'},
+            {url: 'project-access.html', name: 'Права'},
           ],
           [
             {url: 'form-add.html', name: 'Общие сведения'},
             {url: 'form-passport.html', name: 'Паспорт'},
             {url: 'form-roles.html', name: 'Роли'},
             {url: 'form-questions.html', name: 'Вопросы и ответы'}
+          ],
+          [
+            {url: 'forms.html', name: 'Все анкеты', count: 30},
+            {url: 'forms-my.html', name: 'Мои анкеты', count: 25},
+            {url: 'forms-public.html', name: 'Публичные анкеты', count: 5}
           ]
         ]
 
@@ -37,6 +42,8 @@ mixin mainHeader(title, hasReturn,  menuType)
 
       if menuType && targetMenu && targetMenu.length > 0
         ul.primary-menu.main-header__primary-menu
-          each element, index in targetMenu
+          each x, index in targetMenu
             li.primary-menu__item
-              a.primary-menu__link(href=element.url title=element.name)= element.name
+              a.primary-menu__link(href=x.url title=x.name)= x.name
+                if x.count
+                  span.primary-menu__count= x.count
