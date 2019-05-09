@@ -240,10 +240,28 @@ textarea.ui-input
   border-radius: 4px
 
   &__btn
+    position: relative
+    z-index: 1
     flex-shrink: 0
     width: 40px
     font-size: 22px
     background-color: white
+    transition: color .25s $ease
+    .ico
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+      &-mono-minus
+        font-size: 2px
+      &-mono-plus-simple
+        font-size: 10px
+    &:hover, &:focus, &:active
+      color: $colorPrimary
+
+  .ui-input__validation
+    position: absolute
+    bottom: -5px
 
   &__input
     flex: 1 1 auto

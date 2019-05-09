@@ -23,10 +23,12 @@ block content
 
               .ui-group.-inline
                 label(for="test_2") Число
-                .ui-counter
-                  button._btn(type='button') -
-                  input._input(type='text' value='15' name="test_2")
-                  button._btn(type='button') +
+                .ui-counter(js-ui-counter)
+                  button._btn(type='button' data-type="minus")
+                    +svgMono("minus")
+                  input._input(type='text' value='15' min="1" max="99" name="test_2")
+                  button._btn(type='button' data-type="plus")
+                    +svgMono("plus-simple")
 
               .ui-group.-inline
                 label(for="test_3") Список
