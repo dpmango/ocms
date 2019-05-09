@@ -14,10 +14,11 @@
         preloader: false,
         midClick: true,
         removalDelay: 300,
-        mainClass: 'popup-buble',
+        // mainClass: 'popup-buble',
         callbacks: {
           beforeOpen: function() {
-            startWindowScroll = _window.scrollTop();
+            // startWindowScroll = _window.scrollTop();
+            this.st.mainClass = this.st.el.attr('data-effect');
             // $('html').addClass('mfp-helper');
           },
           close: function() {

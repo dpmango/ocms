@@ -41,6 +41,35 @@ html.mfp-helper
   &.mfp-removing.mfp-bg
     opacity: 0
 
+.mfp-bg
+  background: $colorLight
+  opacity: 0.9
+
+.mfp-zoom-in
+  .mfp-with-anim
+    opacity: 0
+    transition: all 0.2s ease-in-out
+    transform: scale(0.8)
+  &.mfp-bg
+    opacity: 0
+    transition: all 0.3s ease-out
+
+  &.mfp-ready
+    .mfp-with-anim
+      opacity: 1
+      transform: scale(1)
+    &.mfp-bg
+      opacity: 0.9
+
+  /* animate out */
+  &.mfp-removing
+
+    .mfp-with-anim
+      transform: scale(0.8)
+      opacity: 0
+    &.mfp-bg
+      opacity: 0
+
 
 
 // Fade-move animation
@@ -62,3 +91,47 @@ html.mfp-helper
     opacity: 0.8
   &.mfp-removing.mfp-bg
     opacity: 0
+
+
+.popup
+  max-width: 600px
+  border-radius: 4px
+  background: #fff
+  margin: 0 auto
+  position: relative
+  box-shadow: 0 0 10px rgba(0,0,0,0.1)
+  &__head
+    padding: 40px 30px
+    border-bottom: 1px solid $borderColor
+    &-title
+      font-size: 24px
+      color: #000
+      font-weight: 700
+      margin: 0
+  button.mfp-close
+    color: #000
+    width: 20px
+    height: 20px
+    line-height: 20px
+    right: 16px
+    top: 16px
+    opacity: 1
+  &__body
+    padding: 30px 30px 40px
+    p
+      margin: 0
+      span
+        display: block
+  &__buttons
+    display: flex
+    align-items: center
+    margin-top: 20px
+  a
+    cursor: pointer
+  a.cancel
+    font-size: 14px
+    color: $colorLight
+    margin-right: 20px
+  a.btn
+    line-height: 1.2
+    margin-left: auto
