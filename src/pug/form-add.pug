@@ -11,34 +11,34 @@ block content
   .page-main
     +mainHeader("Создание анкеты", 'forms', 2)
 
-    form.main-body(action='/' method='post')
+    form.main-body(action='/' js-validate-form)
       .main-content(js-main-content-scroller)
         ._container.container
           ._inner
 
             .content-form._form
               .ui-group.-inline
-                label._label Название
+                label(for="required") Название
                   i.required *
                 ._content
-                  input.ui-input._input(type='text')
+                  input.ui-input(type='text' name="name" required)
 
               .ui-group.-inline
-                label._label Описание
+                label(for="description") Описание
                 ._content
-                  textarea.ui-input._input(rows='6')
+                  textarea.ui-input(rows='6' name="description")
 
               .ui-group.-inline
-                label._label Тип анкеты
+                label Тип анкеты
                   i.required *
                 ._content
                   .ui-radio._item
-                    input#private(type='radio' name='type' checked)
+                    input#private(type='radio' name='type' checked required)
                     label(for='private')
                       span Приватная (доступная только вашей организации)
 
                   .ui-radio._item
-                    input#public(type='radio' name='type')
+                    input#public(type='radio' name='type' required)
                     label(for='public')
                       span Публичная (доступна всем)
 

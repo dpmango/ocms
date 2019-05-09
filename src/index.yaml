@@ -21,9 +21,9 @@ PageList:
   - file: project-roles.html
     ready: 60
   - file: project-questions.html
-    ready: 10
+    ready: 70
   - file: project-tasks.html
-    ready: 10
+    ready: 70
   - file: project-comments.html
     ready: 80
   - file: project-access.html

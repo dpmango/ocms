@@ -11,26 +11,26 @@ block content
   .page-main
     +mainHeader("Интернет-магазин Спортмастер", 'projects', 1)
 
-    form.main-body(action='/' method='post')
+    form.main-body(action='/' js-validate-form)
       .main-content(js-main-content-scroller)
         ._container.container
           ._inner
 
             .content-form._form
               .ui-group.-inline
-                label._label Строка
-                input.ui-input._input(type='text')
+                label(for="test_1") Строка
+                input.ui-input(type='text' name="test_1")
 
               .ui-group.-inline
-                label._label Число
+                label(for="test_2") Число
                 .ui-counter
                   button._btn(type='button') -
-                  input._input(type='text' value='15')
+                  input._input(type='text' value='15' name="test_2")
                   button._btn(type='button') +
 
               .ui-group.-inline
-                label._label Список
-                select.ui-input._input(js-select)
+                label(for="test_3") Список
+                select.ui-input(js-select name="test_3")
                   option Выберите из списка
                   option(value='0') Тип 1
                   option(value='1') Тип 2
@@ -39,10 +39,10 @@ block content
                   option(value='4') Тип 5
 
               .ui-group.-inline
-                label._label Да/Нет
+                label(for="test_4") Да/Нет
                 ._content
                   label.ui-toggle._ui-toggle
-                    input._input(type='checkbox' name='' checked)
+                    input._input(type='checkbox' name='test_4' checked)
                     span._handle
 
       +mainFooter("К следующему шагу")
