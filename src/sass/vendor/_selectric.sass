@@ -57,7 +57,7 @@
       border-bottom: none
 
 .selectric-focus .selectric
-  border-color: #aaaaaa
+  // border-color: #aaaaaa
 
 .selectric-hover .selectric
   .button
@@ -68,7 +68,7 @@
 .selectric-open
   z-index: 9999
   .selectric
-    border-color: #c4c4c4
+    // border-color: #c4c4c4
   .selectric-items
     display: block
 
@@ -130,10 +130,10 @@
   position: absolute
   top: 100%
   left: 0
-  background: #F8F8F8
-  border: 1px solid #c4c4c4
+  background: $colorBg
+  border: 1px solid $colorBg
   z-index: -1
-  box-shadow: 0 0 10px -6px
+  // box-shadow: 0 0 10px -6px
   .selectric-scroll
     height: 100%
     overflow: auto
@@ -158,18 +158,30 @@
     line-height: 20px
     min-height: 20px
     display: block
-    padding: 10px
-    color: #666
+    padding: 10px 18px
+    color: $fontColor
+    cursor: pointer
+    position: relative
     cursor: pointer
     &.selected
-      background: #E0E0E0
-      color: #444
+      &:before
+        position: absolute
+        display: block
+        content: ''
+        width: 4px
+        height: 6px
+        border: 1px solid $colorPrimary
+        left: 7px
+        top: 45%
+        transform: translateY(-50%) rotate(45deg)
+        border-left: none
+        border-top: none
     &.highlighted
-      background: #D0D0D0
-      color: #444
+      // background: #D0D0D0
+      // color: #444
     &:hover
-      background: #D5D5D5
-      color: #444
+      background: #fff
+      // color: #444
   .disabled
     filter: alpha(opacity = 50)
     opacity: 0.5
