@@ -19,10 +19,13 @@
         .on('click', '[js-open-parent]', function(e) {
           e.preventDefault();
           e.stopPropagation();
-          $(this).toggleClass('is-open');
           $(this)
-            .children('.project-questions__sidebar-item')
+            .parent()
+            .toggleClass('is-open');
+          $(this)
             .toggleClass('is-open')
+            .parent('.project-questions__sidebar-item')
+            .children('.project-questions__sidebar-item')
             .slideToggle();
         })
         // .on('mouseover', '[js-open-parent]', function(e) {
