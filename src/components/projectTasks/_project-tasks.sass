@@ -1,0 +1,131 @@
+.project-tasks
+  &__head
+    padding: 18px 0
+    background: $colorBg
+    width: 100%
+    .container
+      display: flex
+      align-items: center
+    p
+      margin-right: 10px
+      color: $fontColor
+    &-buttons
+      margin-left: auto
+      display: flex
+      border-radius: 4px
+      border: 1px solid $borderColor
+      overflow: hidden
+      a
+        padding: 10px 12px
+        display: flex
+        flex-direction: column
+        transition: all .25s $ease
+        &:first-child
+          border-right: 1px solid $borderColor
+        span
+          height: 1px
+          background: $colorIcon
+          display: inline-block
+          margin: 2px 0
+          transition: all .25s $ease
+        &.is-active
+          background: #fff
+          span
+            background: $fontColor
+    &-button
+      width: 14px
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+    &-select
+      margin-right: 10px
+      .selectric-wrapper
+        width: auto
+        .label
+          line-height: 24px
+          height: 24px
+          color: $colorLight
+          margin-right: 24px
+          margin-left: 8px
+      .selectric-open .selectric,
+      .selectric-focus .selectric
+        border-color: transparent
+      .selectric .button
+        height: 22px
+        width: 22px
+        &:after
+          border: 1px solid $colorLight
+          width: 6px
+          height: 6px
+          transform: rotate(45deg)
+          border-left: none
+          border-top: none
+
+
+
+  &__item
+    display: flex
+    // align-items: flex-start
+    flex-direction: column
+    width: 100%
+    // padding: 18px 0
+    // border-bottom: 1px solid $borderColor
+    &:last-child
+      .project-tasks__item-content
+        border-bottom: none
+    > .project-tasks__item
+      padding-left: 30px
+      &:last-child
+        .project-tasks__item-content
+          border-bottom: 1px solid $borderColor
+    &-content
+      display: flex
+      align-items: flex-start
+      width: 100%
+      padding: 18px 0
+      border-bottom: 1px solid $borderColor
+    &-title
+      margin: 0
+      font-size: 16px
+      padding-top: 7px
+    &-description
+      font-size: 14px
+      color: $colorLight
+      margin: 3px 0 0 0
+    &-right
+      margin-left: auto
+      display: flex
+      align-items: center
+      padding-left: 20px
+    &-name
+      margin: 0
+      font-size: 14px
+      line-height: 1.2
+      &.red
+        color: #FF3B3B
+      &.green
+        color: #219653
+      &.purple
+        color: #9B51E0
+    .selectric-wrapper
+      max-width: 300px
+      // width: 100%
+      width: 300px
+      margin-left: 20px
+  &__button
+    padding: 30px 0
+    text-align: right
+
+
++r($lg)
+  .project-tasks
+    &__item
+      &-right
+        display: flex
+        align-items: flex-end
+        flex-direction: column
+        padding-left: 20px
+        .selectric-wrapper
+          margin-top: 10px
+          width: 250px
+

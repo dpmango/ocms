@@ -13,8 +13,124 @@ block content
 
     form.main-body(action='/' method='post')
       .main-content(js-main-content-scroller)
-        ._container.container
-          ._inner
+        .project-tasks
+          .project-tasks__head
+            .container
+              p Роль:
+              .project-tasks__head-select
+                select.ui-input(js-select)
+                  option Любая
+                  option(value='0') Роль 1
+                  option(value='1') Роль 1
+                  option(value='2') Роль 1
+                  option(value='3') Роль 1
+                  option(value='4') Роль 1
+              p Сотрудник:
+              .project-tasks__head-select
+                select.ui-input(js-select)
+                  option Сотрудник:
+                  option(value='0') Роль 1
+                  option(value='1') Роль 1
+                  option(value='2') Роль 1
+                  option(value='3') Роль 1
+                  option(value='4') Роль 1
+              .project-tasks__head-buttons
+                a.is-active(href="#" js-task-button)
+                  .project-tasks__head-button
+                    span(style="width: 100%")
+                    span(style="width: 60%")
+                    span(style="width: 60%")
+                a(href="#" js-task-button)
+                  .project-tasks__head-button
+                    span(style="width: 100%")
+                    span(style="width: 100%")
+                    span(style="width: 100%")
+
+            //- ._inner
+          ._container.container
+            .project-tasks__item
+              .project-tasks__item-content
+                .project-tasks__item-info
+                  p.project-tasks__item-title Обучить дизайнера
+                .project-tasks__item-right
+                  p.project-tasks__item-name.red Дизайнер
+                  select.ui-input._input(js-select)
+                    option Выберите сотрудника
+                    option(value='0') Cотрудник 1
+                    option(value='1') Cотрудник 2
+                    option(value='2') Cотрудник 3
+                    option(value='3') Cотрудник 4
+                    option(value='4') Cотрудник 5
+            .project-tasks__item
+              .project-tasks__item-content
+                .project-tasks__item-info
+                  p.project-tasks__item-title Найти и заключить договор с подрядчиком по оффлайну
+                  p.project-tasks__item-description Описание задачи в несколько слов при его наличии
+                .project-tasks__item-right
+                  p.project-tasks__item-name.purple IT-директор
+                  select.ui-input._input(js-select)
+                    option А. И. Константинопольский
+                    option(value='0') Cотрудник 1
+                    option(value='1') Cотрудник 2
+                    option(value='2') Cотрудник 3
+                    option(value='3') Cотрудник 4
+                    option(value='4') Cотрудник 5
+            .project-tasks__item
+              .project-tasks__item-content
+                .project-tasks__item-info
+                  p.project-tasks__item-title Найти и заключить договор с подрядчиком
+                .project-tasks__item-right
+                  p.project-tasks__item-name.purple IT-директор
+                  select.ui-input._input(js-select)
+                    option В. В. Загитов
+                    option(value='0') Cотрудник 1
+                    option(value='1') Cотрудник 2
+                    option(value='2') Cотрудник 3
+                    option(value='3') Cотрудник 4
+                    option(value='4') Cотрудник 5
+              .project-tasks__item
+                .project-tasks__item-content
+                  .project-tasks__item-info
+                    p.project-tasks__item-title Создать тендер
+                  .project-tasks__item-right
+                    p.project-tasks__item-name.green Коммерческий директор
+                    select.ui-input._input(js-select)
+                      option Выберите сотрудника
+                      option(value='0') Cотрудник 1
+                      option(value='1') Cотрудник 2
+                      option(value='2') Cотрудник 3
+                      option(value='3') Cотрудник 4
+                      option(value='4') Cотрудник 5
+              .project-tasks__item
+                .project-tasks__item-content
+                  .project-tasks__item-info
+                    p.project-tasks__item-title Выбрать подрячика
+                  .project-tasks__item-right
+                    p.project-tasks__item-name.purple IT-директор
+                    select.ui-input._input(js-select)
+                      option Выберите сотрудника
+                      option(value='0') Cотрудник 1
+                      option(value='1') Cотрудник 2
+                      option(value='2') Cотрудник 3
+                      option(value='3') Cотрудник 4
+                      option(value='4') Cотрудник 5
+            .project-tasks__item
+              .project-tasks__item-content
+                .project-tasks__item-info
+                  p.project-tasks__item-title Выделить маркетинговый бюджет
+                .project-tasks__item-right
+                  p.project-tasks__item-name.green Коммерческий директор
+                  select.ui-input._input(js-select)
+                    option С. И. Малахин
+                    option(value='0') С. И. Малахин
+                    option(value='1') С. И. Малахин
+                    option(value='2') С. И. Малахин
+                    option(value='3') С. И. Малахин
+                    option(value='4') С. И. Малахин
+            .project-tasks__button
+              button.btn.btn-outline.btn-padding Экспорт задач в Excel
+
+
 
 
       +mainFooter("К следующему шагу", {

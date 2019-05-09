@@ -28,6 +28,12 @@
             .children('.project-questions__sidebar-item')
             .slideToggle();
         })
+        .on('click', '[js-task-button]', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          $('[js-task-button]').removeClass('is-active');
+          $(this).addClass('is-active');
+        })
         // .on('mouseover', '[js-open-parent]', function(e) {
         //   e.preventDefault();
         //   e.stopPropagation();
