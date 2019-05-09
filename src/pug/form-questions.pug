@@ -14,7 +14,52 @@ block content
     form.main-body(action='/' method='post')
       .main-content(js-main-content-scroller)
         ._container.container
-          ._inner
+          .project-questions
+            .__sidebar
+              .__sidebar-toggle
+                .__sidebar-input
+                  .ui-group.-inline
+                    label(for="test_1") Показывать варианты ответов
+                    ._content
+                      label.ui-toggle._ui-toggle
+                        input._input(type='checkbox' name='test_1')
+                        span._handle
+
+                .__sidebar-input
+                  .ui-group.-inline
+                    label(for="test_2") Показывать созданные задачи
+                    ._content
+                      label.ui-toggle._ui-toggle
+                        input._input(type='checkbox' name='test_2')
+                        span._handle
+              p.__sidebar-title Разработка интернет-магазина
+              .__sidebar-item.main
+                a(href="#" js-open-parent) Нужен ли вам маркетинг?
+                .__sidebar-item
+                  a(href="#" js-open-parent) Укажите общий бюджет на маркетинг
+                  .__sidebar-item
+                    a(href="#" js-open-parent) Требуется ли вам offline-маркетинг?
+                    .__sidebar-item.last
+                      a(href="#" js-open-parent) Нужны ли вам работы над сайтом?
+                  .__sidebar-item
+                    a(href="#" js-open-parent) Требуется ли вам интернет-маркетинг?
+                    .__sidebar-item.last
+                      a(href="#" js-open-parent) Нужны ли вам работы над сайтом?
+                    .__sidebar-item.last.error
+                      a(href="#" js-open-parent) Нужна ли работа с целевой аудиторией и мониторинг работы компании?
+                        //- span.error(data-att="Добавьте ответ к этой связи")
+                        span.error
+                        span.hint Добавьте ответ к этой связи
+                  .__sidebar-item.last
+                    a(href="#" js-open-parent) Требуется ли вам комплексный маркетинг?
+                .__sidebar-item
+                  a(href="#" js-open-parent) Укажите желаемое время реализации
+              .__sidebar-item.main
+                a(href="#" js-open-parent) Нужны ли вам услуги дизайна?
+              .__sidebar-item.main
+                a(href="#" js-open-parent) Нужны ли вам услуги программирования?
+            .form-questions__content
+
 
 
 
