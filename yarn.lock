@@ -1132,6 +1132,10 @@ autoprefixer@^8.6.2:
     postcss "^6.0.23"
     postcss-value-parser "^3.2.3"
 
+autosize@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/autosize/-/autosize-4.0.2.tgz#073cfd07c8bf45da4b9fd153437f5bafbba1e4c9"
+
 aws-sign2@~0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/aws-sign2/-/aws-sign2-0.6.0.tgz#14342dd38dbcc94d0e5b87d763cd63612c0e794f"
@@ -4378,7 +4382,6 @@ gulp-pug@^4.0.1:
 gulp-pugbem@^2.2.4:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/gulp-pugbem/-/gulp-pugbem-2.2.4.tgz#161929c1e0d575eb82662eea99570119979688e3"
-  integrity sha512-fpjXUvn3SKvR9rOYtGMMrp/mO8umTTTZGur0I45/DutdfPuoJ5i47/m6svD0ZJgWVBOAZFmeu4P7tSirBBO/pw==
 
 gulp-rename@^1.2.0, gulp-rename@^1.2.2:
   version "1.2.2"
@@ -7329,7 +7332,6 @@ pngjs@^2.0.0:
 popper.js@^1.14.7:
   version "1.15.0"
   resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.15.0.tgz#5560b99bbad7647e9faa475c6b8056621f5a4ff2"
-  integrity sha512-w010cY1oCUmI+9KwwlWki+r5jxKfTFDVoadl7MSrIujHU5MJ5OR6HTDj6Xo8aoR/QsA56x8jKjA59qGH4ELtrA==
 
 portscanner@2.1.1:
   version "2.1.1"
@@ -9082,6 +9084,10 @@ stdout-stream@^1.4.0:
   dependencies:
     readable-stream "^2.0.1"
 
+stickybits@^3.6.5:
+  version "3.6.5"
+  resolved "https://registry.yarnpkg.com/stickybits/-/stickybits-3.6.5.tgz#680cd6683470996ad4e235ebbbc8c57f11b6bbcb"
+
 stream-browserify@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/stream-browserify/-/stream-browserify-2.0.2.tgz#87521d38a44aa7ee91ce1cd2a47df0cb49dd660b"
@@ -9618,7 +9624,6 @@ timers-ext@0.1:
 tippy.js@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/tippy.js/-/tippy.js-4.3.0.tgz#5f661fed7fa30c90609eb87f6657005dd041ede3"
-  integrity sha512-SjctzIfkx3+waue+Ew58MMTuzYD4SK9wJOnCEdrCmwZiKJ7chZSxOguFmBm11tmTlZuGbxncUC/5Qu6GqzD2qQ==
   dependencies:
     popper.js "^1.14.7"
 

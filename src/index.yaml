@@ -25,7 +25,7 @@ PageList:
   - file: project-tasks.html
     ready: 70
   - file: project-comments.html
-    ready: 80
+    ready: 85
   - file: project-access.html
     ready: 60
 

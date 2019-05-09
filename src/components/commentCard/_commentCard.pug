@@ -1,0 +1,12 @@
+mixin commentCard(obj)
+  // comment card
+  .comment-card
+    .comment-card__header
+      .comment-card__title= obj.title
+      .comment-card__company= obj.company
+      .comment-card__actions
+        // TODO - dropdown actions
+        span ...
+    p.comment-card__caption= obj.caption
+    span.comment-card__date= obj.date
+

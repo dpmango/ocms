@@ -5,59 +5,54 @@ auth: false
 extends shared/_layout
 include ../components/mainHeader/_mainHeader
 include ../components/mainFooter/_mainFooter
+include ../components/commentCard/_commentCard
 
 block content
 
   .page-main
     +mainHeader("Интернет-магазин Спортмастер", 'projects', 1)
 
-    form.main-body(action='/' method='post')
-      .main-content(js-main-content-scroller)
+    .main-body
+      .main-content#sticky-scroller
         ._container.container
 
           .content-comments._comments
             ._list
+              -
+                var comments = [
+                  {
+                    title: 'Алексей Чурков',
+                    company: 'Спортмастер',
+                    caption: 'Если выстроить в ряд случаи инверсий у Державина, то генеративная поэтика вращает абстракционизм.',
+                    date: '15.04.2019, 12:12'
+                  },
+                  {
+                    title: 'Алевтина Китова',
+                    company: 'YAMI YAMI',
+                    caption: 'Диалектический характер неумеренно отталкивает апериодический угол курса.',
+                    date: '14.04.2019, 11:15'
+                  },
+                  {
+                    title: 'Алексей Чурков',
+                    company: 'Спортмастер',
+                    caption: 'Конечно, нельзя не принять во внимание тот факт, что гироскопический стабилизатоор нивелирует динамический штопор, несмотря на отсутствие единого пунктуационного алгоритма.',
+                    date: '13.04.2019, 18:12'
+                  },
+                  {
+                    title: 'Алевтина Китова',
+                    company: 'YAMI',
+                    caption: 'Проекция абсолютной угловой скорости на оси системы координат xyz ортогонально требует перейти к поступательно перемещающейся системе координат, чем и характеризуется крен.',
+                    date: '12.04.2019, 12:12'
+                  }
+                ]
 
-              // start comment-card
-              .comment-card._comment-card
-                ._header
-                  ._title Алексей Чурков
-                  span Спортмастер
-                p._caption Если выстроить в ряд случаи инверсий у Державина, то генеративная поэтика вращает абстракционизм.
-                span._date 15.04.2019, 12:12
-              // end comment-card
-
-              // start comment-card
-              .comment-card._comment-card
-                ._header
-                  ._title Алевтина Китова
-                  span YAMI YAMI
-                p._caption Диалектический характер неумеренно отталкивает апериодический угол курса.
-                span._date 15.04.2019, 12:12
-              // end comment-card
-
-              // start comment-card
-              .comment-card._comment-card
-                ._header
-                  ._title Алексей Чурков
-                  span Спортмастер
-                p._caption Если выстроить в ряд случаи инверсий у Державина, то генеративная поэтика вращает абстракционизм.
-                span._date 15.04.2019, 12:12
-              // end comment-card
-
-              // start comment-card
-              .comment-card._comment-card
-                ._header
-                  ._title Алевтина Китова
-                  span YAMI YAMI
-                p._caption Диалектический характер неумеренно отталкивает апериодический угол курса.
-                span._date 15.04.2019, 12:12
-              // end comment-card
+              each card, index in comments
+                +commentCard(card)
 
             ._add
-              form._form(action='#' method='post')
+              form._form(action='#' js-validate-form js-sticky data-sticky-id="comments" data-offset="30")
                 .ui-group
-                    textarea.ui-input(rows='6' name='' placeholder='Напишите свой комментарий...')
+                  textarea.ui-input(rows='6' js-autosize name='comment' placeholder='Напишите свой комментарий...' required)
 
                 button.btn.btn-outline Отправить
 

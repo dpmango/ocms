@@ -15,6 +15,7 @@
     "deploy": "gulp build --production && surge --project ./dist --domain ocms2.surge.sh"
   },
   "dependencies": {
+    "autosize": "^4.0.2",
     "barba.js": "^1.0.0",
     "gsap": "^2.0.2",
     "jquery": "^3.3.1",
@@ -26,6 +27,7 @@
     "magnific-popup": "^1.1.0",
     "picturefill": "^3.0.3",
     "scrollmonitor": "^1.2.4",
+    "stickybits": "^3.6.5",
     "surge": "^0.20.1",
     "svg4everybody": "^2.1.9",
     "tippy.js": "^4.3.0"
