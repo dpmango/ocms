@@ -1,24 +1,21 @@
 // PAGE-POPUPS :: START
-
-a(href="#attention" data-effect="mfp-zoom-in" js-popup style="display: inline-block; margin-left: 25px; margin-top: 10px;") Обратите внимание
-a(href="#already" data-effect="mfp-zoom-in" js-popup style="display: inline-block; margin-left: 25px; margin-bottom: 10px;") Клиент уже зарегистрирован в системе
 .popup.mfp-with-anim.mfp-hide#attention
   .popup__head
     p.popup__head-title Обратите внимание!
   .popup__body
     p Все внесенные изменения будут потеряны.
     .popup__buttons
-      a.cancel(href="#") Вернуть к редактированию
+      a.cancel(href="#" js-close-modal) Вернуть к редактированию
       a.btn.btn-primary(href="#") Сохранить и продолжить
 
-.popup.mfp-with-anim.mfp-hide#already
+.popup.mfp-with-anim.mfp-hide#client-already-registered
   .popup__head
     p.popup__head-title Клиент уже зарегистрирован в системе
   .popup__body
     p Данный клиент уже зарегистрирован в системе под ником
       span SEBEKON-1
     .popup__buttons
-      a.cancel(href="#") Отменить
+      a.cancel(href="#" js-close-modal) Отменить
       a.btn.btn-primary(href="#") Создать проект для существующего клиента
 
 // PAGE-POPUPS :: END

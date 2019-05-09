@@ -1,6 +1,7 @@
 ---
 title: Добавление клиента
 auth: false
+includePopups: true
 ---
 extends shared/_layout
 include ../components/mainHeader/_mainHeader
@@ -11,7 +12,7 @@ block content
   .page-main
     +mainHeader("Добавление клиента")
 
-    form.main-body(action='/' js-validate-form)
+    form.main-body(action='/' js-validate-form data-type="add-client")
       .main-content(js-main-content-scroller)
         fieldset._fieldset
           ._fields

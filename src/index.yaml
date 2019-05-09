@@ -39,3 +39,6 @@ PageList:
     ready: 10
   - file: form-questions.html
     ready: 10
+
+  - file: ui.html
+    ready: 10

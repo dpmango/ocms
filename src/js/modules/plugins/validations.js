@@ -23,8 +23,12 @@
       validateSubmitHandler: function(form) {
         $(form).addClass('is-loading');
 
-        alert('форма валидна - отправляем $.ajax');
-
+        // pseudo func
+        if ($(form).data('type') === 'add-client') {
+          APP.Plugins.Modals.openMfp('#client-already-registered');
+        } else {
+          alert('форма валидна - отправляем $.ajax');
+        }
         // $.ajax({
         //   type: 'POST',
         //   url: $(form).attr('action'),
