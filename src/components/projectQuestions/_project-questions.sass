@@ -1,0 +1,160 @@
+.project-questions
+  display: flex
+  flex: 1
+  &__sidebar
+    max-width: 342px
+    width: 100%
+    border-right: 1px solid $borderColor
+    padding: 40px 15px 40px 0
+    &-title
+      font-size: 14px
+      font-weight: 700
+      margin: 0
+    &-item
+      // margin: 11px 0 0 0
+      padding: 6px 0
+      cursor: pointer
+      padding-left: 20px
+      position: relative
+      display: none
+      z-index: 3
+      &:hover
+        background: $colorBg
+        border-top-right-radius: 4px
+        border-bottom-right-radius: 4px
+        z-index: 2
+        &:before
+          opacity: 1
+      &.main
+        display: block
+      &.last
+        &:after
+          display: none
+      &:after
+        position: absolute
+        left: 3px
+        top: 11px
+        width: 6px
+        height: 6px
+        border: 1px solid #A3ABC2
+        display: block
+        content: ''
+        transform: rotate(45deg)
+        border-left: none
+        border-top: none
+        transition: all .25s $ease
+      // &:after
+      //   position: absolute
+      //   display: block
+      //   height: 0
+      //   width: 1px
+      //   left: 6px
+      //   top: 26px
+      //   background: $borderColor
+      //   content: ''
+      //   transition: all .25s $ease
+      &:before
+        position: absolute
+        height: 100%
+        width: 100%
+        right: 99%
+        background: $colorBg
+        content: ''
+        display: block
+        top: 0
+        z-index: -1
+        opacity: 0
+
+
+      > .project-questions__sidebar-item
+        padding-left: 20px
+        // border-left: 1px solid $borderColor
+      &.is-open
+        // &:after
+        //   height: calc(100% - 16px)
+        &:after
+          transform: rotate(-45deg)
+          top: 11px
+  &__content
+    padding: 40px 0 30px
+    width: 100%
+  &__progress
+    width: 100%
+    max-width: 810px
+    // outline: 1px solid green
+    padding: 0 30px 0 0
+  &__line
+    width: 100%
+    height: 1px
+    position: relative
+    &:before
+      display: block
+      content: ''
+      position: absolute
+      left: 0
+      bottom: 0px
+      width: 9000px
+      height: 1px
+      background: $borderColor
+  &__point
+    font-size: 14px
+    font-family: $baseFont
+    color: $colorPrimary
+    text-align: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin-bottom: -4px
+    width: 33px
+    position: relative
+    z-index: 2
+    span
+      width: 7px
+      height: 7px
+      background: #fff
+      display: block
+      border-radius: 50%
+      border: 2px solid $colorPrimary
+      margin-top: 10px
+      position: relative
+      z-index: 2
+    &:before
+      display: block
+      content: ''
+      position: absolute
+      left: 0
+      bottom: 3px
+      // width: calc(100% - 10px)
+      width: 100%
+      height: 1px
+      background: $colorPrimary
+      z-index: 2
+  &__title
+    font-size: 18px
+    font-weight: 700
+    margin: 0
+  &__info
+    margin: 25px 0 0 0
+    font-size: 14px
+  &__item
+    padding: 25px 30px
+    max-width: 810px
+    width: 100%
+  &__images
+    display: flex
+    justify-content: space-between
+    margin-top: 30px
+    margin-bottom: 30px
+  &__image-container
+    width: 48.5%
+    font-size: 0
+    img
+      width: 100%
+  &__radio
+    margin-top: 10px
+  &__bottom
+    margin-top: 30px
+    padding-top: 30px
+    text-align: right
+    border-top: 1px solid $borderColor

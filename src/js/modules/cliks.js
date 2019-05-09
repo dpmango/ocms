@@ -16,6 +16,25 @@
             Barba.Pjax.goTo(dataHref);
           }
         })
+        .on('click', '[js-open-parent]', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          $(this).toggleClass('is-open');
+          $(this)
+            .children('.project-questions__sidebar-item')
+            .toggleClass('is-open')
+            .slideToggle();
+        })
+        // .on('mouseover', '[js-open-parent]', function(e) {
+        //   e.preventDefault();
+        //   e.stopPropagation();
+        //   $(this).css('background', '#F2F5FA');
+        // })
+        // .on('mouseout', '[js-open-parent]', function(e) {
+        //   e.preventDefault();
+        //   e.stopPropagation();
+        //   $(this).css('background', 'none');
+        // })
         // prevent going the same link (if barba is connected)
         .on('click', 'a, [js-link]', function(e) {
           var href = $(this).data('href') || $(this).attr('href');

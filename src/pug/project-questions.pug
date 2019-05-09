@@ -14,7 +14,52 @@ block content
     form.main-body(action='/' method='post')
       .main-content(js-main-content-scroller)
         ._container.container
-          ._inner
+          //- ._inner
+          .project-questions
+            .__sidebar
+              p.__sidebar-title Разработка интернет-магазина
+              .__sidebar-item.main(js-open-parent) Нужен ли вам маркетинг?
+                .__sidebar-item(js-open-parent) Укажите общий бюджет на маркетинг
+                  .__sidebar-item(js-open-parent) Требуется ли вам offline-маркетинг?
+                  .__sidebar-item(js-open-parent) Требуется ли вам интернет-маркетинг?
+                    .__sidebar-item.last(js-open-parent) Нужны ли вам работы над сайтом?
+                    .__sidebar-item.last(js-open-parent) Нужна ли работа с целевой аудиторией и мониторинг работы компании?
+                  .__sidebar-item(js-open-parent) Требуется ли вам комплексный маркетинг?
+                .__sidebar-item(js-open-parent) Укажите желаемое время реализации
+              .__sidebar-item.main(js-open-parent) Нужны ли вам услуги дизайна?
+              .__sidebar-item.main(js-open-parent) Нужны ли вам услуги программирования?
+            .__content
+              .__progress
+                .__point(style="padding-left: 24%") 24%
+                  span
+                .__line
+              .__item
+                p.__title Требуется ли вам интернет-маркетинг?
+                p.__info Подынтегральное выражение трансформирует длительностный интеграл от функции, обращающейся в бесконечность в изолированной точке. Голос представляет собой вектор, это и есть одномоментная вертикаль в сверхмногоголосной полифонической ткани. Дифференциация, конечно, решительно образует абстрактный дисторшн.
+                p.__info Ортогональный определитель продолжает коллинеарный ревер. Очевидно проверяется, что интеграл от функции, имеющий конечный разрыв оправдывает убывающий интеграл Фурье.
+                .__images
+                  .__image-container
+                    img(src="img/question1.jpg", srcset="img/question1@2x.jpg" alt="")
+                  .__image-container
+                    img(src="img/question2.jpg", srcset="img/question2@2x.jpg" alt="")
+                .__radio
+                  .ui-radio.ui-radio--full
+                    input#r1(type='radio' name='type')
+                    label(for='r1')
+                      span Да
+                .__radio
+                  .ui-radio.ui-radio--full
+                    input#r2(type='radio' name='type')
+                    label(for='r2')
+                      span Нет
+                .__radio
+                  .ui-radio.ui-radio--full
+                    input#r3(type='radio' name='type')
+                    label(for='r3')
+                      span Затрудняюсь ответить
+                .__bottom
+                  button.btn.btn-outline Ответить
+
 
 
       +mainFooter("К следующему шагу", {
