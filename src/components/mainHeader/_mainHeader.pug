@@ -1,4 +1,4 @@
-mixin mainHeader(title, hasReturn,  menuType)
+mixin mainHeader(title, hasReturn,  menuType, filters)
   .main-header(js-min-header-onscroll)
     .main-header__container.container
 
@@ -47,3 +47,15 @@ mixin mainHeader(title, hasReturn,  menuType)
               a.primary-menu__link(href=x.url title=x.name)= x.name
                 if x.count
                   span.primary-menu__count= x.count
+
+      if filters
+        .main-header__filters
+          i.main-header__filter
+            span Клиент
+            span ...
+          i.main-header__filter
+            span Анкета
+            span ...
+          i.main-header__filter
+            span Доступ
+            span ...
