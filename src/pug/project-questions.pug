@@ -1,6 +1,6 @@
 ---
 title: Вопросы и ответы
-login: true
+auth: false
 ---
 extends shared/_layout
 include ../components/mainHeader/_mainHeader
@@ -8,22 +8,11 @@ include ../components/mainFooter/_mainFooter
 
 block content
 
-  .page-main.page-body__main
-    -
-      var menu = [
-        {url: 'project-add.html', name: 'О проекте', active: true},
-        {url: 'project-passport.html', name: 'Паспорт', active: true},
-        {url: 'project-roles.html', name: 'Сотрудники', active: true},
-        {url: 'project-questions.html', name: 'Вопросы и ответы', active: true},
-        {url: 'project-tasks.html', name: 'Задачи', active: true},
-        {url: 'project-comments.html', name: 'Комментарии', active: true},
-        {url: 'project-access.html', name: 'Права', active: true},
-      ]
+  .page-main
+    +mainHeader("Интернет-магазин Спортмастер", true, 1)
 
-    +mainHeader("Интернет-магазин Спортмастер", true, menu)
-
-    form.main-body._body(action='/' method='post')
-      .main-content._content
+    form.main-body(action='/' method='post')
+      .main-content(js-main-content-scroller)
         ._container.container
           //- ._inner
           .project-questions

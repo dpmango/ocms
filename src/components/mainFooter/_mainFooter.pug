@@ -4,5 +4,5 @@ mixin mainFooter(btnText, returnLink)
       if returnLink
         a.main-footer__return(href=returnLink.url title=returnLink.name)
           +svgMono("arrow-left")
-          span Вернуться к шагу «Паспорт»
+          span= returnLink.name
       button.btn.btn-primary.main-footer__btn(type="submit")= btnText

@@ -8,11 +8,11 @@
       svg4everybody();
 
       // Viewport units buggyfill
-      window.viewportUnitsBuggyfill.init({
-        force: false,
-        refreshDebounceWait: 150,
-        appendToBody: true,
-      });
+      // window.viewportUnitsBuggyfill.init({
+      //   force: false,
+      //   refreshDebounceWait: 150,
+      //   appendToBody: true,
+      // });
     },
   };
 })(jQuery, window.APP);

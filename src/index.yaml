@@ -34,8 +34,8 @@ PageList:
   - file: form-add.html
     ready: 80
   - file: form-passport.html
-    ready: 0
+    ready: 10
   - file: form-roles.html
-    ready: 0
+    ready: 10
   - file: form-questions.html
-    ready: 0
+    ready: 10

@@ -1,11 +1,11 @@
 ---
 title: Анкеты
-login: true
+auth: false
 ---
 extends shared/_layout
 block content
-  
-  .page-main.page-body__main
+
+  .page-main
     .main-header._header
       ._container.container
 
@@ -13,7 +13,7 @@ block content
           h1._heading Анкеты
 
           ._actions
-        
+
         ul.primary-menu._primary-menu
           li._item
             a._link.is-active(href='forms.html' title='Все анкеты') Все анкеты
@@ -24,13 +24,13 @@ block content
           li._item
             a._link(href='#' title='Публичные анкеты') Публичные анкеты
               span._count 5
-    
-    .main-body._body
-      .main-content._content
+
+    .main-body
+      .main-content(js-main-content-scroller)
         ._container.container
           ._list
 
-            // start project card 
+            // start project card
             .project-card._project-card
               ._content
                 ._inner
@@ -46,9 +46,9 @@ block content
 
               ._info
                 a.btn.btn-outline._btn(href='#' title='Посмотреть') Посмотреть
-            // end project card 
+            // end project card
 
-            // start project card 
+            // start project card
             .project-card._project-card
               ._content
                 ._inner
@@ -63,9 +63,9 @@ block content
 
               ._info
                 a.btn.btn-outline._btn(href='#' title='Посмотреть') Посмотреть
-            // end project card 
+            // end project card
 
-            // start project card 
+            // start project card
             .project-card._project-card
               ._content
                 ._inner
@@ -81,8 +81,8 @@ block content
 
               ._info
                 a.btn.btn-outline._btn(href='#' title='Посмотреть') Посмотреть
-            // end project card 
-          
+            // end project card
+
           .content-pagenav._pagenav
             ._list
               a._link(href='#' title='') 1

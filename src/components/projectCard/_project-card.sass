@@ -5,7 +5,9 @@
   position: relative
   z-index: 1
   padding: 26px 0
-
+  border-bottom: 1px solid $borderColor
+  &[js-link]
+    cursor: pointer
   &::before
     content: ''
     position: absolute
@@ -13,27 +15,47 @@
     left: -30px
     right: -30px
     bottom: -1px
-    z-index: -1
+    z-index: 1
     background-color: $colorBg
     opacity: 0
-
-  &:hover
-    z-index: 2
-
-    &::before
-      opacity: 1
+    pointer-events: none
+    transition: opacity .25s $ease
 
   &__content
+    position: relative
+    z-index: 2
     flex: 1 1 auto
     padding-right: 30px
 
   &__inner
     max-width: 640px
 
+  &__header
+    position: relative
+    .progress
+      transform: translateY(-2px)
+
+
   &__heading
-    margin: 0 15px 10px 0
+    margin: 0 8px 10px 0
     display: inline-block
     font-size: 18px
+    transition: color .25s $ease
+
+  &__remove
+    position: absolute
+    font-size: 0
+    top: -4px
+    left: -25px
+    padding: 5px
+    color: $colorIcon
+    opacity: 0
+    cursor: pointer
+    transition: opacity .25s $ease, color .25s $ease
+    .ico
+      font-size: 16px
+    &:hover
+      color: $colorDanger
 
   &__tags
     position: relative
@@ -49,15 +71,47 @@
 
   &__property
     margin-right: 30px
+    display: flex
+    align-items: center
+    span
+      display: inline-block
+      margin-left: 0.5em
+      line-height: 1
+    .ico
+      fill: $colorIcon
+      transform: translateY(-.1em)
+      &-mono-company-user
+        font-size: 16px
+      &-mono-access-full, &-mono-access-limited
+        font-size: 19px
 
   &__info
+    position: relative
+    z-index: 2
     display: flex
     align-items: center
     flex: 0 0 auto
+    margin-top: -10px
 
   &__date
     margin-right: 30px
     white-space: nowrap
-
-  &__label
     color: $colorLight
+    span
+      display: inline-block
+      color: $fontColor
+      margin-left: 0.5em
+
+  &:hover
+    z-index: 2
+    .project-card
+      &__remove
+        opacity: 1
+      &__heading
+        color: $colorPrimary
+
+    &::before
+      opacity: 1
+
+
+
