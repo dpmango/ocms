@@ -1,0 +1,7 @@
+mixin tileCard(obj)
+  // tile card
+  .tile
+    button.btn-delete.tile__btn-delete.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type='button' title='Удалить')
+      +svgMono('delete')
+    h3.tile__heading= obj.heading
+    p.tile__caption.js-editable-caption(contenteditable="true" placeholder="Введите имя сотрудника")= obj.caption

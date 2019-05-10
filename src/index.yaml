@@ -13,13 +13,13 @@ PageList:
     ready: 100
 
   - file: projects.html
-    ready: 90
+    ready: 85
   - file: project-add.html
-    ready: 80
+    ready: 90
   - file: project-passport.html
-    ready: 80
+    ready: 90
   - file: project-roles.html
-    ready: 60
+    ready: 80
   - file: project-questions.html
     ready: 70
   - file: project-tasks.html
