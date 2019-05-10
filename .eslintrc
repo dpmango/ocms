@@ -27,7 +27,7 @@
       { "exceptions": { "ImportDeclaration": true, "VariableDeclarator": true } }
     ],
     "no-multi-str": 2,
-    "camelcase": 1,
+    "camelcase": 0,
     "object-shorthand": ["error", "never"],
     "indent": ["error", 2],
     "quotes": [2, "single", "avoid-escape"],

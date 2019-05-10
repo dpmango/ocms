@@ -65,29 +65,23 @@ mixin mainHeader(title, action,  menuType, filters)
         .main-header__filters
           .main-header__filter
             span Клиент
-            //- span ...
-            select(js-select-chosen)
-              option Дизайнер
-              option(value='0') Роль 1
-              option(value='1') Роль 1
-              option(value='2') Роль 1
-              option(value='3') Роль 1
-              option(value='4') Роль 1
+            select(js-select-chosen multiple)
+              option(value="Спортмастер" selected) Спортмастер
+              option(value='AMI YAMI' selected) YAMI YAMI
+              option(value='Азбука Вкуса') Азбука Вкуса
+              option(value='ВкусВилл') ВкусВилл
           .main-header__filter
             span Анкета
-            select(js-select-chosen)
-              option Дизайнер
-              option(value='0') Роль 1
-              option(value='1') Роль 1
-              option(value='2') Роль 1
-              option(value='3') Роль 1
-              option(value='4') Роль 1
+            select(js-select-chosen multiple)
+              option(value="Все" selected) Все
+              option(value='Анкета 1') Анкета 1
+              option(value='Анкета 2') Анкета 2
+              option(value='Анкета 3') Анкета 3
+              option(value='Анкета 4') Анкета 4
+              option(value='Анкета 5') Анкета 5
           .main-header__filter
-            span Доступ
+            span Любой
             select(js-select-chosen)
-              option Дизайнер
-              option(value='0') Роль 1
-              option(value='1') Роль 1
-              option(value='2') Роль 1
-              option(value='3') Роль 1
-              option(value='4') Роль 1
+              option(value="Любой" selected) Любой
+              option(value='Полный доступ') Полный доступ
+              option(value='Ограниченный доступ') Ограниченный доступ

@@ -75,27 +75,6 @@
       display: block
       content: ''
       position: absolute
-  .chosen-single
-    position: relative
-    display: block
-    overflow: hidden
-    // padding: 0 0 0 8px
-    // height: 25px
-    // border: 1px solid #aaa
-    border-radius: 5px
-    // background-color: #fff
-    background: transparent
-
-    // background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #fff), color-stop(50%, #f6f6f6), color-stop(52%, #eee), to(#f4f4f4))
-    // background: linear-gradient(#fff 20%, #f6f6f6 50%, #eee 52%, #f4f4f4 100%)
-    background-clip: padding-box
-    // -webkit-box-shadow: 0 0 3px #fff inset, 0 1px 1px rgba(0, 0, 0, 0.1)
-    // box-shadow: 0 0 3px #fff inset, 0 1px 1px rgba(0, 0, 0, 0.1)
-    color: $colorLight
-    text-decoration: none
-    white-space: nowrap
-    line-height: 1.57
-    font-size: 14px
   .chosen-default
     color: #999
   .chosen-single span
@@ -121,31 +100,7 @@
       background-position: -42px -10px
   &.chosen-disabled .chosen-single abbr:hover
     background-position: -42px -10px
-  .chosen-single div
-    position: absolute
-    top: -1px
-    right: 5px
-    display: block
-    width: 15px
-    height: 100%
-    b
-      display: block
-      width: 15px
-      height: 100%
-      position: relative
-      transition: all 0.25s $ease
-      &:after
-        display: block
-        position: absolute
-        content: ''
-        top: 41%
-        left: 50%
-        border: 1px solid $colorLight
-        width: 6px
-        height: 6px
-        transform: translate(-50%, -50%) rotate(45deg)
-        border-left: none
-        border-top: none
+
   .chosen-search
     position: relative
     z-index: 1010
@@ -202,6 +157,48 @@
     -webkit-clip-path: inset(100% 100%)
     clip-path: inset(100% 100%)
 
+// single shares both single and multiple
+.chosen-single
+  position: relative
+  display: block
+  overflow: hidden
+  border-radius: 5px
+  background: transparent
+  background-clip: padding-box
+  color: $colorLight
+  text-decoration: none
+  white-space: nowrap
+  line-height: 1.57
+  font-size: 14px
+  div
+    position: absolute
+    top: 0px
+    right: 5px
+    display: block
+    width: 15px
+    height: 100%
+    b
+      display: block
+      width: 15px
+      height: 100%
+      position: relative
+      transition: all 0.25s $ease
+      &:after
+        display: block
+        position: absolute
+        content: ''
+        top: 41%
+        left: 50%
+        border: 1px solid $colorLight
+        width: 6px
+        height: 6px
+        transform: translate(-50%, -50%) rotate(45deg)
+        border-left: none
+        border-top: none
+  &--from-multi
+    // custom from src/js/modules/chosen.js
+
+
 /* @end
 /* @group Results
 
@@ -224,6 +221,7 @@
     -webkit-touch-callout: none
     color: $fontColor
     font-size: 14px
+    transition: background .1s $ease
     &.active-result
       display: list-item
       cursor: pointer
@@ -269,14 +267,13 @@
     position: relative
     overflow: hidden
     margin: 0
-    padding: 0 5px
+    padding: 0px
     width: 100%
     height: auto
-    border: 1px solid #aaa
-    background-color: #fff
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #eee), color-stop(15%, #fff))
-    background-image: linear-gradient(#eee 1%, #fff 15%)
+    border: 0
+    background-color: transparent
     cursor: text
+    outline: 1px solid tomato
     li
       float: left
       list-style: none
@@ -301,6 +298,7 @@
           font-size: 12px
           padding: 14px 25px
       &.search-choice
+        display: none !important
         position: relative
         margin: 3px 5px 3px 0
         padding: 3px 20px 3px 5px
@@ -347,8 +345,9 @@
     padding: 0
   .chosen-drop .result-selected
     display: list-item
-    color: #ccc
-    cursor: default
+    cursor: pointer
+    // color: #ccc
+    // cursor: default
 
 /* @end
 /* @group Active
@@ -385,78 +384,4 @@
   .chosen-single, .chosen-choices .search-choice .search-choice-close
     cursor: default
 
-/* @end
-/* @group Right to Left
 
-.chosen-rtl
-  text-align: right
-  .chosen-single
-    overflow: visible
-    padding: 0 8px 0 0
-    span
-      margin-right: 0
-      margin-left: 26px
-      direction: rtl
-  .chosen-single-with-deselect span
-    margin-left: 38px
-  .chosen-single
-    div
-      right: auto
-      left: 3px
-    abbr
-      right: auto
-      left: 26px
-  .chosen-choices li
-    float: right
-    &.search-field input[type="text"]
-      direction: rtl
-    &.search-choice
-      margin: 3px 5px 3px 0
-      padding: 3px 5px 3px 19px
-      .search-choice-close
-        right: auto
-        left: 4px
-  &.chosen-container-single .chosen-results
-    margin: 0 0 4px 4px
-    padding: 0 4px 0 0
-  .chosen-results li.group-option
-    padding-right: 15px
-    padding-left: 0
-  &.chosen-container-active.chosen-with-drop .chosen-single div
-    border-right: none
-  .chosen-search input[type="text"]
-    padding: 4px 5px 4px 20px
-    background: url("../img/chosen-sprite.png") no-repeat -30px -20px
-    direction: rtl
-  &.chosen-container-single
-    .chosen-single div b
-      background-position: 6px 2px
-    &.chosen-with-drop .chosen-single div b
-      background-position: -12px 2px
-
-/* @end
-/* @group Retina compatibility
-// @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx)
-//   .chosen-rtl .chosen-search input[type="text"]
-//     background-image: url("../img/chosen-sprite@2x.png") !important
-//     background-size: 52px 37px !important
-//     background-repeat: no-repeat !important
-//   .chosen-container-single
-//     .chosen-single
-//       abbr, div b
-//         background-image: url("../img/chosen-sprite@2x.png") !important
-//         background-size: 52px 37px !important
-//         background-repeat: no-repeat !important
-//     .chosen-search input[type="text"]
-//       background-image: url("../img/chosen-sprite@2x.png") !important
-//       background-size: 52px 37px !important
-//       background-repeat: no-repeat !important
-//   .chosen-container-multi .chosen-choices .search-choice .search-choice-close
-//     background-image: url("../img/chosen-sprite@2x.png") !important
-//     background-size: 52px 37px !important
-//     background-repeat: no-repeat !important
-//   .chosen-container
-//     .chosen-results-scroll-down span, .chosen-results-scroll-up span
-//       background-image: url("../img/chosen-sprite@2x.png") !important
-//       background-size: 52px 37px !important
-//       background-repeat: no-repeat !important
