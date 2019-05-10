@@ -21,13 +21,13 @@ PageList:
   - file: project-roles.html
     ready: 80
   - file: project-questions.html
-    ready: 70
+    ready: 80
   - file: project-tasks.html
-    ready: 70
+    ready: 80
   - file: project-comments.html
-    ready: 85
+    ready: 90
   - file: project-access.html
-    ready: 60
+    ready: 80
 
   - file: forms.html
     ready: 90
@@ -38,7 +38,7 @@ PageList:
   - file: form-roles.html
     ready: 10
   - file: form-questions.html
-    ready: 70
+    ready: 80
 
   - file: ui.html
     ready: 10
