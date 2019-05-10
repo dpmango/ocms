@@ -18,15 +18,15 @@ block content
 
             .content-form._form
               .ui-group.-inline
-                label(for="required") Название
+                label(for="name") Название
                   i.required *
                 ._content
-                  input.ui-input(type='text' name="name" required)
+                  input.ui-input(type='text' name="name" required)#name
 
               .ui-group.-inline
                 label(for="description") Описание
                 ._content
-                  textarea.ui-input.js-autosize(rows='6' name="description")
+                  textarea.ui-input.js-autosize(rows='6' name="description")#description
 
               .ui-group.-inline
                 label Тип анкеты

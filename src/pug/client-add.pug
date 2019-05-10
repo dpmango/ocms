@@ -22,28 +22,28 @@ block content
 
                 .content-form._form
                   .ui-group
-                    label Название организации
-                    input.ui-input(type='text')
+                    label(for="organization") Название организации
+                    input.ui-input(type='text' name="organization")#organization
 
                   .ui-row
                     .ui-col.is-6
                       .ui-group
-                        label Имя
-                        input.ui-input(type='text' name='')
+                        label(for="name") Имя
+                        input.ui-input(type='text' name='name')#name
 
                     .ui-col.is-6
                       .ui-group
-                        label Фамилия
-                        input.ui-input(type='text' name='')
+                        label(for="surname") Фамилия
+                        input.ui-input(type='text' name='surname')#surname
 
                   .ui-group
-                    label Должность
-                    input.ui-input(type='text')
+                    label(for="position") Должность
+                    input.ui-input(type='text' name="position")#position
 
                   .ui-group
-                    label Email
+                    label(for="email") Email
                       i.required *
-                    input.ui-input(type='email' required)
+                    input.ui-input(type='email' name="email" required)#email
 
         fieldset._fieldset
           ._fields
@@ -53,18 +53,18 @@ block content
 
                 .content-form._form
                   .ui-group
-                    label Название проекта
+                    label(for="projectName") Название проекта
                       i.required *
-                    input.ui-input(type='text' name="projectName" required)
+                    input.ui-input(type='text' name="projectName" required)#projectName
 
                   .ui-group
-                    label Описание
-                    textarea.ui-input.js-autosize(rows='6' name="projectDescription")
+                    label(for="projectDescription") Описание
+                    textarea.ui-input.js-autosize(rows='6' name="projectDescription")#projectDescription
 
                   .ui-group
-                    label Тип анкеты
+                    label(for="projectType") Тип анкеты
                       i.required *
-                    select.ui-input.js-select(name="projectType" required)
+                    select.ui-input.js-select(name="projectType" required)#projectType
                       option Выберите из списка
                       option(value='0') Тип 1
                       option(value='1') Тип 2
