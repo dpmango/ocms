@@ -56,14 +56,20 @@
     text-transform: uppercase
     font-size: 13px
     font-weight: 700
+    transition: color .25s $ease
     &-icon
       border-radius: 50%
       background: $colorPrimary
       width: 30px
       height: 30px
       color: #fff
-      font-size: 12px
+      font-size: 10px
       display: flex
       align-items: center
       justify-content: center
       margin-right: 10px
+      transition: background .25s $ease
+    &:hover
+      color: $fontColor
+      .main-header__create-icon
+        background: $fontColor

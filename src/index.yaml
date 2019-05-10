@@ -13,7 +13,7 @@ PageList:
     ready: 90
 
   - file: projects.html
-    ready: 80
+    ready: 90
   - file: project-add.html
     ready: 80
   - file: project-passport.html
@@ -30,7 +30,7 @@ PageList:
     ready: 60
 
   - file: forms.html
-    ready: 80
+    ready: 90
   - file: form-add.html
     ready: 80
   - file: form-passport.html

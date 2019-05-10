@@ -5,7 +5,7 @@
   APP.Plugins.Sortable = {
     init: function() {
       var sortlist1 = document.getElementById('items1');
-      if ($sortlist1.length === 0) return;
+      if (!sortlist1) return;
 
       new Sortable(sortlist1, {
         handle: '.handle',

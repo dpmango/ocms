@@ -1,4 +1,4 @@
-mixin mainHeader(title, hasReturn,  menuType, filters)
+mixin mainHeader(title, action,  menuType, filters)
   .main-header(js-min-header-onscroll)
     .main-header__container.container
 
@@ -6,18 +6,24 @@ mixin mainHeader(title, hasReturn,  menuType, filters)
         h1.main-header__heading= title
 
         .main-header__actions
-          if hasReturn === 'projects-create'
-            a.main-header__create(href='#')
+          if action === 'projects-create'
+            a.main-header__create(href='project-add.html')
               .main-header__create-icon
                 +svgMono("plus-simple")
               span создать проект
 
-          if hasReturn === 'projects'
+          if action === 'forms-create'
+            a.main-header__create(href='form-add.html')
+              .main-header__create-icon
+                +svgMono("plus-simple")
+              span создать анкету
+
+          if action === 'projects'
             a.main-header__link(href='projects.html' title='Вернуться к списку проектов')
               +svgMono("arrow-left")
               span Вернуться к списку проектов
 
-          if hasReturn === 'forms'
+          if action === 'forms'
             a.main-header__link(href='forms.html' title='Вернуться к списку анкет')
               +svgMono("arrow-left")
               span Вернуться к списку анкет
