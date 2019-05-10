@@ -18,7 +18,7 @@ block content
           ._fields
             ._container.container
               ._inner
-                legend._legend Данные клиента
+                ._legend Данные клиента
 
                 .content-form._form
                   .ui-group
@@ -49,7 +49,7 @@ block content
           ._fields
             ._container.container
               ._inner
-                legend._legend Информация о проекте
+                ._legend Информация о проекте
 
                 .content-form._form
                   .ui-group
@@ -65,7 +65,7 @@ block content
                     label(for="projectType") Тип анкеты
                       i.required *
                     select.ui-input.js-select(name="projectType" required)#projectType
-                      option Выберите из списка
+                      option(value="-" disabled) Выберите из списка
                       option(value='0') Тип 1
                       option(value='1') Тип 2
                       option(value='2') Тип 3

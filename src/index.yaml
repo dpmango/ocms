@@ -38,7 +38,7 @@ PageList:
   - file: form-roles.html
     ready: 10
   - file: form-questions.html
-    ready: 10
+    ready: 70
 
   - file: ui.html
     ready: 10
