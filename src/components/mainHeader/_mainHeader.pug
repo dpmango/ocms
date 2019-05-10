@@ -1,5 +1,5 @@
 mixin mainHeader(title, action,  menuType, filters)
-  .main-header(js-min-header-onscroll)
+  .main-header.js-min-header-onscroll
     .main-header__container.container
 
       .main-header__info
@@ -65,14 +65,14 @@ mixin mainHeader(title, action,  menuType, filters)
         .main-header__filters
           .main-header__filter
             span Клиент
-            select(js-select-chosen multiple)
+            select.js-select-chosen(multiple)
               option(value="Спортмастер" selected) Спортмастер
               option(value='AMI YAMI' selected) YAMI YAMI
               option(value='Азбука Вкуса') Азбука Вкуса
               option(value='ВкусВилл') ВкусВилл
           .main-header__filter
             span Анкета
-            select(js-select-chosen multiple)
+            select.js-select-chosen(multiple)
               option(value="Все" selected) Все
               option(value='Анкета 1') Анкета 1
               option(value='Анкета 2') Анкета 2
@@ -81,7 +81,7 @@ mixin mainHeader(title, action,  menuType, filters)
               option(value='Анкета 5') Анкета 5
           .main-header__filter
             span Любой
-            select(js-select-chosen)
+            select.js-select-chosen
               option(value="Любой" selected) Любой
               option(value='Полный доступ') Полный доступ
               option(value='Ограниченный доступ') Ограниченный доступ

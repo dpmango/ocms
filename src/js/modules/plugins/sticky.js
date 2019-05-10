@@ -4,7 +4,7 @@
 (function($, APP) {
   APP.Plugins.StickyKit = {
     init: function() {
-      var $sticky = $('[js-sticky]');
+      var $sticky = $('.js-sticky');
       if ($sticky.length === 0) return;
 
       $sticky.each(function(i, st) {
@@ -21,7 +21,7 @@
       });
     },
     destroy: function() {
-      // var $sticky = $('[js-sticky]');
+      // var $sticky = $('.js-sticky');
       // if ($sticky.length === 0) return;
       // $sticky.each(function(i, st) {
       //   var $sticky = $(st);

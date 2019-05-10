@@ -4,7 +4,7 @@
 (function($, APP) {
   APP.Plugins.TextareaAutosize = {
     init: function() {
-      autosize($('[js-autosize]'));
+      autosize($('.js-autosize'));
     },
   };
 })(jQuery, window.APP);

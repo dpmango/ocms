@@ -11,8 +11,8 @@ block content
   .page-main
     +mainHeader("Интернет-магазин Спортмастер", 'projects', 1)
 
-    form.main-body(action='/' js-validate-form)
-      .main-content(js-main-content-scroller)
+    form.main-body(action='/' ).js-validate-form
+      .main-content.js-main-content-scroller
         ._container.container
           ._inner
 
@@ -23,7 +23,7 @@ block content
 
               .ui-group.-inline
                 label(for="test_2") Число
-                .ui-counter(js-ui-counter)
+                .ui-counter.js-ui-counter
                   button._btn(type='button' data-type="minus")
                     +svgMono("minus")
                   input._input(type='text' value='15' min="1" max="99" name="test_2")
@@ -32,7 +32,7 @@ block content
 
               .ui-group.-inline
                 label(for="test_3") Список
-                select.ui-input(js-select name="test_3")
+                select.ui-input.js-select(name="test_3")
                   option Выберите из списка
                   option(value='0') Тип 1
                   option(value='1') Тип 2

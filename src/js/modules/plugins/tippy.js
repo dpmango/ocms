@@ -4,7 +4,7 @@
 (function($, APP) {
   APP.Plugins.Tippy = {
     init: function() {
-      tippy('[js-tooltip]', {
+      tippy('.js-tooltip', {
         arrow: true,
         arrowType: 'round',
         animation: 'perspective',

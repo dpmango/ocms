@@ -1,10 +1,10 @@
 mixin projectCard(obj)
   // project card
-  .project-card(js-link href="homepage.html")
+  .project-card.js-link(href="homepage.html")
     .project-card__content
       .project-card__inner
         .project-card__header
-          .project-card__remove(js-tooltip data-tippy-placement="right" data-tippy-content="Удалить?")
+          .project-card__remove.js-tooltip(data-tippy-placement="right" data-tippy-content="Удалить?")
             +svgMono("delete")
 
           h2.project-card__heading= obj.name
@@ -32,11 +32,11 @@ mixin projectCard(obj)
 
 mixin pollCard(obj)
   // poll card
-  .project-card(js-link href="homepage.html")
+  .project-card.js-link(href="homepage.html")
     .project-card__content
       .project-card__inner
         .project-card__header
-          .project-card__remove(js-tooltip data-tippy-placement="right" data-tippy-content="Удалить?")
+          .project-card__remove.js-tooltip(data-tippy-placement="right" data-tippy-content="Удалить?")
             +svgMono("delete")
           h2.project-card__heading= obj.name
           ul.tags.project-card__tags
@@ -67,35 +67,35 @@ mixin pollCard(obj)
 
 mixin progress(val)
   if val === 0
-    .progress(js-tooltip data-tippy-placement="top" data-tippy-content="Прогресс проекта: 0%")
+    .progress.js-tooltip(data-tippy-placement="top" data-tippy-content="Прогресс проекта: 0%")
       .progress__cell
       .progress__cell
       .progress__cell
       .progress__cell
 
   if val === 1
-    .progress(js-tooltip data-tippy-placement="top" data-tippy-content="Прогресс проекта: 25%")
+    .progress.js-tooltip(data-tippy-placement="top" data-tippy-content="Прогресс проекта: 25%")
       .progress__cell.-complete
       .progress__cell
       .progress__cell
       .progress__cell
 
   if val === 2
-    .progress(js-tooltip data-tippy-placement="top" data-tippy-content="Прогресс проекта: 50%")
+    .progress.js-tooltip(data-tippy-placement="top" data-tippy-content="Прогресс проекта: 50%")
       .progress__cell.-complete
       .progress__cell.-complete
       .progress__cell
       .progress__cell
 
   if val === 3
-    .progress(js-tooltip data-tippy-placement="top" data-tippy-content="Прогресс проекта: 75%")
+    .progress.js-tooltip(data-tippy-placement="top" data-tippy-content="Прогресс проекта: 75%")
       .progress__cell.-complete
       .progress__cell.-complete
       .progress__cell.-complete
       .progress__cell
 
   if val === 4
-    .progress(js-tooltip data-tippy-placement="top" data-tippy-content="Прогресс проекта: 100%")
+    .progress.js-tooltip(data-tippy-placement="top" data-tippy-content="Прогресс проекта: 100%")
       .progress__cell.-complete
       .progress__cell.-complete
       .progress__cell.-complete

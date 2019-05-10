@@ -5,7 +5,6 @@
   APP.Components.Header = {
     init: function() {
       this.setMenuClass();
-      this.controlHeaderClass();
     },
     setMenuClass: function() {
       // SET ACTIVE CLASS IN HEADER
@@ -19,20 +18,6 @@
           $(val).removeClass('is-active');
         }
       });
-    },
-    controlHeaderClass: function() {
-      var $header = $('.header');
-      if ($header.length === 0) return;
-
-      $header.attr('data-modifier', false);
-
-      var $modifierElement = $('.page')
-        .last()
-        .find('[js-header-class]');
-
-      if ($modifierElement.length > 0) {
-        $header.attr('data-modifier', $modifierElement.data('class'));
-      }
     },
   };
 })(jQuery, window.APP);

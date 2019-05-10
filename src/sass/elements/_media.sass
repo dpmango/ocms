@@ -22,7 +22,7 @@
     top: 0
     left: 0
     width: 100%
-    [js-lazy]
+    &.js-lazy
       will-change: opacity
       backface-visibility: hidden
   &.is-bg-hidden
@@ -33,7 +33,7 @@
       opacity: 1
 
 img, picture
-  &[js-lazy]
+  &.js-lazy
     opacity: 0
     transition: opacity .25s $ease, transform .4s $ease
   &.is-loaded

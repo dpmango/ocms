@@ -12,8 +12,8 @@ block content
   .page-main
     +mainHeader("Добавление клиента")
 
-    form.main-body(action='/' js-validate-form data-type="add-client")
-      .main-content(js-main-content-scroller)
+    form.main-body(action='/' data-type="add-client").js-validate-form
+      .main-content.js-main-content-scroller
         fieldset._fieldset
           ._fields
             ._container.container
@@ -59,12 +59,12 @@ block content
 
                   .ui-group
                     label Описание
-                    textarea.ui-input(rows='6' name="projectDescription" js-autosize )
+                    textarea.ui-input.js-autosize(rows='6' name="projectDescription")
 
                   .ui-group
                     label Тип анкеты
                       i.required *
-                    select.ui-input(js-select name="projectType" required)
+                    select.ui-input.js-select(name="projectType" required)
                       option Выберите из списка
                       option(value='0') Тип 1
                       option(value='1') Тип 2

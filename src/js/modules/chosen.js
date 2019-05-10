@@ -4,7 +4,7 @@
 (function($, APP) {
   APP.Plugins.Chosen = {
     init: function() {
-      var $chosen = $('[js-select-chosen]');
+      var $chosen = $('.js-select-chosen');
       if ($chosen.length === 0) return;
 
       $chosen.each(function(i, select) {

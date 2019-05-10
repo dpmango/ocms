@@ -92,7 +92,7 @@
     },
     applyForms: function() {
       var _this = this;
-      var $forms = $('[js-validate-form]:not(.is-validation-attached)');
+      var $forms = $('.js-validate-form:not(.is-validation-attached)');
       if ($forms.length === 0) return;
 
       // CONSTRUCTOR LIKE FIRST

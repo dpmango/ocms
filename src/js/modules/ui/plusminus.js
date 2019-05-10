@@ -5,19 +5,19 @@
   APP.Plugins.PlusMinus = {
     init: function() {
       var _this = this;
-      var $elements = $('[js-ui-counter]');
+      var $elements = $('.js-ui-counter');
       if ($elements.length === 0) return;
 
       _document
-        .on('click', '[js-ui-counter] [data-type="plus"]', function() {
+        .on('click', '.js-ui-counter [data-type="plus"]', function() {
           _this.changePlusMinusInput($(this), 'plus');
         })
-        .on('click', '[js-ui-counter] [data-type="minus"]', function() {
+        .on('click', '.js-ui-counter [data-type="minus"]', function() {
           _this.changePlusMinusInput($(this), 'minus');
         });
     },
     changePlusMinusInput: function($el, type) {
-      var $input = $el.closest('[js-ui-counter]').find('input');
+      var $input = $el.closest('.js-ui-counter').find('input');
       var $form = $input.closest('form');
       var minValue = $input.attr('min');
       var maxValue = $input.attr('max');

@@ -50,9 +50,9 @@ block content
                 +commentCard(card)
 
             ._add
-              form._form(action='#' js-validate-form js-sticky data-sticky-id="comments" data-offset="30")
+              form._form(action='#' data-sticky-id="comments" data-offset="30").js-validate-form.js-sticky
                 .ui-group
-                  textarea.ui-input(rows='6' js-autosize name='comment' placeholder='Напишите свой комментарий...' required)
+                  textarea.ui-input.js-autosize(rows='6' name='comment' placeholder='Напишите свой комментарий...' required)
 
                 button.btn.btn-outline Отправить
 
