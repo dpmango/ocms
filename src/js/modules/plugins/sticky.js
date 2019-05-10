@@ -5,7 +5,7 @@
   APP.Plugins.StickyKit = {
     init: function() {
       var $sticky = $('.js-sticky');
-      if ($sticky.length === 0) return;
+      if ($sticky.length === 0 || APP.Browser().data.isIe) return;
 
       $sticky.each(function(i, st) {
         var $sticky = $(st);
