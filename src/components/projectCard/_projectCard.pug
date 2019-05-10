@@ -56,10 +56,11 @@ mixin pollCard(obj)
               span Приватная
 
     .project-card__info
-      .btn.btn-square(js-dropdown) ...
-        //- .dropdown
-        //-   li
-        //-     a(href="#") Изменить
+      .btn.btn-square
+        +svgMono("dots")
+        .action__dropdown-buttons
+          a.action__dropdown-btn(href="#") Изменить
+          a.action__dropdown-btn(href="#") Удалить
 
       a.btn.btn-outline(href='#' title='Посмотреть') Посмотреть
 

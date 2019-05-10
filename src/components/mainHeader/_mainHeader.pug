@@ -6,10 +6,17 @@ mixin mainHeader(title, hasReturn,  menuType, filters)
         h1.main-header__heading= title
 
         .main-header__actions
+          if hasReturn === 'projects-create'
+            a.main-header__create(href='#')
+              .main-header__create-icon
+                +svgMono("plus-simple")
+              span создать проект
+
           if hasReturn === 'projects'
             a.main-header__link(href='projects.html' title='Вернуться к списку проектов')
               +svgMono("arrow-left")
               span Вернуться к списку проектов
+
           if hasReturn === 'forms'
             a.main-header__link(href='forms.html' title='Вернуться к списку анкет')
               +svgMono("arrow-left")
@@ -50,12 +57,31 @@ mixin mainHeader(title, hasReturn,  menuType, filters)
 
       if filters
         .main-header__filters
-          i.main-header__filter
+          .main-header__filter
             span Клиент
-            span ...
-          i.main-header__filter
+            //- span ...
+            select(js-select-chosen)
+              option Дизайнер
+              option(value='0') Роль 1
+              option(value='1') Роль 1
+              option(value='2') Роль 1
+              option(value='3') Роль 1
+              option(value='4') Роль 1
+          .main-header__filter
             span Анкета
-            span ...
-          i.main-header__filter
+            select(js-select-chosen)
+              option Дизайнер
+              option(value='0') Роль 1
+              option(value='1') Роль 1
+              option(value='2') Роль 1
+              option(value='3') Роль 1
+              option(value='4') Роль 1
+          .main-header__filter
             span Доступ
-            span ...
+            select(js-select-chosen)
+              option Дизайнер
+              option(value='0') Роль 1
+              option(value='1') Роль 1
+              option(value='2') Роль 1
+              option(value='3') Роль 1
+              option(value='4') Роль 1

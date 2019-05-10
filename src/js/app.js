@@ -70,6 +70,8 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Plugins.Tippy.init();
       APP.Plugins.StickyKit.init();
       APP.Plugins.TextareaAutosize.init();
+      APP.Plugins.Chosen.init();
+      APP.Plugins.Sortable.init();
     };
 
     // All components from `src/componenets`

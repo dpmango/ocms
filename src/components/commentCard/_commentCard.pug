@@ -7,6 +7,9 @@ mixin commentCard(obj)
       .comment-card__actions
         // TODO - dropdown actions
         span ...
+          .action__dropdown-buttons
+            a.action__dropdown-btn(href="#") Изменить
+            a.action__dropdown-btn(href="#") Удалить
     p.comment-card__caption= obj.caption
     span.comment-card__date= obj.date
 

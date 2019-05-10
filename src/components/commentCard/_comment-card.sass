@@ -15,6 +15,21 @@
 
   &__actions
     margin-left: auto
+    span
+      transition: color .25s $ease
+      position: relative
+      cursor: pointer
+      padding: 0 3px 5px
+      font-weight: 700
+      font-size: 14px
+      letter-spacing: 1px
+      color: $colorIcon
+      &:hover
+        color: $colorPrimary
+        .action__dropdown-buttons
+          opacity: 1
+          pointer-events: all
+          visibility: visible
 
   &__title
     margin: 0 7px 0 0

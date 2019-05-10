@@ -90,102 +90,106 @@ block content
                       label.ui-toggle._ui-toggle
                         input._input(type='checkbox' name='test_12')
                         span._handle
-              .form-questions__item
-                .form-questions__item-head
-                  p.form-questions__answer ответ 1
-                  .form-questions__row
-                    .form-questions__item-title
-                      +svgMono('lines')
-                      | Требуется
-                    .form-questions__head-right
-                      a.form-questions__remove(href="#")
-                        +svgMono('remove')
-                        span Удалить связь
-                .form-questions__item-body
-                  .form-questions__item-body-row
-                    p.form-questions__item-body-title Задача 1
-                    .form-questions__head-right
-                      a.form-questions__remove(href="#")
-                        +svgMono('remove')
-                        span Удалить связь
-                  .form-questions__item-body-grid
-                    .form-questions__item-body-left
-                      input.ui-input(type='text' name='login' placeholder="Название задачи")
-                      select.ui-input(js-select)
-                        option Выберите роль
-                        option(value='0') Роль 1
-                        option(value='1') Роль 1
-                        option(value='2') Роль 1
-                        option(value='3') Роль 1
-                        option(value='4') Роль 1
-                    .form-questions__item-body-right
-                      .ui-group
-                        textarea.ui-input(placeholder="Комментарий к задаче")
-                .form-questions__item-body
-                  .form-questions__item-body-row
-                    p.form-questions__item-body-title Связь 1
-                    .form-questions__head-right
-                      a.form-questions__remove(href="#")
-                        +svgMono('remove')
-                        span Удалить связь
-                  .form-questions__item-body-grid
-                    input.ui-input(type='text' name='login' placeholder="Название задачи" value="Нужны ли вам работы над сайтом?")
-                    a.btn.btn-outline(href="#") Перейти к связи
-                  .form-questions__item-body-line
-                  .form-questions__item-body-row
-                    p.form-questions__item-body-title Связь 1
-                    .form-questions__head-right
-                      a.form-questions__remove(href="#")
-                        +svgMono('remove')
-                        span Удалить связь
-                  .form-questions__item-body-grid
-                    input.ui-input(type='text' name='login' placeholder="Название задачи" value="Нужны ли вам работы над сайтом?")
-                    a.btn.btn-outline(href="#") Перейти к связи
+              .form-questions__items#items1
+                .form-questions__item
+                  .form-questions__item-head
+                    p.form-questions__answer ответ 1
+                    .form-questions__row
+                      .form-questions__item-title
+                        .handle
+                          +svgMono('lines')
+                        | Требуется
+                      .form-questions__head-right
+                        a.form-questions__remove(href="#")
+                          +svgMono('remove')
+                          span Удалить связь
+                  .form-questions__item-body
+                    .form-questions__item-body-row
+                      p.form-questions__item-body-title Задача 1
+                      .form-questions__head-right
+                        a.form-questions__remove(href="#")
+                          +svgMono('remove')
+                          span Удалить связь
+                    .form-questions__item-body-grid
+                      .form-questions__item-body-left
+                        input.ui-input(type='text' name='login' placeholder="Название задачи")
+                        select.ui-input(js-select)
+                          option Выберите роль
+                          option(value='0') Роль 1
+                          option(value='1') Роль 1
+                          option(value='2') Роль 1
+                          option(value='3') Роль 1
+                          option(value='4') Роль 1
+                      .form-questions__item-body-right
+                        .ui-group
+                          textarea.ui-input(placeholder="Комментарий к задаче")
+                  .form-questions__item-body
+                    .form-questions__item-body-row
+                      p.form-questions__item-body-title Связь 1
+                      .form-questions__head-right
+                        a.form-questions__remove(href="#")
+                          +svgMono('remove')
+                          span Удалить связь
+                    .form-questions__item-body-grid
+                      input.ui-input(type='text' name='login' placeholder="Название задачи" value="Нужны ли вам работы над сайтом?")
+                      a.btn.btn-outline(href="#") Перейти к связи
+                    .form-questions__item-body-line
+                    .form-questions__item-body-row
+                      p.form-questions__item-body-title Связь 1
+                      .form-questions__head-right
+                        a.form-questions__remove(href="#")
+                          +svgMono('remove')
+                          span Удалить связь
+                    .form-questions__item-body-grid
+                      input.ui-input(type='text' name='login' placeholder="Название задачи" value="Нужны ли вам работы над сайтом?")
+                      a.btn.btn-outline(href="#") Перейти к связи
 
 
-                .form-questions__item-bottom
-                  a(href="#")
-                    +svgMono('add-task')
-                    | Добавить задачу
-                  a(href="#")
-                    +svgMono('add-conn')
-                    | Добавить связь к ответу
-              .form-questions__item
-                .form-questions__item-head
-                  p.form-questions__answer ответ 2
-                  .form-questions__row
-                    .form-questions__item-title
-                      +svgMono('lines')
-                      | Не требуется
-                    .form-questions__head-right
-                      a.form-questions__remove(href="#")
-                        +svgMono('remove')
-                        span Удалить связь
-                .form-questions__item-bottom
-                  a(href="#")
-                    +svgMono('add-task')
-                    | Добавить задачу
-                  a(href="#")
-                    +svgMono('add-conn')
-                    | Добавить связь к ответу
-              .form-questions__item
-                .form-questions__item-head
-                  p.form-questions__answer ответ 3
-                  .form-questions__row
-                    .form-questions__item-title
-                      +svgMono('lines')
-                      | Введите ответ
-                    .form-questions__head-right
-                      a.form-questions__remove(href="#")
-                        +svgMono('remove')
-                        span Удалить связь
-                .form-questions__item-bottom
-                  a(href="#")
-                    +svgMono('add-task')
-                    | Добавить задачу
-                  a(href="#")
-                    +svgMono('add-conn')
-                    | Добавить связь к ответу
+                  .form-questions__item-bottom
+                    a(href="#")
+                      +svgMono('add-task')
+                      | Добавить задачу
+                    a(href="#")
+                      +svgMono('add-conn')
+                      | Добавить связь к ответу
+                .form-questions__item
+                  .form-questions__item-head
+                    p.form-questions__answer ответ 2
+                    .form-questions__row
+                      .form-questions__item-title
+                        .handle
+                          +svgMono('lines')
+                        | Не требуется
+                      .form-questions__head-right
+                        a.form-questions__remove(href="#")
+                          +svgMono('remove')
+                          span Удалить связь
+                  .form-questions__item-bottom
+                    a(href="#")
+                      +svgMono('add-task')
+                      | Добавить задачу
+                    a(href="#")
+                      +svgMono('add-conn')
+                      | Добавить связь к ответу
+                .form-questions__item
+                  .form-questions__item-head
+                    p.form-questions__answer ответ 3
+                    .form-questions__row
+                      .form-questions__item-title
+                        .handle
+                          +svgMono('lines')
+                        | Введите ответ
+                      .form-questions__head-right
+                        a.form-questions__remove(href="#")
+                          +svgMono('remove')
+                          span Удалить связь
+                  .form-questions__item-bottom
+                    a(href="#")
+                      +svgMono('add-task')
+                      | Добавить задачу
+                    a(href="#")
+                      +svgMono('add-conn')
+                      | Добавить связь к ответу
               .form-questions__add
                 a(href="#")
                   +svgMono('plus')

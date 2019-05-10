@@ -96,6 +96,37 @@
     align-items: center
     flex: 0 0 auto
     margin-top: -10px
+    align-items: stretch
+    .btn-square
+      color: $colorIcon
+      font-size: 3px
+      padding: 9px
+      border: 1px solid $borderColor
+      background-color: transparent
+      min-width: 41px
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-right: 10px
+      background: transparent
+      &:before
+        display: block
+        position: absolute
+        content: ''
+        width: 100%
+        height: 20px
+        top: 99%
+      &:hover
+        background: $borderColor
+        .action__dropdown-buttons
+          opacity: 1
+          pointer-events: all
+          visibility: visible
+    .action__dropdown-buttons
+      right: -6px
+      text-align: left
+      margin-top: 17px
+
 
   &__date
     margin-right: 30px

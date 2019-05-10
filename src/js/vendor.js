@@ -16,6 +16,8 @@ import throttle from 'lodash/throttle';
 import tippy from 'tippy.js';
 import stickybits from 'stickybits';
 import autosize from 'autosize';
+import chosen from 'chosen-js';
+import Sortable from 'sortablejs';
 
 // expose imports to window to use in app.js
 // (jquery is exposed in expose-loader)
@@ -38,3 +40,5 @@ window.throttle = throttle;
 window.tippy = tippy;
 window.stickybits = stickybits;
 window.autosize = autosize;
+window.chosen = chosen;
+window.Sortable = Sortable;
