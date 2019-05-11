@@ -5,10 +5,12 @@ mixin commentCard(obj)
       .comment-card__title= obj.title
       .comment-card__company= obj.company
       .comment-card__actions
-        span ...
-          .action__dropdown-buttons
-            a.action__dropdown-btn(href="#") Изменить
-            a.action__dropdown-btn(href="#") Удалить
+        .btn
+          +svgMono("dots")
+          .dropdown
+            .dropdown__menu
+              a.dropdown__button(href="#") Изменить
+              a.dropdown__button(href="#") Удалить
     p.comment-card__caption= obj.caption
     span.comment-card__date= obj.date
 
