@@ -45,13 +45,14 @@
   &__remove
     position: absolute
     font-size: 0
-    top: -4px
+    top: 22px
     left: -25px
     padding: 5px
     color: $colorIcon
     opacity: 0
     cursor: pointer
     transition: opacity .25s $ease, color .25s $ease
+    z-index: 2
     .ico
       font-size: 16px
     &:hover
@@ -149,5 +150,40 @@
     &::before
       opacity: 1
 
++r($lg)
+  .project-card
+    &__info
+      flex-direction: column-reverse
+      align-items: flex-start
+      justify-content: flex-start
+      .btn
+        margin-right: 50px
 
-
+    &__date
+      margin-top: 15px
+      margin-right: auto
+      margin-left: 0
+      span
+        display: block
+        margin: 0
+    &__remove
+      opacity: 1
+      right: 0
+      top: 16px
+      left: auto
+      padding: 11px
+      min-width: 41px
+      border: 1px solid $borderColor
+      border-radius: 4px
+      text-align: center
+      font-size: 16px
+      line-height: 1
+      display: flex
+      align-items: center
+      justify-content: center
+      z-index: 100
+      pointer-events: all
+      .ico
+        font-size: 17px
+      &:hover
+        background: $borderColor

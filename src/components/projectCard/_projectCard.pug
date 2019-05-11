@@ -1,11 +1,13 @@
 mixin projectCard(obj)
   // project card
   .project-card.js-link(data-href="homepage.html")
+    .project-card__remove.js-tooltip(data-tippy-placement="right" data-tippy-content="Удалить?")
+      +svgMono("delete")
     .project-card__content
       .project-card__inner
         .project-card__header
-          .project-card__remove.js-tooltip(data-tippy-placement="right" data-tippy-content="Удалить?")
-            +svgMono("delete")
+          //- .project-card__remove.js-tooltip(data-tippy-placement="right" data-tippy-content="Удалить?")
+          //-   +svgMono("delete")
 
           h2.project-card__heading= obj.name
           +progress(obj.progress)

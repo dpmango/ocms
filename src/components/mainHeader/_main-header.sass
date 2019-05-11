@@ -75,3 +75,47 @@
       color: $fontColor
       .main-header__create-icon
         background: $fontColor
+
+
++r($lg)
+  .main-header
+    &__filters
+      margin-bottom: 0
+      width: 100%
+      justify-content: space-between
+      border: 1px solid $borderColor
+      border-radius: 4px 4px 0 0
+      border-bottom: none
+    &__filter
+      width: 33.333333%
+      padding: 13px 15px 28px
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      border-right: 1px solid $borderColor
+      margin: 0
+      // overflow: hidden
+      position: relative
+      &:last-child
+        border-right: none
+      .chosen-container
+        position: absolute
+        width: 100% !important
+        height: 100%
+        left: 0
+        top: 0
+        padding-left: 15px
+        padding-top: 29px
+        display: block
+        height: auto
+        padding-bottom: 9px
+        cursor: pointer
+      .chosen-single
+        overflow: visible
+      .chosen-single div
+        top: -6px
+        height: 15px
+      .chosen-container-multi.chosen-with-drop.chosen-container-active .chosen-drop
+        margin-top: 23px
+      .chosen-drop
+        border-radius: 0 0 4px 4px
