@@ -5,6 +5,7 @@ auth: false
 extends shared/_layout
 include ../components/mainHeader/_mainHeader
 include ../components/mainFooter/_mainFooter
+include ../components/tile/_tile
 
 block content
 
@@ -12,29 +13,23 @@ block content
     +mainHeader("Интернет-магазин Спортмастер", 'projects', 1)
 
     form.main-body(action='/' method='post')
-      .main-content(js-main-content-scroller)
+      .main-content.js-main-content-scroller
         ._container.container
           ._inner
 
             .content-grid._grid
               ._inner
                 ._column
-                  .tile._tile
-                    button.btn-delete._btn-delete(type='button' title='Удалить')
-                      +svgMono('delete')
-                    h3._heading Андрей Логвинов
-                    ._select
-                      span Доступ:
-                      span._selected Редактирование
+                  +tileCard({
+                    heading: 'Андрей Логвинов',
+                    access: 'Редактирование'
+                  })
 
                 ._column
-                  .tile._tile
-                    button.btn-delete._btn-delete(type='button' title='Удалить')
-                      +svgMono('delete')
-                    h3._heading Константин Константинопольский
-                    ._select
-                      span Доступ:
-                      span._selected Чтение
+                  +tileCard({
+                    heading: 'Константин Константинопольский',
+                    access: 'Чтение'
+                  })
 
                 ._column
                   .tile.-add._tile Добавить нового пользователя

@@ -4,7 +4,7 @@
 (function($, APP) {
   APP.Plugins.LazyLoadImages = {
     init: function() {
-      _document.find('[js-lazy]').Lazy({
+      _document.find('.js-lazy').Lazy({
         threshold: 500,
         enableThrottle: true,
         throttle: 100,

@@ -4,7 +4,7 @@
 (function($, APP) {
   APP.Plugins.Selectric = {
     init: function() {
-      var $select = $('[js-select]');
+      var $select = $('.js-select');
       if ($select.length === 0) return;
 
       $select.selectric({

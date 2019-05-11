@@ -12,13 +12,13 @@ block content
     +mainHeader("Интернет-магазин Спортмастер", 'projects', 1)
 
     form.main-body(action='/' method='post')
-      .main-content(js-main-content-scroller)
+      .main-content.js-main-content-scroller
         .project-tasks
           .project-tasks__head
             .container
               p Роль:
               .project-tasks__head-select
-                select.ui-input(js-select-chosen)
+                select.ui-input.js-select-chosen
                   option Любая
                   option(value='0') Роль 1
                   option(value='1') Роль 1
@@ -27,7 +27,7 @@ block content
                   option(value='4') Роль 1
               p Сотрудник:
               .project-tasks__head-select
-                select.ui-input(js-select-chosen)
+                select.ui-input.js-select-chosen
                   option Сотрудник:
                   option(value='0') Роль 1
                   option(value='1') Роль 1
@@ -35,12 +35,12 @@ block content
                   option(value='3') Роль 1
                   option(value='4') Роль 1
               .project-tasks__head-buttons
-                a.is-active(href="#" js-task-button)
+                a.is-active.js-task-button(href="#")
                   .project-tasks__head-button
                     span(style="width: 100%")
                     span(style="width: 60%")
                     span(style="width: 60%")
-                a(href="#" js-task-button)
+                a.js-task-button(href="#")
                   .project-tasks__head-button
                     span(style="width: 100%")
                     span(style="width: 100%")
@@ -54,7 +54,7 @@ block content
                   p.project-tasks__item-title Обучить дизайнера
                 .project-tasks__item-right
                   p.project-tasks__item-name.red Дизайнер
-                  select.ui-input(js-select)
+                  select.ui-input.js-select
                     option Выберите сотрудника
                     option(value='0') Cотрудник 1
                     option(value='1') Cотрудник 2
@@ -68,7 +68,7 @@ block content
                   p.project-tasks__item-description Описание задачи в несколько слов при его наличии
                 .project-tasks__item-right
                   p.project-tasks__item-name.purple IT-директор
-                  select.ui-input(js-select)
+                  select.ui-input.js-select
                     option А. И. Константинопольский
                     option(value='0') Cотрудник 1
                     option(value='1') Cотрудник 2
@@ -81,7 +81,7 @@ block content
                   p.project-tasks__item-title Найти и заключить договор с подрядчиком
                 .project-tasks__item-right
                   p.project-tasks__item-name.purple IT-директор
-                  select.ui-input(js-select)
+                  select.ui-input.js-select
                     option В. В. Загитов
                     option(value='0') Cотрудник 1
                     option(value='1') Cотрудник 2
@@ -94,7 +94,7 @@ block content
                     p.project-tasks__item-title Создать тендер
                   .project-tasks__item-right
                     p.project-tasks__item-name.green Коммерческий директор
-                    select.ui-input(js-select)
+                    select.ui-input.js-select
                       option Выберите сотрудника
                       option(value='0') Cотрудник 1
                       option(value='1') Cотрудник 2
@@ -107,7 +107,7 @@ block content
                     p.project-tasks__item-title Выбрать подрячика
                   .project-tasks__item-right
                     p.project-tasks__item-name.purple IT-директор
-                    select.ui-input(js-select)
+                    select.ui-input.js-select
                       option Выберите сотрудника
                       option(value='0') Cотрудник 1
                       option(value='1') Cотрудник 2
@@ -120,7 +120,7 @@ block content
                   p.project-tasks__item-title Выделить маркетинговый бюджет
                 .project-tasks__item-right
                   p.project-tasks__item-name.green Коммерческий директор
-                  select.ui-input(js-select)
+                  select.ui-input.js-select
                     option С. И. Малахин
                     option(value='0') С. И. Малахин
                     option(value='1') С. И. Малахин

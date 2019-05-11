@@ -11,28 +11,28 @@ block content
   .page-main
     +mainHeader("Интернет-магазин Спортмастер", 'projects', 1)
 
-    form.main-body(action='/' js-validate-form)
-      .main-content(js-main-content-scroller)
+    form.main-body(action='/' ).js-validate-form
+      .main-content.js-main-content-scroller
         ._container.container
           ._inner
 
             .content-form._form
               .ui-group.-inline
                 label(for="test_1") Строка
-                input.ui-input(type='text' name="test_1")
+                input.ui-input(type='text' name="test_1")#test_1
 
               .ui-group.-inline
                 label(for="test_2") Число
-                .ui-counter(js-ui-counter)
+                .ui-counter.js-ui-counter
                   button._btn(type='button' data-type="minus")
                     +svgMono("minus")
-                  input._input(type='text' value='15' min="1" max="99" name="test_2")
+                  input._input(type='number' value='15' min="1" max="99" name="test_2")#test_2
                   button._btn(type='button' data-type="plus")
                     +svgMono("plus-simple")
 
               .ui-group.-inline
                 label(for="test_3") Список
-                select.ui-input(js-select name="test_3")
+                select.ui-input.js-select(name="test_3")#test_3
                   option Выберите из списка
                   option(value='0') Тип 1
                   option(value='1') Тип 2
@@ -44,7 +44,7 @@ block content
                 label(for="test_4") Да/Нет
                 ._content
                   label.ui-toggle._ui-toggle
-                    input._input(type='checkbox' name='test_4' checked)
+                    input._input(type='checkbox' name='test_4' checked)#test_4
                     span._handle
 
       +mainFooter("К следующему шагу")

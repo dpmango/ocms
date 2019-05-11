@@ -11,8 +11,8 @@ block content
   .page-main
     +mainHeader("Создание проекта", 'projects', 1)
 
-    form.main-body(action='/' js-validate-form)
-      .main-content(js-main-content-scroller)
+    form.main-body(action='/' ).js-validate-form
+      .main-content.js-main-content-scroller
         ._container.container
           ._inner
 
@@ -21,18 +21,18 @@ block content
                 label(for="name") Название
                   i.required *
                 ._content
-                  input.ui-input(type='text' name="name" required)
+                  input.ui-input(type='text' name="name" required)#name
 
               .ui-group.-inline
                 label(for="description") Описание
                 ._content
-                  textarea.ui-input(rows='6' name="description" js-autosize )
+                  textarea.ui-input.js-autosize(rows='6' name="description")#description
 
               .ui-group.-inline
                 label(for="type") Тип анкеты
                   i.required *
                 ._content
-                  select.ui-input(js-select name="type" required)
+                  select.ui-input.js-select(name="type" required)#type
                     option(value='') Выберите из списка
                     option(value='0') Тип 1
                     option(value='1') Тип 2

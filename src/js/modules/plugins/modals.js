@@ -19,7 +19,7 @@
     init: function() {
       var startWindowScroll = 0;
       var _this = this;
-      $('[js-popup]').magnificPopup(
+      $('.js-popup').magnificPopup(
         $.extend(_this.data.shared, {
           callbacks: {
             // beforeOpen: function() {
@@ -34,22 +34,7 @@
         })
       );
 
-      $('[js-popup-gallery]').magnificPopup({
-        delegate: 'a',
-        type: 'image',
-        tLoading: 'Загрузка #%curr%...',
-        mainClass: 'popup-buble',
-        gallery: {
-          enabled: true,
-          navigateByImgClick: true,
-          preload: [0, 1],
-        },
-        image: {
-          tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-        },
-      });
-
-      _document.on('click', '[js-close-modal]', function() {
+      _document.on('click', '.js-close-modal', function() {
         $.magnificPopup.close();
       });
     },

@@ -11,22 +11,22 @@ block content
   .page-main
     +mainHeader("Создание анкеты", 'forms', 2)
 
-    form.main-body(action='/' js-validate-form)
-      .main-content(js-main-content-scroller)
+    form.main-body(action='/' ).js-validate-form
+      .main-content.js-main-content-scroller
         ._container.container
           ._inner
 
             .content-form._form
               .ui-group.-inline
-                label(for="required") Название
+                label(for="name") Название
                   i.required *
                 ._content
-                  input.ui-input(type='text' name="name" required)
+                  input.ui-input(type='text' name="name" required)#name
 
               .ui-group.-inline
                 label(for="description") Описание
                 ._content
-                  textarea.ui-input(rows='6' name="description" js-autosize )
+                  textarea.ui-input.js-autosize(rows='6' name="description")#description
 
               .ui-group.-inline
                 label Тип анкеты

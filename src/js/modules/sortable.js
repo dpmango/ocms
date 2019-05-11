@@ -4,7 +4,7 @@
 (function($, APP) {
   APP.Plugins.Sortable = {
     init: function() {
-      var sortlist1 = document.getElementById('items1');
+      var sortlist1 = document.getElementById('sortable');
       if (!sortlist1) return;
 
       new Sortable(sortlist1, {

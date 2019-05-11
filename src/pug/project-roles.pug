@@ -5,6 +5,7 @@ auth: false
 extends shared/_layout
 include ../components/mainHeader/_mainHeader
 include ../components/mainFooter/_mainFooter
+include ../components/tile/_tile
 
 block content
 
@@ -12,7 +13,7 @@ block content
     +mainHeader("Интернет-магазин Спортмастер", 'projects', 1)
 
     form.main-body(action='/' method='post')
-      .main-content(js-main-content-scroller)
+      .main-content.js-main-content-scroller
         ._container.container
           ._inner
 
@@ -27,25 +28,22 @@ block content
             .content-grid._grid
               ._inner
                 ._column
-                  .tile._tile
-                    button.btn-delete._btn-delete(type='button' title='Удалить')
-                      +svgMono('delete')
-                    h3._heading Дизайнер
-                    p._caption Евгений Гришковец
+                  +tileCard({
+                    heading: 'Дизайнер',
+                    caption: 'Евгений Гришковец'
+                  })
 
                 ._column
-                  .tile._tile
-                    button.btn-delete._btn-delete(type='button' title='Удалить')
-                      +svgMono('delete')
-                    h3._heading Программист
-                    p._caption Введите имя сотрудника
+                  +tileCard({
+                    heading: 'Программист',
+                    caption: ''
+                  })
 
                 ._column
-                  .tile._tile
-                    button.btn-delete._btn-delete(type='button' title='Удалить')
-                      +svgMono('delete')
-                    h3._heading Выберите роль
-                    p._caption Введите имя сотрудника
+                  +tileCard({
+                    heading: 'Выберите роль',
+                    caption: ''
+                  })
 
                 ._column
                   .tile.-add._tile Добавить нового сотрудника

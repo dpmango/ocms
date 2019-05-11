@@ -44,7 +44,7 @@
         this.enableScroll(isOnload);
         return;
       }
-      if ($('[js-hamburger]').is('.is-active')) {
+      if ($('.something').is('.is-active')) {
         this.disableScroll();
       } else {
         this.enableScroll();

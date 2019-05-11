@@ -8,7 +8,7 @@
         .on('click', '[href="#"]', function(e) {
           e.preventDefault();
         })
-        .on('click', '[js-link]', function(e) {
+        .on('click', '.js-link', function(e) {
           var dataHref = $(this).data('href');
           if (dataHref && dataHref !== '#') {
             e.preventDefault();
@@ -16,7 +16,7 @@
             Barba.Pjax.goTo(dataHref);
           }
         })
-        .on('click', '[js-open-parent]', function(e) {
+        .on('click', '.js-open-parent', function(e) {
           e.preventDefault();
           e.stopPropagation();
           $(this)
@@ -28,24 +28,24 @@
             .children('.project-questions__sidebar-item')
             .slideToggle();
         })
-        .on('click', '[js-task-button]', function(e) {
+        .on('click', '.js-task-button', function(e) {
           e.preventDefault();
           e.stopPropagation();
-          $('[js-task-button]').removeClass('is-active');
+          $('.js-task-button').removeClass('is-active');
           $(this).addClass('is-active');
         })
-        // .on('mouseover', '[js-open-parent]', function(e) {
+        // .on('mouseover', '.js-open-parent', function(e) {
         //   e.preventDefault();
         //   e.stopPropagation();
         //   $(this).css('background', '#F2F5FA');
         // })
-        // .on('mouseout', '[js-open-parent]', function(e) {
+        // .on('mouseout', '.js-open-parent', function(e) {
         //   e.preventDefault();
         //   e.stopPropagation();
         //   $(this).css('background', 'none');
         // })
         // prevent going the same link (if barba is connected)
-        .on('click', 'a, [js-link]', function(e) {
+        .on('click', 'a, .js-link', function(e) {
           var href = $(this).data('href') || $(this).attr('href');
           var path = window.location.pathname;
 
