@@ -24,7 +24,7 @@ block content
                     button.btn-delete.tile__btn-delete.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type="button" title="Удалить")
                       +svgMono("delete")
 
-                    h3.tile__heading Андрей Логвинов
+                    h3.tile__heading.js-editable-caption(contenteditable="true" placeholder="Введите имя сотрудника") Андрей Логвинов
                     .tile__select-row
                       p Доступ:
                       select.js-select-chosen
@@ -36,7 +36,8 @@ block content
                   .tile.--access
                     button.btn-delete.tile__btn-delete.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type="button" title="Удалить")
                       +svgMono("delete")
-                    h3.tile__heading Константин Константинопольский
+                    h3.tile__heading.js-editable-caption(contenteditable="true" placeholder="Введите имя сотрудника") Константин Константинопольский
+
                     .tile__select-row
                       p Доступ:
                       select.js-select-chosen
