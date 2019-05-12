@@ -34,6 +34,13 @@
           $('.js-task-button').removeClass('is-active');
           $(this).addClass('is-active');
         })
+        .on('click', '.js-sidebar-hide', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          $('.project-questions__sidebar').toggleClass('is-hide');
+          $(this).toggleClass('is-hide');
+        })
+
         // .on('mouseover', '.js-open-parent', function(e) {
         //   e.preventDefault();
         //   e.stopPropagation();

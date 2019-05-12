@@ -20,16 +20,41 @@ block content
             .content-grid._grid
               ._inner
                 ._column
-                  +tileCard({
-                    heading: 'Андрей Логвинов',
-                    access: 'Редактирование'
-                  })
+                  .tile.--access
+                    button.btn-delete.tile__btn-delete.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type="button" title="Удалить")
+                      +svgMono("delete")
+
+                    h3.tile__heading Андрей Логвинов
+                    .tile__select-row
+                      p Доступ:
+                      select.js-select-chosen
+                        option(value='Редактирование') Редактирование
+                        option(value='Чтение' selected) Чтение
+                        option(value='Все') Все
 
                 ._column
-                  +tileCard({
-                    heading: 'Константин Константинопольский',
-                    access: 'Чтение'
-                  })
+                  .tile.--access
+                    button.btn-delete.tile__btn-delete.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type="button" title="Удалить")
+                      +svgMono("delete")
+                    h3.tile__heading Константин Константинопольский
+                    .tile__select-row
+                      p Доступ:
+                      select.js-select-chosen
+                        option(value='Редактирование' selected) Редактирование
+                        option(value='Чтение') Чтение
+                        option(value='Все') Все
+
+                //- ._column
+                //-   +tileCard({
+                //-     heading: 'Андрей Логвинов',
+                //-     access: 'Редактирование'
+                //-   })
+
+                //- ._column
+                //-   +tileCard({
+                //-     heading: 'Константин Константинопольский',
+                //-     access: 'Чтение'
+                //-   })
 
                 ._column
                   .tile.-add._tile Добавить нового пользователя

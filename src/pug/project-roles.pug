@@ -28,22 +28,67 @@ block content
             .content-grid._grid
               ._inner
                 ._column
-                  +tileCard({
-                    heading: 'Дизайнер',
-                    caption: 'Евгений Гришковец'
-                  })
+                  .tile
+                    button.btn-delete.tile__btn-delete.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type="button" title="Удалить")
+                      +svgMono("delete")
+
+                    //- h3.tile__heading Дизайнер 1
+                    .tile__select
+                      select.js-select-chosen
+                        option(value='0' disabled) Выберите роль
+                        option(value='Программист') Программист
+                        option(value="Дизайнер" selected) Дизайнер
+                        option(value='Коммерческий директор') Коммерческий директор
+                        option(value='Проект-менеджер') Проект-менеджер
+                    .tile__input
+                      input(type="text" name="" placeholder="Введите имя сотрудника" value="Евгений Гришковец")
 
                 ._column
-                  +tileCard({
-                    heading: 'Программист',
-                    caption: ''
-                  })
+                  .tile
+                    button.btn-delete.tile__btn-delete.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type="button" title="Удалить")
+                      +svgMono("delete")
+                    .tile__select
+                      select.js-select-chosen
+                        option(value='0' disabled) Выберите роль
+                        option(value='Программист' selected) Программист
+                        option(value="Дизайнер") Дизайнер
+                        option(value='Коммерческий директор') Коммерческий директор
+                        option(value='Проект-менеджер') Проект-менеджер
+                    .tile__input
+                      input(type="text" name="" placeholder="Введите имя сотрудника" value="")
 
                 ._column
-                  +tileCard({
-                    heading: 'Выберите роль',
-                    caption: ''
-                  })
+                  .tile
+                    button.btn-delete.tile__btn-delete.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type="button" title="Удалить")
+                      +svgMono("delete")
+
+                    //- h3.tile__heading Дизайнер 2
+                    .tile__select
+                      select.js-select-chosen
+                        option(value='0' disabled selected) Выберите роль
+                        option(value='Программист') Программист
+                        option(value="Дизайнер") Дизайнер
+                        option(value='Коммерческий директор') Коммерческий директор
+                        option(value='Проект-менеджер') Проект-менеджер
+                    .tile__input
+                      input(type="text" name="" placeholder="Введите имя сотрудника" value="Евгений Гришковец")
+
+                  //- +tileCard({
+                  //-   heading: 'Дизайнер',
+                  //-   caption: 'Евгений Гришковец'
+                  //- })
+
+                //- ._column
+                //-   +tileCard({
+                //-     heading: 'Программист',
+                //-     caption: 'asd'
+                //-   })
+
+                //- ._column
+                //-   +tileCard({
+                //-     heading: 'Выберите роль',
+                //-     caption: ''
+                //-   })
 
                 ._column
                   .tile.-add._tile Добавить нового сотрудника
