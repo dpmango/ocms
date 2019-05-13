@@ -17,6 +17,7 @@
     height: 40px
     color: $colorLight
     border-right: 1px solid $borderColor
+    transition: .25s $ease
 
     &:last-child
       border-right: 0
@@ -24,3 +25,9 @@
     &--current
       color: white
       background-color: $colorPrimary
+
+    &--separator
+      pointer-events: none
+
+    &:hover:not(.pagenav__link--current)
+      color: $colorPrimary
