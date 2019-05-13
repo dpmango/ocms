@@ -38,8 +38,8 @@ mixin pollCard(obj)
     .project-card__content
       .project-card__inner
         .project-card__header
-          .project-card__remove.js-tooltip(data-tippy-placement="right" data-tippy-content="Удалить?")
-            +svgMono("delete")
+          //- .project-card__remove.js-tooltip(data-tippy-placement="right" data-tippy-content="Удалить?")
+          //-   +svgMono("delete")
           h2.project-card__heading= obj.name
           ul.tags.project-card__tags
             li.tags__item= obj.tags
@@ -57,7 +57,7 @@ mixin pollCard(obj)
               +svgMono("visibility-private")
               span Приватная
 
-    .project-card__info
+    .project-card__info.project-card__info--forms
       .btn.btn-square
         +svgMono("dots")
         .dropdown
