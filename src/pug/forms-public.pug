@@ -1,0 +1,47 @@
+---
+title: Анкеты публичные
+auth: false
+---
+extends shared/_layout
+include ../components/mainHeader/_mainHeader
+include ../components/projectCard/_projectCard
+
+block content
+
+  .page-main
+    +mainHeader("Анкеты", 'forms-create', 3)
+
+
+    .main-body
+      .main-content.js-main-content-scroller
+        ._container.container
+          ._list
+            -
+              var cards = [
+                {
+                  name: "Публичная анкета",
+                  tags: '2 проекта',
+                  caption: 'микроформах начала ХХ столетия, нашел далекую историческую параллель в лице средневекового гокета.',
+                  user: 'Сергей',
+                  visibility: 'public'
+                },
+                {
+                  name: "Настройка эквайринга",
+                  tags: '5 проектов',
+                  caption: 'Пуантилизм, зародившийся в музыкальных микроформах начала ХХ столетия, нашел далекую историческую параллель в лице средневекового гокета.',
+                  user: 'Админ',
+                  visibility: 'private'
+                },
+                {
+                  name: "Разработка интернет-магазина",
+                  tags: '12 проектов',
+                  caption: '',
+                  user: 'Антон',
+                  visibility: 'public'
+                },
+              ]
+
+            each x, index in cards
+              +pollCard(x)
+
+          include ../components/pagenav/_pagenav

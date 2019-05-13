@@ -21,22 +21,22 @@ PageList:
   - file: project-roles.html
     ready: 90
   - file: project-questions.html
-    ready: 80
+    ready: 95
   - file: project-tasks.html
-    ready: 80
+    ready: 100
   - file: project-comments.html
-    ready: 90
+    ready: 95
   - file: project-access.html
-    ready: 80
+    ready: 90
 
   - file: forms.html
     ready: 100
   - file: form-add.html
-    ready: 80
+    ready: 90
   - file: form-passport.html
-    ready: 10
+    ready: 90
   - file: form-roles.html
-    ready: 80
+    ready: 90
   - file: form-questions.html
     ready: 80
 
