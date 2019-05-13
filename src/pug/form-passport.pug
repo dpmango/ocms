@@ -11,6 +11,45 @@ block content
   .page-main
     +mainHeader("Создание анкеты", 'forms', 2)
 
+    form(action="#")
+      .passport-hidden
+        a.passport-hidden__close-overlay.js-close-passport-add(href="#")
+        .passport-hidden__overlay
+        .passport-hidden__content
+          a.passport-hidden__close.js-close-passport-add(href="#")
+            +svgMono("crest")
+          p.passport-hidden__title Значения списка
+          .passport-hidden__rows#sortablePassport
+            .passport-hidden__row
+              a.passport-hidden__icon.handle(href="#")
+                +svgMono("lines")
+              .ui-group
+                input.ui-input(type="text", name="" placeholder="Введите значение" value="Маркетинг")
+              a.passport-hidden__icon(href="#")
+                +svgMono("delete")
+            .passport-hidden__row
+              a.passport-hidden__icon.handle(href="#")
+                +svgMono("lines")
+              .ui-group
+                input.ui-input(type="text", name="" placeholder="Введите значение" value="Программирование")
+              a.passport-hidden__icon(href="#")
+                +svgMono("delete")
+            .passport-hidden__row
+              a.passport-hidden__icon.handle(href="#")
+                +svgMono("lines")
+              .ui-group
+                input.ui-input(type="text", name="" placeholder="Введите значение" value="")
+              a.passport-hidden__icon(href="#")
+                +svgMono("delete")
+
+
+          a.tile__passport-add(href="#")
+            +svgMono("plus")
+            | Добавить значения
+          .passport-hidden__line
+          a.btn.btn-primary.passport-hidden__btn(href="#") Сохранить
+
+
     form.main-body(action='/' method='post')
       .main-content.js-main-content-scroller
         ._container.container
@@ -56,7 +95,7 @@ block content
                         option(value='Редактирование') Редактирование
                         option(value='Чтение' selected) Чтение
                         option(value='Все') Все
-                    a.tile__passport-add(href="#")
+                    a.tile__passport-add.js-open-passport-add(href="#")
                       +svgMono("plus")
                       | Добавить значения
 
@@ -77,7 +116,7 @@ block content
                         option(value='Чтение' selected) Чтение
                         option(value='Все') Все
                     p.tile__passport-edit Создано 2 значения
-                      a(href="#")
+                      a.js-open-passport-add(href="#")
                         +svgMono("settings")
 
                 ._column
