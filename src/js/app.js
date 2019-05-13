@@ -55,6 +55,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Plugins.LegacySupport.init();
       APP.Plugins.ScrollBlock.listenScroll();
       APP.Plugins.Clicks.init();
+      APP.Plugins.PlusMinus.init();
       APP.Plugins.Barba.init();
     };
 
@@ -62,7 +63,6 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
     app.initPlugins = function(fromPjax) {
       APP.Plugins.Modals.init();
       APP.Plugins.Masks.init();
-      APP.Plugins.PlusMinus.init();
       APP.Plugins.Selectric.init();
       APP.Plugins.Validations.init();
       APP.Plugins.Tippy.init();

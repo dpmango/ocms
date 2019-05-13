@@ -12,13 +12,29 @@
     data: {
       validateErrorPlacement: function(error, element) {
         error.addClass('ui-input__validation');
-        error.appendTo(element.parent('div'));
+        if (element.is('select')) {
+          error.appendTo(element.closest('.selectric-wrapper'));
+        } else {
+          error.appendTo(element.parent('div'));
+        }
       },
       validateHighlight: function(element) {
-        $(element).addClass('has-error');
+        var $element = $(element);
+
+        if ($element.is('select')) {
+          $element.closest('.selectric-wrapper').addClass('has-error');
+        } else {
+          $(element).addClass('has-error');
+        }
       },
       validateUnhighlight: function(element) {
-        $(element).removeClass('has-error');
+        var $element = $(element);
+
+        if ($element.is('select')) {
+          $element.closest('.selectric-wrapper').removeClass('has-error');
+        } else {
+          $(element).removeClass('has-error');
+        }
       },
       validateSubmitHandler: function(form) {
         $(form).addClass('is-loading');
