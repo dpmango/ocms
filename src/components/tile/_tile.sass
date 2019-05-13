@@ -16,6 +16,11 @@
       opacity: 1
       pointer-events: all
 
+    .tile__btn-move
+      opacity: 1
+      pointer-events: all
+
+
   &--add
     display: flex
     flex-direction: column
@@ -137,6 +142,85 @@
         color: $fontColor
   &--access
 
+  &--passport
+    padding-top: 25px
+    .tile__select-row
+      margin-top: 0
+
+    .tile__btn-delete
+      top: 8px
+
+    .tile__btn-move
+      top: 8px
+
+  &__passport-add
+    display: flex
+    align-items: center
+    margin-top: 6px
+    font-size: 14px
+    color: $colorLight
+    .ico
+      margin-right: 8px
+      font-size: 16px
+
+  &__passport-edit
+    margin-top: 6px
+    margin-bottom: 0
+    font-size: 14px
+    color: $fontColor
+    display: flex
+    align-items: center
+    a
+      margin-left: auto
+      display: block
+      line-height: 0
+    .ico
+      color: $colorLight
+      font-size: 16px
+      height: 16px
+
+  &__btn-move
+    position: absolute
+    top: 10px
+    right: 28px
+    opacity: 0
+    pointer-events: none
+    transition: opacity .25s $ease
+    line-height: 0
+    padding-left: 0
+    padding-right: 0
+    background: none
+    .ico
+      color: $colorIcon
+
+  &__number
+    position: absolute
+    margin: 0
+    left: 0
+    top: 0
+    background: #fff
+    border-radius: 4px 0 4px 0
+    border: 1px solid $borderColor
+    min-width: 20px
+    text-align: center
+    top: -1px
+    left: -1px
+    font-size: 10px
+    line-height: 1
+    padding: 4px 0
+    &:after
+      content: counter(my-counter)
+      display: inline-block
+      position: relative
+
+.content-grid
+  &__counter
+    counter-reset: my-counter
+  &__column
+    counter-increment: my-counter
+
+
+
 +r($lg)
   .tile
     padding: 0
@@ -150,6 +234,25 @@
       min-height: 100px
       .tile__heading
         margin-bottom: 0
+    &--passport
+      .tile__heading
+        margin: 0 0 auto 0
+        padding: 15px 20px
+      .tile__select-row
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+        .chosen-container
+          width: 100% !important
+          padding-top: 20px
+          margin-top: -20px
+          position: relative
+          z-index: 2
+        .chosen-single
+          overflow: visible
+          div
+            top: -12px
+
     &__select
       margin-bottom: 0
       border-bottom: 1px solid $borderColor
@@ -179,3 +282,11 @@
     &__btn-delete
       top: 5px
       right: 9px
+    &__number
+      display: none
+    &__passport-add
+      display: none
+    &__passport-edit
+      display: none
+    &__btn-move
+      display: none
