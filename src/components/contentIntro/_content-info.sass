@@ -16,3 +16,58 @@
 
   &__tags
     margin: 0 0 0 10px
+
+  &--hidden
+    border: none
+    padding: 0
+    background: $colorBg
+    border-radius: 4px
+    margin-bottom: 30px
+  &__hidden
+    padding: 20px
+    &-button
+      display: flex
+      align-items: center
+      font-weight: 700
+      color: $fontColor
+      margin: -8px 0
+
+      &.is-active
+        .ico
+          opacity: 0
+        .content-info__hidden-icon
+          &:after
+            opacity: 1
+
+    &-icon
+      margin-left: auto
+      width: 30px
+      height: 30px
+      border-radius: 50%
+      background: #fff
+      display: flex
+      align-items: center
+      justify-content: center
+      position: relative
+      &:after
+        display: block
+        position: absolute
+        content: ''
+        width: 10px
+        height: 2px
+        background: #000
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        transition: all .25s $ease
+        opacity: 0
+    .ico
+      font-size: 10px
+      color: $fontColor
+      transition: all .25s $ease
+    &-info
+      margin: 15px 0 0 0
+      font-size: 14px
+      color: $fontColor
+      max-width: 641px
+      display: none

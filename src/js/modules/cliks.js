@@ -40,6 +40,12 @@
           $('.project-questions__sidebar').toggleClass('is-hide');
           $(this).toggleClass('is-hide');
         })
+        .on('click', '.js-open-content-info', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          $('.content-info__hidden-info').slideToggle();
+          $(this).toggleClass('is-active');
+        })
 
         // .on('mouseover', '.js-open-parent', function(e) {
         //   e.preventDefault();
