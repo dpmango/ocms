@@ -4,6 +4,7 @@
   &__sidebar
     max-width: 300px
     width: 100%
+    flex: 1 0 300px
     border-right: 1px solid $borderColor
     padding: 40px 15px 40px 0
     &-close
@@ -149,10 +150,10 @@
     padding: 40px 0 30px
     width: 100%
   &__progress
-    width: 100%
-    max-width: 810px
-    // outline: 1px solid green
-    padding: 0 30px 0 0
+    width: calc(100% + 13px)
+    // max-width: 810px
+    max-width: calc(100% + 13px)
+    padding: 0
   &__line
     width: 100%
     height: 1px
@@ -176,10 +177,15 @@
     justify-content: center
     align-items: center
     margin-bottom: -4px
-    width: 33px
+    width: 7px
     position: relative
     z-index: 2
-    span
+    span.info
+      position: absolute
+      bottom: 5px
+      left: 50%
+      transform: translateX(-50%)
+    span.dot
       width: 7px
       height: 7px
       background: #fff
@@ -241,6 +247,10 @@
       margin-left: -10px
       padding-right: 0
       transition: all 0.25s ease-in-out
+      &-toggle
+        margin-left: 0
+        padding-top: 40px
+        padding-right: 20px
       &.is-hide
         margin-left: -265px
       &-head

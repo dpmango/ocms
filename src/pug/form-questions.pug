@@ -64,26 +64,28 @@ block content
                   p.form-questions__title Требуется ли вам интернет-маркетинг?
                   p.form-questions__description Введите описание, если это необходимо
                 .form-questions__head-right
-                  a.form-questions__remove(href="#")
+                  a.form-questions__remove.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" title='Удалить' href="#")
                     +svgMono('remove')
-                    span Удалить связь
               .form-questions__role
-                p Выберите роль:
-                .form-questions__role-select
-                  select.ui-input.js-select
-                    option Дизайнер
-                    option(value='0') Роль 1
-                    option(value='1') Роль 1
-                    option(value='2') Роль 1
-                    option(value='3') Роль 1
-                    option(value='4') Роль 1
-                .ui-group.-inline
-                  p Несколько ответов:
-                  ._content
-                    label.ui-toggle._ui-toggle
-                      input._input(type='checkbox' name='test_11' checked)
-                      span._handle
-                .form-questions__role-right
+                .form-questions__role-item
+                  p Выберите роль:
+                  .form-questions__role-select
+                    select.js-select-chosen
+                      option Дизайнер
+                      option(value='0') Роль 1
+                      option(value='1') Роль 1
+                      option(value='2') Роль 1
+                      option(value='3') Роль 1
+                      option(value='4') Роль 1
+                .form-questions__role-item
+                  .ui-group.-inline
+                    p Несколько ответов:
+                    ._content
+                      label.ui-toggle._ui-toggle
+                        input._input(type='checkbox' name='test_11' checked)
+                        span._handle
+
+                .form-questions__role-item
                   .ui-group.-inline
                     p Несколько ответов:
                     ._content
@@ -95,21 +97,19 @@ block content
                   .form-questions__item-head
                     p.form-questions__answer ответ 1
                     .form-questions__row
-                      .form-questions__item-title
+                      .form-questions__row-left
                         .handle
                           +svgMono('lines')
-                        | Требуется
+                        .form-questions__row-title.js-editable-caption(contenteditable="true" placeholder="Требуется") Требуется
                       .form-questions__head-right
-                        a.form-questions__remove(href="#")
+                        a.form-questions__remove.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" title='Удалить' href="#")
                           +svgMono('remove')
-                          span Удалить связь
                   .form-questions__item-body
                     .form-questions__item-body-row
                       p.form-questions__item-body-title Задача 1
                       .form-questions__head-right
-                        a.form-questions__remove(href="#")
+                        a.form-questions__remove.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" title='Удалить' href="#")
                           +svgMono('remove')
-                          span Удалить связь
                     .form-questions__item-body-grid
                       .form-questions__item-body-left
                         input.ui-input(type='text' name='login' placeholder="Название задачи")
@@ -127,9 +127,8 @@ block content
                     .form-questions__item-body-row
                       p.form-questions__item-body-title Связь 1
                       .form-questions__head-right
-                        a.form-questions__remove(href="#")
+                        a.form-questions__remove.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" title='Удалить' href="#")
                           +svgMono('remove')
-                          span Удалить связь
                     .form-questions__item-body-grid
                       input.ui-input(type='text' name='login' placeholder="Название задачи" value="Нужны ли вам работы над сайтом?")
                       a.btn.btn-outline(href="#") Перейти к связи
@@ -137,9 +136,8 @@ block content
                     .form-questions__item-body-row
                       p.form-questions__item-body-title Связь 1
                       .form-questions__head-right
-                        a.form-questions__remove(href="#")
+                        a.form-questions__remove.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" title='Удалить' href="#")
                           +svgMono('remove')
-                          span Удалить связь
                     .form-questions__item-body-grid
                       input.ui-input(type='text' name='login' placeholder="Название задачи" value="Нужны ли вам работы над сайтом?")
                       a.btn.btn-outline(href="#") Перейти к связи
@@ -156,14 +154,13 @@ block content
                   .form-questions__item-head
                     p.form-questions__answer ответ 2
                     .form-questions__row
-                      .form-questions__item-title
+                      .form-questions__row-left
                         .handle
                           +svgMono('lines')
-                        | Не требуется
+                        .form-questions__row-title.js-editable-caption(contenteditable="true" placeholder="Требуется")   Не требуется
                       .form-questions__head-right
-                        a.form-questions__remove(href="#")
+                        a.form-questions__remove.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" title='Удалить' href="#")
                           +svgMono('remove')
-                          span Удалить связь
                   .form-questions__item-bottom
                     a(href="#")
                       +svgMono('add-task')
@@ -175,14 +172,13 @@ block content
                   .form-questions__item-head
                     p.form-questions__answer ответ 3
                     .form-questions__row
-                      .form-questions__item-title
+                      .form-questions__row-left
                         .handle
                           +svgMono('lines')
-                        | Введите ответ
+                        .form-questions__row-title.js-editable-caption(contenteditable="true" placeholder="Требуется") Введите ответ
                       .form-questions__head-right
-                        a.form-questions__remove(href="#")
+                        a.form-questions__remove.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" title='Удалить' href="#")
                           +svgMono('remove')
-                          span Удалить связь
                   .form-questions__item-bottom
                     a(href="#")
                       +svgMono('add-task')

@@ -25,21 +25,21 @@ block content
                 +svgMono("lines")
               .ui-group
                 input.ui-input(type="text", name="" placeholder="Введите значение" value="Маркетинг")
-              a.passport-hidden__icon(href="#")
+              a.passport-hidden__icon.passport-hidden__icon--remove.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type='button' title='Удалить' href="#")
                 +svgMono("delete")
             .passport-hidden__row
               a.passport-hidden__icon.handle(href="#")
                 +svgMono("lines")
               .ui-group
                 input.ui-input(type="text", name="" placeholder="Введите значение" value="Программирование")
-              a.passport-hidden__icon(href="#")
+              a.passport-hidden__icon.passport-hidden__icon--remove.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type='button' title='Удалить' href="#")
                 +svgMono("delete")
             .passport-hidden__row
               a.passport-hidden__icon.handle(href="#")
                 +svgMono("lines")
               .ui-group
                 input.ui-input(type="text", name="" placeholder="Введите значение" value="")
-              a.passport-hidden__icon(href="#")
+              a.passport-hidden__icon.passport-hidden__icon--remove.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type='button' title='Удалить' href="#")
                 +svgMono("delete")
 
 
@@ -115,8 +115,8 @@ block content
                         option(value='Редактирование') Редактирование
                         option(value='Чтение' selected) Чтение
                         option(value='Все') Все
-                    p.tile__passport-edit Создано 2 значения
-                      a.js-open-passport-add(href="#")
+                    a.tile__passport-edit(href="#") Создано 2 значения
+                      .tile__passport-edit-icon
                         +svgMono("settings")
 
                 ._column
@@ -127,7 +127,7 @@ block content
                     button.btn-delete.tile__btn-delete.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type="button" title="Удалить")
                       +svgMono("delete")
 
-                    h3.tile__heading.js-editable-caption(contenteditable="true" placeholder="Введите имя сотрудника") Введите названия поля
+                    h3.tile__heading.js-editable-caption(contenteditable="true" placeholder="Введите название поля")
 
                 ._column
                   .tile.-add._tile Добавить новую роль

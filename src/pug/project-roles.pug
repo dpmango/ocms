@@ -41,7 +41,7 @@ block content
                         option(value='Коммерческий директор') Коммерческий директор
                         option(value='Проект-менеджер') Проект-менеджер
                     .tile__input
-                      input(type="text" name="" placeholder="Введите имя сотрудника" value="Евгений Гришковец")
+                      p.tile__caption.js-editable-caption(contenteditable="true" placeholder="Введите имя сотрудника") Евгений Гришковец
 
                 ._column
                   .tile
@@ -55,7 +55,7 @@ block content
                         option(value='Коммерческий директор') Коммерческий директор
                         option(value='Проект-менеджер') Проект-менеджер
                     .tile__input
-                      input(type="text" name="" placeholder="Введите имя сотрудника" value="")
+                      p.tile__caption.js-editable-caption(contenteditable="true" placeholder="Введите имя сотрудника") Евгений Гришковец
 
                 ._column
                   .tile
@@ -71,24 +71,8 @@ block content
                         option(value='Коммерческий директор') Коммерческий директор
                         option(value='Проект-менеджер') Проект-менеджер
                     .tile__input
-                      input(type="text" name="" placeholder="Введите имя сотрудника" value="Евгений Гришковец")
+                      p.tile__caption.js-editable-caption(contenteditable="true" placeholder="Введите имя сотрудника")
 
-                  //- +tileCard({
-                  //-   heading: 'Дизайнер',
-                  //-   caption: 'Евгений Гришковец'
-                  //- })
-
-                //- ._column
-                //-   +tileCard({
-                //-     heading: 'Программист',
-                //-     caption: 'asd'
-                //-   })
-
-                //- ._column
-                //-   +tileCard({
-                //-     heading: 'Выберите роль',
-                //-     caption: ''
-                //-   })
 
                 ._column
                   .tile.-add._tile Добавить нового сотрудника

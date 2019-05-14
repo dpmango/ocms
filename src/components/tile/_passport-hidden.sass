@@ -4,15 +4,17 @@
   height: 100%
   z-index: 2000
   top: 0
-  left: 0
-  opacity: 0
+  right: 0
+  opacity: 1
   pointer-events: none
   background: rgba($colorLight, 0.9)
   transition: .25s $ease
   display: flex
+  transform: translateX(100%)
+  // left: 100%
 
   &.is-open
-    opacity: 1
+    transform: translateX(0)
     pointer-events: all
   &__content
     max-width: 500px
@@ -68,6 +70,9 @@
     color: $colorIcon
     display: inline-block
     line-height: 0
+    &--remove
+      &:hover
+        color: $colorPrimary
   &__line
     margin: 20px -30px
     width: calc(100% + 60px)
