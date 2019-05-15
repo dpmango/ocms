@@ -12,12 +12,26 @@
 
       $editable.each(function(i, el) {
         var $el = $(el);
+        function clearPlaceHolder() {
+          if ($el.text().length == 0) {
+            $el.empty();
+          }
+        }
+
         $el.focus(function() {
           $el.addClass('is-editing');
         });
         $el.blur(function() {
           $el.removeClass('is-editing');
         });
+
+        $el.keyup(clearPlaceHolder);
+
+        $el.click(clearPlaceHolder);
+
+        $el.bind('input', clearPlaceHolder);
+
+        $el.change(clearPlaceHolder);
       });
     },
   };

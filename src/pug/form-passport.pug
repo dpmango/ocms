@@ -11,44 +11,7 @@ block content
   .page-main
     +mainHeader("Создание анкеты", 'forms', 2)
 
-    form(action="#")
-      .passport-hidden
-        a.passport-hidden__close-overlay.js-close-passport-add(href="#")
-        .passport-hidden__overlay
-        .passport-hidden__content
-          a.passport-hidden__close.js-close-passport-add(href="#")
-            +svgMono("crest")
-          p.passport-hidden__title Значения списка
-          .passport-hidden__rows.js-sortable
-            .passport-hidden__row
-              a.passport-hidden__icon.handle(href="#")
-                +svgMono("lines")
-              .ui-group
-                input.ui-input(type="text", name="" placeholder="Введите значение" value="Маркетинг")
-              a.passport-hidden__icon.passport-hidden__icon--remove.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type='button' title='Удалить' href="#")
-                +svgMono("delete")
-            .passport-hidden__row
-              a.passport-hidden__icon.handle(href="#")
-                +svgMono("lines")
-              .ui-group
-                input.ui-input(type="text", name="" placeholder="Введите значение" value="Программирование")
-              a.passport-hidden__icon.passport-hidden__icon--remove.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type='button' title='Удалить' href="#")
-                +svgMono("delete")
-            .passport-hidden__row
-              a.passport-hidden__icon.handle(href="#")
-                +svgMono("lines")
-              .ui-group
-                input.ui-input(type="text", name="" placeholder="Введите значение" value="")
-              a.passport-hidden__icon.passport-hidden__icon--remove.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type='button' title='Удалить' href="#")
-                +svgMono("delete")
-
-
-          a.tile__passport-add(href="#")
-            +svgMono("plus")
-            | Добавить значения
-          .passport-hidden__line
-          a.btn.btn-primary.passport-hidden__btn(href="#") Сохранить
-
+    include ../components/slidePanel/_slidePanel
 
     form.main-body(action='/' method='post')
       .main-content.js-main-content-scroller
@@ -115,7 +78,7 @@ block content
                         option(value='Редактирование') Редактирование
                         option(value='Чтение' selected) Чтение
                         option(value='Все') Все
-                    a.tile__passport-edit(href="#") Создано 2 значения
+                    a.tile__passport-edit.js-open-passport-add(href="#") Создано 2 значения
                       .tile__passport-edit-icon
                         +svgMono("settings")
 

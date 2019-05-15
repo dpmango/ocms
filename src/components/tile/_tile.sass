@@ -4,7 +4,7 @@
   flex-direction: column
   position: relative
   // position: static
-  z-index: 1
+  // z-index: 1
   padding: 21px 20px 21px
   height: 100%
   border: 1px solid $borderColor
@@ -118,6 +118,8 @@
         color: $fontColor
       div
         height: 20px
+        opacity: 0
+        transition: opacity .25s $ease
         // display: none
   .chosen-search
     display: none
@@ -235,15 +237,20 @@
     line-height: 1
     padding: 4px 0
     &:after
-      content: counter(my-counter)
+      content: counter(list-counter)
       display: inline-block
       position: relative
 
+  &:hover
+    .chosen-single
+      div
+        opacity: 1
+
 .content-grid
   &__counter
-    counter-reset: my-counter
+    counter-reset: list-counter
   &__column
-    counter-increment: my-counter
+    counter-increment: list-counter
 
 
 +r($lg)

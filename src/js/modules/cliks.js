@@ -49,12 +49,12 @@
         .on('click', '.js-open-passport-add', function(e) {
           e.preventDefault();
           e.stopPropagation();
-          $('.passport-hidden').toggleClass('is-open');
+          $('.slide-panel').toggleClass('is-open');
         })
         .on('click', '.js-close-passport-add', function(e) {
           e.preventDefault();
           e.stopPropagation();
-          $('.passport-hidden').removeClass('is-open');
+          $('.slide-panel').removeClass('is-open');
         })
 
         // .on('mouseover', '.js-open-parent', function(e) {
