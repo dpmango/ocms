@@ -23,3 +23,52 @@ block content
             h4 H4 заголовок
             h5 H5 заголовок
             h6 H6 заголовок
+
+            h1 Формы и валидация
+            form(action='/' ).js-validate-form
+              .ui-group
+                label(for="name") Инпут
+                  i.required *
+                input.ui-input(type='text' name="name" required)#name
+
+              .ui-group
+                label(for="description") Текстовое поле
+                textarea.ui-input.js-autosize(rows='4' name="description" required)#description
+
+              .ui-group
+                label Чекбокс
+                  i.required *
+
+                .ui-checkbox
+                  input#checkbox(type='checkbox' name='checkbox' required)
+                  label(for='checkbox')
+                    span Чекбокс лейбл
+
+              .ui-group
+                label Радио
+                  i.required *
+
+                .ui-radio.ui-group__item
+                  input#private(type='radio' name='type' required)
+                  label(for='private')
+                    span Опция 1
+
+                .ui-radio.ui-group__item
+                  input#public(type='radio' name='type' required)
+                  label(for='public')
+                    span Опция 2
+
+              .ui-group
+                label(for="select") Селект
+                  i.required *
+                select.ui-input.js-select(name="select" required)#select
+                  option(value='') Выберите из списка
+                  option(value='0') Тип 1
+                  option(value='1') Тип 2
+                  option(value='2') Тип 3
+                  option(value='3') Тип 4
+                  option(value='4') Тип 5
+
+              .ui-group
+                button.btn.btn-primary(type="submit") Отправить
+

@@ -14,6 +14,8 @@
         error.addClass('ui-input__validation');
         if (element.is('select')) {
           error.appendTo(element.closest('.selectric-wrapper'));
+        } else if (element.is('input[type="radio"]') || element.is('input[type="checkbox"]')) {
+          error.appendTo(element.closest('.ui-group'));
         } else {
           error.appendTo(element.parent('div'));
         }
