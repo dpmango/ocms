@@ -34,6 +34,17 @@
       flex-direction: column
       &-block
         display: none
+        position: relative
+        &:after
+          position: absolute
+          display: block
+          height: 0
+          width: 1px
+          left: -15px
+          top: 0px
+          background: $borderColor
+          content: ''
+          transition: all .25s $ease
         &.main
           display: block
         &.is-active
@@ -73,15 +84,15 @@
           // &:before
           //   opacity: 1
       &:after
-        position: absolute
-        display: block
-        height: 0
-        width: 1px
-        left: 4px
-        top: 26px
-        background: $borderColor
-        content: ''
-        transition: all .25s $ease
+        // position: absolute
+        // display: block
+        // height: 0
+        // width: 1px
+        // left: 4px
+        // top: 26px
+        // background: $borderColor
+        // content: ''
+        // transition: all .25s $ease
       &.main
         // display: block
         margin-left: -20px
@@ -148,6 +159,8 @@
       > .project-questions__sidebar-item-block
         padding-left: 20px
         margin-left: 0
+        &:after
+          height: 100%
         // border-left: 1px solid $borderColor
       &.task
         display: none
@@ -399,6 +412,8 @@
           top: -1px
           left: -100px
         &-block
+          &:after
+            display: none
           // transition: all 0.25s $ease
         // z-index: 500
         // &-block
