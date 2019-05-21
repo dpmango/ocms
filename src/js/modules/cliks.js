@@ -19,14 +19,46 @@
         .on('click', '.js-open-parent', function(e) {
           e.preventDefault();
           e.stopPropagation();
+          // $('.project-questions__sidebar-item.main').addClass('is-hidden');
+          // $(this)
+          //   .parent()
+          //   .toggleClass('is-open is-current');
+
           $(this)
             .parent()
             .toggleClass('is-open');
+
           $(this)
             .toggleClass('is-open')
             .parent('.project-questions__sidebar-item')
-            .children('.project-questions__sidebar-item')
+            .children('.project-questions__sidebar-item-block')
+            // .toggleClass('is-active');
             .slideToggle();
+
+          // $(this)
+          //   .parent('.project-questions__sidebar-item')
+          //   .toggleClass('is-current');
+        })
+        .on('click', '.js-open-tasks', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          $(this)
+            .parent()
+            .toggleClass('is-active');
+        })
+        .on('change', '.js-show-answers', function(e) {
+          if ($(this).is(':checked')) {
+            $('.project-questions__sidebar').addClass('should-show-answers');
+          } else {
+            $('.project-questions__sidebar').removeClass('should-show-answers');
+          }
+        })
+        .on('change', '.js-show-tasks', function(e) {
+          if ($(this).is(':checked')) {
+            $('.project-questions__sidebar').addClass('should-show-tasks');
+          } else {
+            $('.project-questions__sidebar').removeClass('should-show-tasks');
+          }
         })
         .on('click', '.js-task-button', function(e) {
           e.preventDefault();
