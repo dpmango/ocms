@@ -2,10 +2,15 @@
   display: flex
   flex: 1
   &__sidebar
-    max-width: 342px
+    max-width: 300px
     width: 100%
+    flex: 1 0 300px
     border-right: 1px solid $borderColor
     padding: 40px 15px 40px 0
+    &-add
+      display: none
+    &-close
+      display: none
     &-title
       font-size: 14px
       font-weight: 700
@@ -143,14 +148,57 @@
           flex: 1
         .ui-group__content
           flex: 0
+    &-tasks
+      padding-left: 0
+      margin-top: -10px
+      position: relative
+      z-index: 10
+      font-size: 12px
+      color: $colorLight
+      display: flex
+      width: auto
+      // &:before
+      //   position: absolute
+      //   width: 100%
+      //   display: block
+      //   height: 18px
+      //   content: ''
+      //   outline: 1px solid red
+      //   bottom: 0
+      &:hover
+        .project-questions__sidebar-tasks-links
+          opacity: 1
+          pointer-events: all
+      &-links
+        width: 250px
+        bottom: 18px
+        position: absolute
+        width: 100%
+        border-radius: 4px
+        background: $colorBg
+        box-shadow: 0 0 5px rgba(#0B1C2D, 0.15)
+        opacity: 0
+        pointer-events: none
+        transition: all 0.25s ease-in-out
+      &-link
+        padding: 14px !important
+        font-size: 12px
+        color: $fontColor
+        border-bottom: 1px solid $borderColor
+        &:before
+          display: none !important
+        &:after
+          display: none !important
+        &:last-child
+          border-bottom: none
   &__content
     padding: 40px 0 30px
     width: 100%
   &__progress
-    width: 100%
-    max-width: 810px
-    // outline: 1px solid green
-    padding: 0 30px 0 0
+    width: calc(100% + 13px)
+    // max-width: 810px
+    max-width: calc(100% + 13px)
+    padding: 0
   &__line
     width: 100%
     height: 1px
@@ -174,10 +222,15 @@
     justify-content: center
     align-items: center
     margin-bottom: -4px
-    width: 33px
+    width: 7px
     position: relative
     z-index: 2
-    span
+    span.info
+      position: absolute
+      bottom: 5px
+      left: 50%
+      transform: translateX(-50%)
+    span.dot
       width: 7px
       height: 7px
       background: #fff
@@ -226,3 +279,96 @@
     padding-top: 30px
     text-align: right
     border-top: 1px solid $borderColor
+
+
++r($lg)
+  .project-questions
+    &__content
+      padding-top: 20px
+    &__item
+      padding-right: 0
+    &__sidebar
+      padding-top: 0
+      margin-left: -10px
+      padding-right: 0
+      transition: all 0.25s ease-in-out
+      &-tasks
+        display: none
+      &-toggle
+        margin-left: 0
+        padding-top: 40px
+        padding-right: 20px
+        display: none
+      &--form
+        .project-questions__sidebar-item
+          a
+            position: relative
+      &-add
+        display: inline-block
+        position: absolute
+        left: 9px
+        // top: 14px
+        top: 50%
+        transform: translateY(-50%)
+        color: $colorPrimary
+        line-height: 0
+        .ico
+          font-size: 16px
+      &.is-hide
+        margin-left: -265px
+      &-head
+        display: flex
+        align-items: center
+        padding-right: 8px
+      &-close
+        display: flex
+        width: 28px
+        height: 28px
+        border: 1px solid $borderColor
+        border-radius: 50%
+        background: $colorBg
+        margin-left: auto
+        align-items: center
+        justify-content: center
+        span
+          width: 6px
+          height: 6px
+          border: 1px solid #A3ABC2
+          display: block
+          content: ''
+          transform: rotate(135deg)
+          border-left: none
+          border-top: none
+          transition: all 0.25s ease-in-out
+          margin-right: -2px
+        &.is-hide
+          span
+            transform: rotate(315deg)
+            margin-left: -2px
+      &-title
+        padding: 12px 10px 12px 10px
+        position: relative
+        .project-questions__sidebar-add
+          left: -11px
+      &-item
+        border-top: 1px solid $borderColor
+        padding-left: 0
+        &.main
+          &:last-child
+            border-bottom: 1px solid $borderColor
+        &:after
+          display: none
+        a
+          width: 100%
+          padding: 12px 30px 12px 30px
+          &:after
+            left: auto
+            right: 19px
+            top: 50%
+            transform: translateY(-50%) rotate(-45deg)
+        &.is-open
+          a
+            &:after
+              top: 50%
+              transform: translateY(-50%) rotate(-45deg)
+

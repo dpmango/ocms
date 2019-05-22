@@ -55,14 +55,14 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Plugins.LegacySupport.init();
       APP.Plugins.ScrollBlock.listenScroll();
       APP.Plugins.Clicks.init();
-      APP.Plugins.Barba.init();
+      APP.Plugins.PlusMinus.init();
+      APP.Plugins.Pjax.init();
     };
 
     // Plugins which depends on DOM and page content
     app.initPlugins = function(fromPjax) {
       APP.Plugins.Modals.init();
       APP.Plugins.Masks.init();
-      APP.Plugins.PlusMinus.init();
       APP.Plugins.Selectric.init();
       APP.Plugins.Validations.init();
       APP.Plugins.Tippy.init();
@@ -77,6 +77,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Components.Header.init();
       APP.Components.MainHeader.init();
       APP.Components.MainFooter.init();
+      APP.Components.Tile.init();
     };
 
     return app;

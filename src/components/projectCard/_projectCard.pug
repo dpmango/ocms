@@ -1,11 +1,13 @@
 mixin projectCard(obj)
   // project card
   .project-card.js-link(data-href="homepage.html")
+    .project-card__remove.js-tooltip(data-tippy-placement="right" data-tippy-content="Удалить?")
+      +svgMono("delete")
     .project-card__content
       .project-card__inner
         .project-card__header
-          .project-card__remove.js-tooltip(data-tippy-placement="right" data-tippy-content="Удалить?")
-            +svgMono("delete")
+          //- .project-card__remove.js-tooltip(data-tippy-placement="right" data-tippy-content="Удалить?")
+          //-   +svgMono("delete")
 
           h2.project-card__heading= obj.name
           +progress(obj.progress)
@@ -36,8 +38,8 @@ mixin pollCard(obj)
     .project-card__content
       .project-card__inner
         .project-card__header
-          .project-card__remove.js-tooltip(data-tippy-placement="right" data-tippy-content="Удалить?")
-            +svgMono("delete")
+          //- .project-card__remove.js-tooltip(data-tippy-placement="right" data-tippy-content="Удалить?")
+          //-   +svgMono("delete")
           h2.project-card__heading= obj.name
           ul.tags.project-card__tags
             li.tags__item= obj.tags
@@ -55,12 +57,13 @@ mixin pollCard(obj)
               +svgMono("visibility-private")
               span Приватная
 
-    .project-card__info
+    .project-card__info.project-card__info--forms
       .btn.btn-square
         +svgMono("dots")
-        .action__dropdown-buttons
-          a.action__dropdown-btn(href="#") Изменить
-          a.action__dropdown-btn(href="#") Удалить
+        .dropdown
+          .dropdown__menu
+            a.dropdown__button(href="#") Изменить
+            a.dropdown__button(href="#") Удалить
 
       a.btn.btn-outline(href='#' title='Посмотреть') Посмотреть
 

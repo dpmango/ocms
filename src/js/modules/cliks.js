@@ -34,6 +34,29 @@
           $('.js-task-button').removeClass('is-active');
           $(this).addClass('is-active');
         })
+        .on('click', '.js-sidebar-hide', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          $('.project-questions__sidebar').toggleClass('is-hide');
+          $(this).toggleClass('is-hide');
+        })
+        .on('click', '.js-open-content-info', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          $('.content-info__hidden-info').slideToggle();
+          $(this).toggleClass('is-active');
+        })
+        .on('click', '.js-open-passport-add', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          $('.slide-panel').toggleClass('is-open');
+        })
+        .on('click', '.js-close-passport-add', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          $('.slide-panel').removeClass('is-open');
+        })
+
         // .on('mouseover', '.js-open-parent', function(e) {
         //   e.preventDefault();
         //   e.stopPropagation();

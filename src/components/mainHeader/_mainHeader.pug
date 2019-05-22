@@ -64,14 +64,14 @@ mixin mainHeader(title, action,  menuType, filters)
       if filters
         .main-header__filters
           .main-header__filter
-            span Клиент
+            p Клиент
             select.js-select-chosen(multiple)
               option(value="Спортмастер" selected) Спортмастер
               option(value='AMI YAMI' selected) YAMI YAMI
               option(value='Азбука Вкуса') Азбука Вкуса
               option(value='ВкусВилл') ВкусВилл
           .main-header__filter
-            span Анкета
+            p Анкета
             select.js-select-chosen(multiple)
               option(value="Все" selected) Все
               option(value='Анкета 1') Анкета 1
@@ -80,7 +80,7 @@ mixin mainHeader(title, action,  menuType, filters)
               option(value='Анкета 4') Анкета 4
               option(value='Анкета 5') Анкета 5
           .main-header__filter
-            span Любой
+            p Доступ
             select.js-select-chosen
               option(value="Любой" selected) Любой
               option(value='Полный доступ') Полный доступ

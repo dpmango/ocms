@@ -5,8 +5,6 @@
   APP.Plugins.PlusMinus = {
     init: function() {
       var _this = this;
-      var $elements = $('.js-ui-counter');
-      if ($elements.length === 0) return;
 
       _document
         .on('click', '.js-ui-counter [data-type="plus"]', function() {

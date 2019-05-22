@@ -30,6 +30,7 @@
   &--inline
     display: flex
     align-items: flex-start
+    margin-bottom: 20px
 
     > label:not(.ui-input__validation)
       flex: 0 0 150px
@@ -102,6 +103,13 @@ textarea.ui-input
           border-color: $colorPrimary
         &::after
           transform: translateY(-50%) scale(1)
+    &.has-error
+      + label
+        &::before
+          border-color: #F8D7CF
+          background-color: #F8D7CF
+        &::after
+
   label
     display: block
     width: 100%
@@ -165,6 +173,11 @@ textarea.ui-input
           border: 1px solid $colorPrimary
           &::before
             background-color: $colorPrimary
+    &:hover
+      label
+        background: #fff
+        border-color: $borderColor
+
 
 .ui-checkbox
   label
@@ -279,3 +292,15 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 
 input[type="number"]
   -moz-appearance: textfield;
+
+[contenteditable]
+  cursor: text
+  /// :empty:not(:focus):before
+  &:empty:before
+    content: attr(placeholder)
+    display: block
+    color: $colorLight
+
+[placeholder]:empty:focus::before
+  content: ""
+

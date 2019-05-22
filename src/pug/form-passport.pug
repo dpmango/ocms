@@ -11,10 +11,89 @@ block content
   .page-main
     +mainHeader("Создание анкеты", 'forms', 2)
 
+    include ../components/slidePanel/_slidePanel
+
     form.main-body(action='/' method='post')
       .main-content.js-main-content-scroller
         ._container.container
           ._inner
+            .content-info.content-info--hidden
+              .content-info__hidden
+                a.content-info__hidden-button.js-open-content-info(href="#")
+                  | Пояснения к разделу
+                  .content-info__hidden-icon
+                    +svgMono("plus-simple")
+                p.content-info__hidden-info Как было показано выше, заимствование существенно редуцирует имидж. Позиционирование на рынке программирует метод изучения рынка. М.М.Бахтин понимал тот факт, что дольник приводит конструктивный рейтинг.
+
+            .content-grid._grid
+              ._inner.content-grid__counter.js-sortable
+                ._column
+                  .tile.tile--passport
+                    p.tile__number
+                    button.handle.btn-move.tile__btn-move.js-tooltip(data-tippy-placement="top" data-tippy-content="Переместить" type="button" title="Переместить")
+                      +svgMono("lines")
+                    button.btn-delete.tile__btn-delete.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type="button" title="Удалить")
+                      +svgMono("delete")
+
+                    h3.tile__heading.js-editable-caption(contenteditable="true" placeholder="Введите имя сотрудника") Цели
+                    .tile__select-row
+                      p Тип поля:
+                      select.js-select-chosen
+                        option(value='Редактирование') Редактирование
+                        option(value='Чтение' selected) Чтение
+                        option(value='Все') Все
+
+                ._column
+                  .tile.tile--passport
+                    p.tile__number
+                    button.handle.btn-move.tile__btn-move.js-tooltip(data-tippy-placement="top" data-tippy-content="Переместить" type="button" title="Переместить")
+                      +svgMono("lines")
+                    button.btn-delete.tile__btn-delete.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type="button" title="Удалить")
+                      +svgMono("delete")
+
+                    h3.tile__heading.js-editable-caption(contenteditable="true" placeholder="Введите имя сотрудника") Причины
+                    .tile__select-row
+                      p Тип поля:
+                      select.js-select-chosen
+                        option(value='Редактирование') Редактирование
+                        option(value='Чтение' selected) Чтение
+                        option(value='Все') Все
+                    a.tile__passport-add.js-open-passport-add(href="#")
+                      +svgMono("plus")
+                      | Добавить значения
+
+
+                ._column
+                  .tile.tile--passport
+                    p.tile__number
+                    button.handle.btn-move.tile__btn-move.js-tooltip(data-tippy-placement="top" data-tippy-content="Переместить" type="button" title="Переместить")
+                      +svgMono("lines")
+                    button.btn-delete.tile__btn-delete.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type="button" title="Удалить")
+                      +svgMono("delete")
+
+                    h3.tile__heading.js-editable-caption(contenteditable="true" placeholder="Введите имя сотрудника") Аудитория
+                    .tile__select-row
+                      p Тип поля:
+                      select.js-select-chosen
+                        option(value='Редактирование') Редактирование
+                        option(value='Чтение' selected) Чтение
+                        option(value='Все') Все
+                    a.tile__passport-edit.js-open-passport-add(href="#") Создано 2 значения
+                      .tile__passport-edit-icon
+                        +svgMono("settings")
+
+                ._column
+                  .tile.tile--passport
+                    p.tile__number
+                    button.handle.btn-move.tile__btn-move.js-tooltip(data-tippy-placement="top" data-tippy-content="Переместить" type="button" title="Переместить")
+                      +svgMono("lines")
+                    button.btn-delete.tile__btn-delete.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type="button" title="Удалить")
+                      +svgMono("delete")
+
+                    h3.tile__heading.js-editable-caption(contenteditable="true" placeholder="Введите название поля")
+
+                ._column
+                  .tile.-add._tile Добавить новую роль
 
 
 

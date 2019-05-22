@@ -9,7 +9,8 @@
 
       $select.selectric({
         responsive: true,
-        maxHeight: 300,
+        maxHeight: 200,
+        disableOnMobile: false,
         arrowButtonMarkup:
           '<b class="button"><svg class="ico ico-select-down"><use xlink:href="img/sprite.svg#ico-select-down"></use></svg></b>',
 

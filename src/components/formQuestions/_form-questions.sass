@@ -27,50 +27,18 @@
     display: inline-block
     &:hover
       color: #000
-      span
-        opacity: 1
-    span
-      height: auto
-      top: -40px
-      display: inline-block
-      position: absolute
-      right: -5px
-      background: $colorBg
-      color: $fontColor
-      padding: 10px
-      white-space: nowrap
-      font-size: 12px
-      box-shadow: 0 0 5px rgba(#0B1C2D, 0.15)
-      transition: all 0.25s $ease
-      opacity: 0
-      &:before
-        position: absolute
-        width: 8px
-        height: 8px
-        display: block
-        content: ''
-        bottom: -4px
-        transform: rotate(45deg)
-        right: 8px
-        background: $colorBg
-        box-shadow: 0 0 5px rgba(#0B1C2D, 0.15)
-      &:after
-        width: 100%
-        background: $colorBg
-        height: 7px
-        bottom: 0
-        content: ''
-        display: block
-        position: absolute
-        left: 0
+      .ico
+        color: $colorPrimary
+
   &__role
     display: flex
     align-items: center
     margin-top: 25px
     p
       margin: 0 15px 0 0
-    &-right
-      margin-left: auto
+    &-item
+      &:last-child
+        margin-left: auto
     .ui-group
       margin: 0
     .ui-toggle
@@ -79,31 +47,35 @@
       height: 20px
     &-select
       margin-right: 50px
-      .selectric
-        background: transparent
-        border-color: transparent
-      .selectric-wrapper
-        width: auto
-        .label
-          line-height: 24px
-          height: 24px
-          color: $colorLight
-          margin-right: 24px
-          margin-left: 8px
-      .selectric-open .selectric,
-      .selectric-focus .selectric
-        border-color: transparent
-      .selectric .button
-        height: 22px
-        width: 22px
-        background: transparent
-        &:after
-          border: 1px solid $colorLight
-          width: 6px
-          height: 6px
-          transform: rotate(45deg)
-          border-left: none
-          border-top: none
+      // .selectric
+      //   background: transparent
+      //   border-color: transparent
+      // .selectric-wrapper
+      //   width: auto
+      //   .label
+      //     line-height: 24px
+      //     height: 24px
+      //     color: $colorLight
+      //     margin-right: 24px
+      //     margin-left: 8px
+      // .selectric-open .selectric,
+      // .selectric-focus .selectric
+      //   border-color: transparent
+      // .selectric .button
+      //   height: 22px
+      //   width: 22px
+      //   background: transparent
+      //   &:after
+      //     border: 1px solid $colorLight
+      //     width: 6px
+      //     height: 6px
+      //     transform: rotate(45deg)
+      //     border-left: none
+      //     border-top: none
+    &-item
+      display: flex
+      align-items: center
+
 
   &__item
     margin-top: 30px
@@ -134,20 +106,6 @@
         .ico
           font-size: 16px
           margin-right: 8px
-    &-title
-      font-size: 16px
-      color: #000
-      line-height: 1.2
-      font-weight: 700
-      display: flex
-      align-items: center
-      .handle
-        font-size: 0
-        cursor: pointer
-      .ico
-        font-size: 16px
-        color: $colorIcon
-        margin-right: 10px
     &-body
       margin: 20px 20px 0
       padding: 20px
@@ -198,6 +156,27 @@
   &__row
     margin-top: 12px
     display: flex
+    &-title
+      &:empty
+        color: $colorLight
+    &-left
+      font-size: 16px
+      color: #000
+      line-height: 1
+      font-weight: 700
+      display: flex
+      align-items: center
+      .handle
+        font-size: 0
+        cursor: pointer
+      .ico
+        font-size: 16px
+        color: $colorIcon
+        margin-right: 10px
+      &[contenteditable=true]
+        cursor: text
+        &:empty:before
+          color: $colorLight
   &__add
     margin-top: 30px
     a
@@ -206,6 +185,29 @@
       line-height: 1
       display: flex
       align-items: center
+      transition: all 0.25s $ease
       .ico
         font-size: 16px
         margin-right: 10px
+      &:hover
+        color: $fontColor
+
++r($lg)
+  .form-questions
+    &__role
+      border: 1px solid $borderColor
+      border-radius: 4px
+      &-item
+        padding: 15px
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+        border-right: 1px solid $borderColor
+        width: 33.3333333%
+        &:last-child
+          border-right: 0
+        .ui-group--inline
+          flex-direction: column
+      p
+        margin: 0 0 10px 0
+        width: 100%

@@ -15,10 +15,43 @@ block content
       .main-content.js-main-content-scroller
         ._container.container
           ._inner
+            .content-info.content-info--hidden
+              .content-info__hidden
+                a.content-info__hidden-button.js-open-content-info(href="#")
+                  | Пояснения к разделу
+                  .content-info__hidden-icon
+                    +svgMono("plus-simple")
+                p.content-info__hidden-info Как было показано выше, заимствование существенно редуцирует имидж. Позиционирование на рынке программирует метод изучения рынка. М.М.Бахтин понимал тот факт, что дольник приводит конструктивный рейтинг.
+
+            .content-grid._grid
+              ._inner
+                ._column
+                  .tile.tile--editable
+                    button.btn-delete.tile__btn-delete.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type="button" title="Удалить")
+                      +svgMono("delete")
+
+                    h3.tile__heading.js-editable-caption(contenteditable="true" placeholder="Введите имя сотрудника") Дизайнер
+
+                ._column
+                  .tile.tile--editable
+                    button.btn-delete.tile__btn-delete.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type="button" title="Удалить")
+                      +svgMono("delete")
+
+                    h3.tile__heading.js-editable-caption(contenteditable="true" placeholder="Введите имя сотрудника") Программист
+
+                ._column
+                  .tile.tile--editable
+                    button.btn-delete.tile__btn-delete.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type="button" title="Удалить")
+                      +svgMono("delete")
+
+                    h3.tile__heading.js-editable-caption(contenteditable="true" placeholder="Введите имя сотрудника")
+
+                ._column
+                  .tile.-add._tile Добавить новую роль
 
 
 
       +mainFooter("К следующему шагу", {
         url: 'form-passport.html',
-        name: 'Вернуться к предидущему шагу'
+        name: 'Вернуться к предыдущему шагу'
       })

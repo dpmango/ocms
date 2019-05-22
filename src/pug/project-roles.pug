@@ -5,6 +5,7 @@ auth: false
 extends shared/_layout
 include ../components/mainHeader/_mainHeader
 include ../components/mainFooter/_mainFooter
+include ../components/tile/_tile
 
 block content
 
@@ -27,25 +28,51 @@ block content
             .content-grid._grid
               ._inner
                 ._column
-                  .tile._tile
-                    button.btn-delete._btn-delete(type='button' title='Удалить')
-                      +svgMono('delete')
-                    h3._heading Дизайнер
-                    p._caption Евгений Гришковец
+                  .tile
+                    button.btn-delete.tile__btn-delete.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type="button" title="Удалить")
+                      +svgMono("delete")
+
+                    //- h3.tile__heading Дизайнер 1
+                    .tile__select
+                      select.js-select-chosen
+                        option(value='0' disabled) Выберите роль
+                        option(value='Программист') Программист
+                        option(value="Дизайнер" selected) Дизайнер
+                        option(value='Коммерческий директор') Коммерческий директор
+                        option(value='Проект-менеджер') Проект-менеджер
+                    .tile__input
+                      p.tile__caption.js-editable-caption(contenteditable="true" placeholder="Введите имя сотрудника") Евгений Гришковец
 
                 ._column
-                  .tile._tile
-                    button.btn-delete._btn-delete(type='button' title='Удалить')
-                      +svgMono('delete')
-                    h3._heading Программист
-                    p._caption Введите имя сотрудника
+                  .tile
+                    button.btn-delete.tile__btn-delete.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type="button" title="Удалить")
+                      +svgMono("delete")
+                    .tile__select
+                      select.js-select-chosen
+                        option(value='0' disabled) Выберите роль
+                        option(value='Программист' selected) Программист
+                        option(value="Дизайнер") Дизайнер
+                        option(value='Коммерческий директор') Коммерческий директор
+                        option(value='Проект-менеджер') Проект-менеджер
+                    .tile__input
+                      p.tile__caption.js-editable-caption(contenteditable="true" placeholder="Введите имя сотрудника") Евгений Гришковец
 
                 ._column
-                  .tile._tile
-                    button.btn-delete._btn-delete(type='button' title='Удалить')
-                      +svgMono('delete')
-                    h3._heading Выберите роль
-                    p._caption Введите имя сотрудника
+                  .tile
+                    button.btn-delete.tile__btn-delete.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type="button" title="Удалить")
+                      +svgMono("delete")
+
+                    //- h3.tile__heading Дизайнер 2
+                    .tile__select
+                      select.js-select-chosen
+                        option(value='0' disabled selected) Выберите роль
+                        option(value='Программист') Программист
+                        option(value="Дизайнер") Дизайнер
+                        option(value='Коммерческий директор') Коммерческий директор
+                        option(value='Проект-менеджер') Проект-менеджер
+                    .tile__input
+                      p.tile__caption.js-editable-caption(contenteditable="true" placeholder="Введите имя сотрудника")
+
 
                 ._column
                   .tile.-add._tile Добавить нового сотрудника

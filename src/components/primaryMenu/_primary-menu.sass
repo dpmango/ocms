@@ -49,3 +49,41 @@
     vertical-align: middle
     border-radius: 4px
 
++r($lg)
+  .primary-menu
+    &.main-header
+      &__primary-menu
+        flex-wrap: nowrap !important
+        justify-content: space-between
+        border: 1px solid $borderColor
+        border-radius: 4px 4px 0 0
+        // border-bottom: none
+        overflow: hidden
+        .primary-menu__item
+          margin: 0
+          width: auto
+          // flex: 1
+          // flex: 0
+          width: 100%
+          flex: 1 0
+          border-right: 1px solid $borderColor
+          align-items: center
+          display: flex
+          align-items: stretch
+          &:last-child
+            border-right: none
+        .primary-menu__link
+          // white-space: nowrap
+          padding: 10px 5px
+          width: 100%
+          display: flex
+          align-items: center
+          justify-content: center
+          background: $colorBg
+          height: 1
+          text-align: center
+          &.is-active
+            font-weight: 700
+            background: #fff
+          &:after
+            display: none

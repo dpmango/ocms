@@ -1,0 +1,324 @@
+
+.tile
+  display: flex
+  flex-direction: column
+  position: relative
+  // position: static
+  // z-index: 1
+  padding: 21px 20px 21px
+  height: 100%
+  border: 1px solid $borderColor
+  border-radius: 4px
+  transition: .25s $ease
+  *[contenteditable=true]
+    cursor: text
+    &:empty:before
+      color: $colorLight
+  &:hover
+    background-color: $colorBg
+    border-color: $colorBg
+
+    .tile__btn-delete
+      opacity: 1
+      pointer-events: all
+
+    .tile__btn-move
+      opacity: 1
+      pointer-events: all
+
+
+  &--add
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 15px
+    min-height: 100px
+    color: $colorPrimary
+    text-align: center
+    border-color: $colorPrimary
+    cursor: pointer
+    &::before
+      content: '+'
+      margin-bottom: 7px
+      display: block
+      width: 30px
+      height: 30px
+      color: white
+      font-size: 20px
+      font-weight: 700
+      line-height: 32px
+      background-color: $colorPrimary
+      border-radius: 50%
+      transition: background .25s $ease
+    &:hover
+      background-color: white
+      border-color: #2A87C7
+      color: #2A87C7
+      &::before
+        background-color: #2A87C7
+
+  &__btn-delete
+    position: absolute
+    z-index: 2
+    top: 10px
+    right: 12px
+    opacity: 0
+    pointer-events: none
+    transition: opacity .25s $ease
+    .ico
+      transform: translate3d(0,0,0)
+      backface-visibility: hidden
+
+  &__heading
+    margin: 0 0 9px
+
+  &__caption
+    margin: auto 0 0
+    min-height: 21px
+    transition: color .25s $ease
+    &.is-editing
+      // color: red
+    &[contenteditable=true]
+      cursor: text
+      &:empty:before
+        color: $colorLight
+  &__select
+    // margin-top: auto
+
+  &__label
+    margin-right: 7px
+
+  &__selected
+    color: $colorLight
+    cursor: pointer
+  &__select
+    margin-bottom: 9px
+    &-row
+      display: flex
+      align-items: center
+      margin-top: auto
+      p
+        margin: -2px 10px 0 0
+        white-space: nowrap
+      .chosen-single
+        span
+          text-overflow: ellipsis
+          max-width: 110px
+          width: 100%
+    .chosen-single
+      background: transparent
+      border-color: transparent
+      span
+        font-size: 16px
+        font-weight: 700
+        line-height: normal
+        margin: 0 25px 0 0
+        height: auto
+        color: $fontColor
+      div
+        height: 20px
+        opacity: 0
+        transition: opacity .25s $ease
+        // display: none
+  .chosen-search
+    display: none
+  .chosen-drop
+    &:after
+      display: block
+      position: absolute
+      content: ''
+      width: 90%
+      left: 5%
+      top: 0
+      height: 10px
+      background: #fff
+  .chosen-results
+    position: relative
+    z-index: 2
+  &__input
+    width: 100%
+    input
+      margin: auto 0 0
+      min-height: 21px
+      transition: color .25s $ease
+      font-size: 14px
+      border: none
+      background: transparent
+      width: 100%
+      color: $fontColor
+      font-family: $baseFont
+      &::-webkit-input-placeholder
+        color: $fontColor
+
+      &::-moz-placeholder
+        color: $fontColor
+
+      &:-ms-input-placeholder
+        color: $fontColor
+
+      &:-moz-placeholder
+        color: $fontColor
+  &--access
+
+  &--passport
+    padding-top: 25px
+    .tile__select-row
+      margin-top: 0
+
+    .tile__btn-delete
+      top: 8px
+
+    .tile__btn-move
+      top: 8px
+
+  &__passport-add
+    display: flex
+    align-items: center
+    margin-top: 6px
+    font-size: 14px
+    color: $colorLight
+    transition: all .25s $ease
+    .ico
+      margin-right: 8px
+      font-size: 16px
+    &:hover
+      color: $colorPrimary
+
+  &__passport-edit
+    margin-top: 6px
+    margin-bottom: 0
+    font-size: 14px
+    color: $fontColor
+    display: flex
+    align-items: center
+    transition: all .25s $ease
+    &-icon
+      margin-left: auto
+      display: block
+      line-height: 0
+      transition: all .25s $ease
+    .ico
+      color: $colorLight
+      font-size: 16px
+      height: 16px
+    &:hover
+      color: $colorPrimary
+      .ico
+        color: $colorPrimary
+
+  &__btn-move
+    position: absolute
+    top: 10px
+    right: 28px
+    opacity: 0
+    pointer-events: none
+    transition: opacity .25s $ease
+    line-height: 0
+    padding-left: 0
+    padding-right: 0
+    background: none
+    .ico
+      color: $colorIcon
+
+  &__number
+    position: absolute
+    margin: 0
+    left: 0
+    top: 0
+    background: #fff
+    border-radius: 4px 0 4px 0
+    border: 1px solid $borderColor
+    min-width: 20px
+    text-align: center
+    top: -1px
+    left: -1px
+    font-size: 10px
+    line-height: 1
+    padding: 4px 0
+    &:after
+      content: counter(list-counter)
+      display: inline-block
+      position: relative
+
+  &:hover
+    .chosen-single
+      div
+        opacity: 1
+
+.content-grid
+  &__counter
+    counter-reset: list-counter
+  &__column
+    counter-increment: list-counter
+
+
++r($lg)
+  .tile
+    padding: 0
+    &--access
+      h3
+        padding: 17px 20px
+        // min-height: 68px
+        margin-bottom: 0
+    &--editable
+      padding: 17px 20px
+      min-height: 100px
+      .tile__heading
+        margin-bottom: 0
+    &--passport
+      .tile__heading
+        margin: 0 0 auto 0
+        padding: 15px 20px
+      .tile__select-row
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+        .chosen-container
+          width: 100% !important
+          padding-top: 20px
+          margin-top: -20px
+          position: relative
+          z-index: 2
+        .chosen-single
+          overflow: visible
+          div
+            top: -12px
+
+    &__select
+      margin-bottom: 0
+      border-bottom: 1px solid $borderColor
+      .chosen-container
+        display: block
+        padding: 15px 15px 15px 20px
+        width: 100%
+      .chosen-single
+        line-height: 1
+        height: 20px
+        padding-right: 15px
+        span
+          display: block
+          overflow: hidden
+          text-overflow: ellipsis
+        div
+          right: 2px
+          height: 20px
+          display: block
+      &-row
+        padding: 15px 20px
+        margin-top: auto
+        border-top: 1px solid $borderColor
+    &__input
+      padding: 17px 20px
+    &__btn-delete
+      top: 16px
+      right: auto
+      left: -2px
+    &__number
+      display: none
+    &__passport-add
+      display: none
+    &__passport-edit
+      display: none
+    &__btn-move
+      display: none

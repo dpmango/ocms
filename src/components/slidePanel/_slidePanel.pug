@@ -1,0 +1,37 @@
+form(action="#")
+  .slide-panel
+    a.slide-panel__close-overlay.js-close-passport-add(href="#")
+    .slide-panel__overlay
+    .slide-panel__content
+      a.slide-panel__close.js-close-passport-add(href="#")
+        +svgMono("crest")
+      p.slide-panel__title Значения списка
+      .slide-panel__rows.js-sortable
+        .slide-panel__row
+          a.slide-panel__icon.handle(href="#")
+            +svgMono("lines")
+          .ui-group
+            input.ui-input(type="text", name="" placeholder="Введите значение" value="Маркетинг")
+          a.slide-panel__icon.slide-panel__icon--remove.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type='button' title='Удалить' href="#")
+            +svgMono("delete")
+        .slide-panel__row
+          a.slide-panel__icon.handle(href="#")
+            +svgMono("lines")
+          .ui-group
+            input.ui-input(type="text", name="" placeholder="Введите значение" value="Программирование")
+          a.slide-panel__icon.slide-panel__icon--remove.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type='button' title='Удалить' href="#")
+            +svgMono("delete")
+        .slide-panel__row
+          a.slide-panel__icon.handle(href="#")
+            +svgMono("lines")
+          .ui-group
+            input.ui-input(type="text", name="" placeholder="Введите значение" value="")
+          a.slide-panel__icon.slide-panel__icon--remove.js-tooltip(data-tippy-placement="top" data-tippy-content="Удалить" type='button' title='Удалить' href="#")
+            +svgMono("delete")
+
+
+      a.tile__passport-add(href="#")
+        +svgMono("plus")
+        | Добавить значения
+      .slide-panel__line
+      button.btn.btn-primary.slide-panel__btn(type="submit") Сохранить

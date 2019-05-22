@@ -4,13 +4,16 @@
 (function($, APP) {
   APP.Plugins.Sortable = {
     init: function() {
-      var sortlist1 = document.getElementById('sortable');
-      if (!sortlist1) return;
+      var $sortable = $('.js-sortable');
 
-      new Sortable(sortlist1, {
-        handle: '.handle',
-        ghostClass: 'change-background',
-        animation: 150,
+      if ($sortable.length === 0) return;
+
+      $sortable.each(function(i, el) {
+        new Sortable(el, {
+          handle: '.handle',
+          ghostClass: 'change-background',
+          animation: 150,
+        });
       });
     },
   };
