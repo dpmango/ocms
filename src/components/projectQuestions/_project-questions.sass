@@ -7,6 +7,14 @@
     flex: 1 0 300px
     border-right: 1px solid $borderColor
     padding: 40px 15px 40px 0
+    &.should-show-tasks
+      .project-questions__sidebar-tasks
+        display: inline-block
+      .project-questions__sidebar-item.task
+        display: block
+    &.should-show-answers
+      .project-questions__sidebar-item.answer
+        display: block
     &-add
       display: none
     &-close
@@ -19,9 +27,28 @@
       cursor: pointer
       padding-left: 20px
       position: relative
-      display: none
+      // display: none
       z-index: 3
       margin-left: -20px
+      display: flex
+      flex-direction: column
+      &-block
+        display: none
+        position: relative
+        &:after
+          position: absolute
+          display: block
+          height: 0
+          width: 1px
+          left: -15px
+          top: 0px
+          background: $borderColor
+          content: ''
+          transition: all .25s $ease
+        &.main
+          display: block
+        &.is-active
+          display: block
       a
         padding: 6px 10px 6px 0
         display: inline-block
@@ -39,36 +66,37 @@
           border-left: none
           border-top: none
           transition: all .25s $ease
-        &:before
-          position: absolute
-          height: 100%
-          width: 200%
-          right: 100%
-          background: $colorBg
-          content: ''
-          display: block
-          top: 0
-          opacity: 0
+        // &:before
+        //   position: absolute
+        //   height: 100%
+        //   width: 200%
+        //   right: 100%
+        //   background: $colorBg
+        //   content: ''
+        //   display: block
+        //   top: 0
+        //   opacity: 0
         &:hover
-          background: $colorBg
-          border-top-right-radius: 4px
-          border-bottom-right-radius: 4px
-          z-index: 2
-          &:before
-            opacity: 1
+          // background: $colorBg
+          // border-top-right-radius: 4px
+          // border-bottom-right-radius: 4px
+          // z-index: 2
+          // &:before
+          //   opacity: 1
       &:after
-        position: absolute
-        display: block
-        height: 0
-        width: 1px
-        left: 4px
-        top: 26px
-        background: $borderColor
-        content: ''
-        transition: all .25s $ease
+        // position: absolute
+        // display: block
+        // height: 0
+        // width: 1px
+        // left: 4px
+        // top: 26px
+        // background: $borderColor
+        // content: ''
+        // transition: all .25s $ease
       &.main
-        display: block
+        // display: block
         margin-left: -20px
+        transition: all 0.25s ease-in-out
       &.error
         a
           color: #EB5757
@@ -122,10 +150,6 @@
           &:after
             display: none
 
-      > .project-questions__sidebar-item
-        padding-left: 20px
-        margin-left: 0
-        // border-left: 1px solid $borderColor
       &.is-open
         &:after
           height: calc(100% - 25px)
@@ -133,6 +157,19 @@
           &:after
             transform: rotate(-45deg)
             top: 11px
+      > .project-questions__sidebar-item-block
+        padding-left: 20px
+        margin-left: 0
+        &:after
+          height: 100%
+        // border-left: 1px solid $borderColor
+      &.task
+        display: none
+      &.answer
+        display: none
+        color: $colorLight
+        .task
+          color: $fontColor
     &-toggle
       padding-bottom: 20px
       border-bottom: 1px solid $borderColor
@@ -155,8 +192,9 @@
       z-index: 10
       font-size: 12px
       color: $colorLight
-      display: flex
+      // display: inline-block
       width: auto
+      display: none
       // &:before
       //   position: absolute
       //   width: 100%
@@ -165,13 +203,17 @@
       //   content: ''
       //   outline: 1px solid red
       //   bottom: 0
-      &:hover
+      a
+        padding: 0
+        &:after
+          display: none
+      &.is-active
         .project-questions__sidebar-tasks-links
           opacity: 1
           pointer-events: all
       &-links
         width: 250px
-        bottom: 18px
+        bottom: 25px
         position: absolute
         width: 100%
         border-radius: 4px
@@ -182,6 +224,7 @@
         transition: all 0.25s ease-in-out
       &-link
         padding: 14px !important
+        width: 100%
         font-size: 12px
         color: $fontColor
         border-bottom: 1px solid $borderColor
@@ -196,7 +239,6 @@
     width: 100%
   &__progress
     width: calc(100% + 13px)
-    // max-width: 810px
     max-width: calc(100% + 13px)
     padding: 0
   &__line
@@ -289,9 +331,14 @@
       padding-right: 0
     &__sidebar
       padding-top: 0
-      margin-left: -10px
+      margin-left: -30px
       padding-right: 0
       transition: all 0.25s ease-in-out
+      max-width: 320px
+      flex: 1 0 320px
+      padding-left: 20px
+      overflow: hidden
+      position: relative
       &-tasks
         display: none
       &-toggle
@@ -312,10 +359,14 @@
         transform: translateY(-50%)
         color: $colorPrimary
         line-height: 0
+        display: none
         .ico
           font-size: 16px
       &.is-hide
-        margin-left: -265px
+        margin-left: -305px
+        .project-questions__sidebar-item
+          transform: translate(-100%)
+          opacity: 0
       &-head
         display: flex
         align-items: center
@@ -353,6 +404,67 @@
       &-item
         border-top: 1px solid $borderColor
         padding-left: 0
+        background: #fff
+        margin-left: 0
+        &:before
+          position: absolute
+          width: 400px
+          height: 1px
+          background: $borderColor
+          display: block
+          content: ''
+          top: -1px
+          left: -100px
+        &-block
+          &:after
+            display: none
+          // transition: all 0.25s $ease
+        // z-index: 500
+        // &-block
+        //   display: none
+        //   position: absolute
+        //   left: 0
+        //   top: -1px
+        //   width: 100%
+        //   display: block
+        //   transform: translateX(100%)
+        //   visibility: hidden
+        //   opacity: 0
+        //   &:before
+        //     position: absolute
+        //     width: 100%
+        //     height: 10000px
+        //     background: #fff
+        //     content: ''
+        //     display: block
+        //     left: 0
+        //     top: 0
+        //     z-index: 400
+        //   &.main
+        //     display: block
+        //     position: relative
+        //     transform: translateX(0)
+        //     opacity: 1
+        //     visibility: visible
+        //     transition: all .2s ease
+          // &.is-active
+          //   display: block
+          //   transform: translateX(0)
+          //   opacity: 1
+          //   visibility: visible
+          //   transition: all .2s ease
+          //   z-index: 400
+            // & > .project-questions__sidebar-item
+            //   // transform: translateX(-100%)
+            //   &.is-open
+
+            // // ~ div
+            //   // opacity: 0
+            //   // pointer-events: none
+            //   // visibility: hidden
+            //   transform: translateX(-100%)
+        &.task
+          display: block
         &.main
           &:last-child
             border-bottom: 1px solid $borderColor
@@ -367,8 +479,14 @@
             top: 50%
             transform: translateY(-50%) rotate(-45deg)
         &.is-open
+          & > .project-questions__sidebar-item-block
+            padding-left: 20px
           a
             &:after
               top: 50%
               transform: translateY(-50%) rotate(-45deg)
-
+        // &.is-hidden
+          // transform: translateX(-100%)
+          // &.is-open
+            // transform: translate(0)
+            // position: absolute
